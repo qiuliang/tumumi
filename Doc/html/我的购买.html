@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的购买 - 土木迷</title>
+<link type="text/css" href="css/pub.css" rel="stylesheet" />
+
+<link type="text/css" href="css/gb.css" rel="stylesheet" />
+<link href="css/my.css" rel="stylesheet" type="text/css" />
+<link href="css/showAuction.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+
+
+<div id="s_landh">
+    <div class="d_submenu_wapper">
+        <div class="d_submenubox">
+            <div class="d_yn-sub-nav">
+                <ul>
+                    <li class=""><a href="/app/my/docin/myBook">我的文档</a></li>
+                    <li class="" style="position:relative"><a href="/app/friends/myfriends">我的好友</a></li>
+                    <li class=""><a href="/app/my/msg/system">消息<span style="font-weight:normal;">(2<img align='absmiddle' vspace='8' src='http://img.wanlibo.com/images_cn/newDocin/docin_xx.gif' />)</span></A></li>
+                    <li class="">
+                        <div style="float:left; padding:0px; margin:0px;"> <a href="/spidermanlhg" target="_blank" style=" padding-right:2px;">我的主页</a> </div>
+                        <div style="float:left; padding:0px; margin:0px;"><a href="/app/user/editUserInfo">编辑</a></div>
+                    </li>
+                    <li class=""><a href="/app/my/docin/myFavorite">我的收藏</a></li>
+                    <li class="d_current"><a href="/app/my/docin/myBuy">我的购买</a></li>
+                    <li class=""><a href="/app/my/fin/addmoney">充值/兑换</a></li>
+                    <li class=""><a href="/app/my/docin/password">基本设置</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="searchformy">
+        <form action="/app/docsearch" method="get">
+            <input type="hidden" name="fn" id="fn" value="" />
+            <input type="hidden" name="searchType_banner" id="searchType_banner" value="p" />
+            <div class="searchBox" id="searchBox">
+                <div class="searchNew">
+                    <h3>搜索全球最大中文文档库</h3>
+                    <div class="searchbar">
+                        <input baiduSug="2" id="topsearch" type="text" maxlength="100" class='listTopDefault' name="dky" onkeydown="if(event.keyCode==13){ return searchNew()}" value="在一亿文档库里搜索文档" onfocus="if(this.value=='在一亿文档库里搜索文档') this.value='';this.className='listTopInput';" onblur="if(this.value=='') {this.value='在一亿文档库里搜索文档';this.className='listTopDefault';}"/>
+                        <div id="search-listbtn">
+                            <h5>文档</h5>
+                            <div id="search-listtags">
+                                <ul>
+                                    <li><a href="#nogo" onmousedown="document.getElementById('searchType_banner').value='p';">文档</a></li>
+                                    <li><a href="#nogo" onmousedown="document.getElementById('searchType_banner').value='u';">用户</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn" value="搜索" onclick="return searchNew();" />
+                        <a href="/app/docsearch?fn=more" title="高级">高级</a> </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="Layer1" style="border:1px solid #b6dd82;display:none;" onmouseover="divFlag = 1;" onmouseout="divFlag = 0;closeSaleDiv();" >
+    <div style="clear:both"></div>
+</div>
+<div id="Layer2" style="border:1px solid #b6dd82;display:none;">
+    <div style="clear:both"></div>
+</div>
+<div id="container"  style="width:970px; margin:auto;">
+    <div class="mywd_container">
+	
+        <!--我的文档_提示信息开始-->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td><div class="glwd">
+                        <div class="f1"><span class="font16">管理你购买的文档</span></div>
+                        <div class="ts" id="result" style="display:none;">
+                            <div class="tsleft"><img src="http://img.wanlibo.com/images_cn/newDocin/bgleft.gif" /></div>
+                            <div class="tscen">
+                                <div class="title"><span class="fontblock" id="ajaxDelete">你删除了<span style="font-weight:bold;" id="deleteBookNum">1</span>条购买文档记录</span></div>
+                            </div>
+                            <div class="tsleft"><img src="http://img.wanlibo.com/images_cn/newDocin/bgright.gif" /></div>
+                        </div>
+                    </div></td>
+            </tr>
+        </table>
+        <!--我的文档_提示信息结束-->
+		
+		
+        <!--我的文档_列表开始-->
+        <table width="100%" height="104" border="0" cellpadding="0" cellspacing="0" style="margin-top:10px;">
+            <tr>
+                <td><div class="lb_column1"> 每页显示：
+                        
+                        &nbsp;<a href="/app/my/docin/showLength?pageLength=25" class="lanfont">25</a>&nbsp;|&nbsp; <a href="/app/my/docin/showLength?pageLength=50" class="lanfont2">50</a>&nbsp;|&nbsp; <a href="/app/my/docin/showLength?pageLength=100" class="lanfont2" style="margin:0 20px 0 0">100</a>&nbsp;&nbsp;
+                        选择： <a href="javascript:void(0);" onClick="javascript:selectAll();" class="lanfont2">全选</a>&nbsp;|&nbsp; <a href="javascript:void(0);" onClick="javascript:selectOthers();" class="lanfont2" style="margin:0 20px 0 0">反选</a>&nbsp;
+                        浏览： <a href="/app/my/docin/myBuy?styleList=1&currentPage=1&orderName=0&orderDate=1&orderVisit=0&orderStatus=0" title="列表浏览"><img src="http://img.wanlibo.com/images_cn/newDocin/icon_2_1.gif" width="23" height="20" border="0" align="absmiddle" /></a>&nbsp;|&nbsp; <a href="/app/my/docin/myBuy?styleList=2&currentPage=1&orderName=0&orderDate=1&orderVisit=0&orderStatus=0" title="日志浏览"><img src="http://img.wanlibo.com/images_cn/newDocin/icon_1_1.gif" width="23" height="20" border="0" align="absmiddle" /></a> </div>
+                    <div class="lb_column2" id="showStateUp">2篇文档中的1-2</div>
+                    <div class="lb_columnht">
+                        <input name="" type="button" value=" 删除 " onClick="javascript:moreDelete();" />
+                    </div>
+                    <form action="/app/my/docin/deleteMyBook" id="myForm" name="myForm">
+                        <input type="hidden" name="fn" id="fn" value="myBuy" />
+                        <input type="hidden" name="whichCaozuo" id="whichCaozuo" value="delete" />
+                        <input type="hidden" name="currentPage" id="currentPage" value="1" />
+                        <input type="hidden" name="orderName" id="orderName" value="0" />
+                        <input type="hidden" name="orderDate" id="orderDate" value="1" />
+                        <input type="hidden" name="orderVisit" id="orderVisit" value="0" />
+                        <input type="hidden" name="orderStatus" id="orderStatus" value="0" />
+                        <table width="100%"  border="0" cellpadding="0" cellspacing="0" style="margin-top:2px;">
+                            <tr >
+                                <td id="trName" width="489" height="30" align="left" bgcolor="#ECF4FA" style="border-bottom:1px solid #e2ebf5;" onMouseOver="this.style.backgroundColor='#fcffda'" onMouseOut="this.style.backgroundColor=''">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img name="uploadNameImg" align="absmiddle" id="uploadNameImg" style="display:none;position:relative;top:-1px" />&nbsp; <a href="javascript:orderByName(2);" id="aName" class="font14" style=" color:#006ad0;">标题</a> </td>
+                                <td id="trDate" width="146" height="30" bgcolor="#fcffda" style="border-right:2px solid #FFFFFF; border-left:2px solid #FFFFFF; border-bottom:1px solid #e2ebf5;" onMouseOver="this.style.backgroundColor='#fcffda'" onMouseOut="this.style.backgroundColor=''">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img name="uploadDateImg" align="absmiddle" id="uploadDateImg" style="display:none;position:relative;top:-1px" />&nbsp; <a href="javascript:orderByDate(2);" id="aDate" class="font14" style=" color:#006ad0;">购买时间</a> </td>
+                                <td id="trVisit" width="125" height="30" align="center" bgcolor="#ECF4FA" style="border-right:2px solid #FFFFFF; sborder-bottom:1px solid #e2ebf5;" onMouseOver="this.style.backgroundColor='#fcffda'" onMouseOut="this.style.backgroundColor=''"><img name="uploadDateVisit" align="absmiddle" id="uploadDateVisit" style="display:none;position:relative;top:-1px" />&nbsp; <a href="javascript:orderByVisit(2);" id="aVisit" class="font14" style=" color:#006ad0;">消费(人民币)</a> </td>
+                                <td id="trPerson" width="158" height="30" align="left" bgcolor="#ECF4FA"  onMouseOver="this.style.backgroundColor='#fcffda'" onMouseOut="this.style.backgroundColor=''" style="border-right:2px solid #FFFFFF; border-bottom:1px solid #e2ebf5;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img name="uploadPersonImg" align="absmiddle" id="uploadPersonImg" style="display:none;position:relative;top:-1px" /> <a href="javascript:orderByStatus(2);" id="aPerson" class="font14" style=" color:#006ad0;">上传人</a> </td>
+                                <td width="60" bgcolor="#ECF4FA" style="border-bottom:1px solid #e2ebf5;">&nbsp;</td>
+                            </tr>
+                            <input type="hidden" name="styleList" id="styleList" value="1" />
+                            <tr id="tr1958619">
+                                <td valign="top" style="border-bottom:1px solid #e2ebf4;"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:15px;  margin-bottom:8px;">
+                                        <tr>
+                                            <td width="25" height="30" align="center" valign="top"><input type="checkbox" name="product" id="product1958619" value="1958619" />
+                                            </td>
+                                            <td width="19" align="left" valign="top"><a href="javascript:void(0);" onMouseover="javascript:getAuction(this,'72490986')" onMouseOut="javascript:closeAuctionDiv();"><img src="images/icon_money.gif" border="0" /></a> </td>
+                                            <td width="20" align="left" valign="top"><img src="images/icon_pdf.gif" title="pdf" /> </td>
+                                            <td height="30" align="left" valign="top"><a href="/p-72490986.html" title="设计的秘密：产品设计2（创意的集合）—清晰照片版" target="_blank" class="font14sl">设计的秘密：产品设计2（创意的集合）—清..</a> </td>
+                                        </tr>
+                                    </table></td>
+                                <td valign="top" style="border-bottom:1px solid #e2ebf4; "><table width="100%" height="0" border="0" cellpadding="0" cellspacing="0"  style="margin-top:15px;  margin-bottom:8px;">
+                                        <tr>
+                                            <td height="29" align="center"><span class="fontblock2_ss">2010-08-24 12:51</span></td>
+                                        </tr>
+                                    </table></td>
+                                <td valign="top" style="border-bottom:1px solid #e2ebf4; "><table width="100%" height="29" border="0" cellpadding="0" cellspacing="0"  style="margin-top:15px;  margin-bottom:8px;">
+                                        <tr>
+                                            <td height="29" align="center"><span class="font162">3.96</span></td>
+                                        </tr>
+                                    </table></td>
+                                <td colspan="2" valign="top" style="border-bottom:1px solid #e2ebf4; "><table width="100%" height="30" border="0" cellpadding="0" cellspacing="0"  style="margin-top:15px;  margin-bottom:8px;">
+                                        <tr>
+                                            <td width="73%" height="27" align="left" valign="middle"><span class="redfont">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td width="28%" align="right"><img src="http://img.wanlibo.com/upload/users/1/2010/7/21/12/13453611/1279685336420.jpg" width="20" height="20" /></td>
+                                                        <td width="72%"><a href="/sc025" target="_blank" title="如影随星" class="lanfont2">&nbsp;如影随星</a></td>
+                                                    </tr>
+                                                </table>
+                                                </span></td>
+                                            <td width="27%" align="center">&nbsp; <a href="javascript:void(0);" onclick="javascript:deleteOne(1958619,2);"><img src="images/icon_del.gif" alt="删除" width="17" height="17" border="0" /></a> </td>
+                                        </tr>
+                                    </table></td>
+                            </tr>
+                        </table>
+                    </form></td>
+            </tr>
+        </table>
+        <!--我的文档_列表结束-->
+        <!--翻页开始-->
+        <table width="100%" height="47" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="right"> ﻿ </td>
+            </tr>
+        </table>
+        <!--翻页结束-->
+        <div class="lb_column1"> 每页显示：
+            &nbsp;<a href="/app/my/docin/showLength?pageLength=25" class="lanfont">25</a>&nbsp;|&nbsp; <a href="/app/my/docin/showLength?pageLength=50" class="lanfont2">50</a>&nbsp;|&nbsp; <a href="/app/my/docin/showLength?pageLength=100" class="lanfont2" style="margin:0 20px 0 0">100</a>&nbsp;&nbsp;
+            选择： <a href="javascript:void(0);" onClick="javascript:selectAll();" class="lanfont2">全选</a>&nbsp;|&nbsp; <a href="javascript:void(0);" onClick="javascript:selectOthers();" class="lanfont2" style="margin:0 20px 0 0">反选</a>&nbsp;
+            浏览： <a href="/app/my/docin/myBuy?styleList=1&currentPage=1&orderName=0&orderDate=1&orderVisit=0&orderStatus=0" title="列表浏览"><img src="http://img.wanlibo.com/images_cn/newDocin/icon_2_1.gif" width="23" height="20" border="0" align="absmiddle" /></a>&nbsp;|&nbsp; <a href="/app/my/docin/myBuy?styleList=2&currentPage=1&orderName=0&orderDate=1&orderVisit=0&orderStatus=0" title="日志浏览"><img src="http://img.wanlibo.com/images_cn/newDocin/icon_1_1.gif" width="23" height="20" border="0" align="absmiddle" /></a> </div>
+        <div class="lb_column2" id="showStateDown">2篇文档中的1-2</div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" style=" clear:both">
+            <tr>
+                <td><div class="lb_columnht">
+                        <input name="" type="button" value=" 删除 " onClick="javascript:moreDelete();" />
+                    </div></td>
+            </tr>
+        </table>
+    </div>
+    <div class="clear">
+</div>
+
+
+</body>
+</html>

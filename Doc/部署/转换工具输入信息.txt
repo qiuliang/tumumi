@@ -1,0 +1,13 @@
+服务器：(local)
+数据库：TMM
+用户名：tmm
+密码：Tumumi654321
+上传文档保存的表名：D_DocInfo
+字段名：PhysicalPath
+保存SWF文档字段名：FlashUrl
+页码字段：PageCount
+保存缩略图字段名：ThumbnailUrl
+简介字段：Description
+生成flash保存目录：E:\convert\flash
+
+缩略图：E:\convert\images

@@ -1,0 +1,280 @@
+<%@ CodeTemplate Language="C#" TargetLanguage="C#" Description="This Template Generates C# domain objects for NHibernate" Debug="true" %>
+<%@ Property Name="Namespace" Type="System.String" Default="MyNamespace.Data" Category="Object" Description="The class namespace that the mapping file should use" %>
+<%@ Property Name="Assembly" Type="System.String" Default="MyApp.MyAssembly" Category="Object" Description="The assembly that the class will be used in" %>
+<%@ Property Name="RemoveTablePrefix" Type="System.String" Default="tbl" Category="Object" Description="The prefix to remove from table names" %>
+<%@ Property Name="ForceId" Type="System.Boolean" Default="true" Category="Object" Description="Force Id for identity column" %>
+<%@ Assembly Name="System.Design" %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.IO" %>
+<%@ Import Namespace="System.Xml" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="System.Windows.Forms.Design" %>
+<%@ Import Namespace="System.Text.RegularExpressions" %>
+
+<script runat="template">
+/*
+	Title    : NHibernate.cst
+	Author   : Scott Beeler  (Modified from version provided by Simon Green (simon@intesoft.net) http://www.intesoft.net/nhibernate)
+
+	Summary  : Codesmith template to iterate the tables in a database and generate C# class files and NHibername xml mapping files
+	Notes    : Will recognise & Handle (most) many-to-many linking tables, both sides of self-joins, one-to-one joins and polymorphism
+			   Uses NHibernate.class.cst, NHibernate.hbm.cst and NHibernate.inc which should be in the same folder
+*/
+
+	private DatabaseSchema _sourceDatabase;
+	private string _outputDirectory;
+    private bool _implementNotification = true;
+
+	private CodeTemplate _csharpTemplate;
+	private CodeTemplate _mappingTemplate;
+	private CodeTemplate _bllTemplate;
+	
+
+    [Category("Database")]
+    [Description("Database that the mapping file should be based on.")]
+    public DatabaseSchema SourceDatabase {
+        get { return _sourceDatabase; }
+        set { _sourceDatabase = value; }
+    }
+	
+	private string _projectName;
+	[Category("Class")]
+    [Description("The folder to save the generated class files.")]
+	public string ProjectName
+	{
+		get {return _projectName;}
+		set {_projectName= value;}
+	}
+
+	[Editor(typeof(System.Windows.Forms.Design.FolderNameEditor), typeof(System.Drawing.Design.UITypeEditor))]
+	[Category("Class")]
+    [Description("The folder to save the generated class files.")]
+	public string OutputDirectory
+	{
+		get {return _outputDirectory;}
+		set {_outputDirectory= value;}
+	}
+
+	[Browsable(false)]
+	public CodeTemplate BatisMapTemplate
+	{
+		get
+		{
+			if (_csharpTemplate == null)
+				_csharpTemplate = CompileTemplate(CodeTemplateInfo.DirectoryName + "IBatisNetGen.BatisMap.cst");
+
+			return _csharpTemplate;
+		}
+	}
+	
+	[Browsable(false)]
+	public CodeTemplate BLLTemplate
+	{
+		get
+		{
+			if (_bllTemplate == null)
+				_bllTemplate = CompileTemplate(CodeTemplateInfo.DirectoryName + "IBatisNetGen.BLL.cst");
+
+			return _bllTemplate;
+			
+		}
+	}
+
+	[Browsable(false)]
+	public CodeTemplate DaoImplTemplate
+	{
+		get
+		{
+			if (_mappingTemplate == null)
+				_mappingTemplate = CompileTemplate(CodeTemplateInfo.DirectoryName + "IBatisNetGen.DaoImpl.cst");
+
+			return _mappingTemplate;
+		}
+	}
+	
+	private CodeTemplate _editTemplate;
+	[Browsable(false)]
+	public CodeTemplate EditTemplate
+	{
+		get
+		{
+			if (_editTemplate == null)
+				_editTemplate = CompileTemplate(CodeTemplateInfo.DirectoryName + "IBatisNetGen.ViewEdit.Helper.cst");
+
+			return _editTemplate;
+		}
+	}
+	
+	private CodeTemplate _showTemplate;
+	[Browsable(false)]
+	public CodeTemplate ShowTemplate
+	{
+		get
+		{
+			if (_showTemplate == null)
+				_showTemplate = CompileTemplate(CodeTemplateInfo.DirectoryName + "IBatisNetGen.ViewShow.Helper.cst");
+
+			return _showTemplate;
+		}
+	}
+	
+	private CodeTemplate _listTemplate;
+	[Browsable(false)]
+	public CodeTemplate ListTemplate
+	{
+		get
+		{
+			if (_listTemplate == null)
+				_listTemplate = CompileTemplate(CodeTemplateInfo.DirectoryName + "IBatisNetGen.ViewList.Helper.cst");
+
+			return _listTemplate;
+		}
+	}
+	
+	
+	private CodeTemplate _controllerTemplate;
+	[Browsable(false)]
+	public CodeTemplate ControllerTemplate
+	{
+		get
+		{
+			if (_controllerTemplate == null)
+				_controllerTemplate = CompileTemplate(CodeTemplateInfo.DirectoryName + "IBatisNetGen.Controller.Helper.cst");
+
+			return _controllerTemplate;
+		}
+	}
+	
+	private CodeTemplate _modelTemplate;
+	[Browsable(false)]
+	public CodeTemplate ModelTemplate
+	{
+		get
+		{
+			if (_modelTemplate == null)
+				_modelTemplate = CompileTemplate(CodeTemplateInfo.DirectoryName + "IBatisNetGen.Entity.cst");
+
+			return _modelTemplate;
+		}
+	}
+	
+	private CodeTemplate _sqlconfigTemplate;
+	[Browsable(false)]
+	public CodeTemplate SqlConfigTemplate
+	{
+		get
+		{
+			if (_sqlconfigTemplate == null)
+				_sqlconfigTemplate = CompileTemplate(CodeTemplateInfo.DirectoryName + "sql.config.cst");
+
+			return _sqlconfigTemplate;
+		}
+	}
+
+	public CodeTemplate CompileTemplate(string templateName)
+	{
+		CodeTemplateCompiler compiler = new CodeTemplateCompiler(templateName);
+		compiler.Compile();
+
+		if (compiler.Errors.Count == 0)
+		{
+			return compiler.CreateInstance();
+		}
+		else
+		{
+			for (int i = 0; i < compiler.Errors.Count; i++)
+			{
+				Response.WriteLine(compiler.Errors[i].ToString());
+			}
+			return null;
+		}
+
+	}
+
+	public void Generate()
+	{
+		foreach(TableSchema sourceTable in SourceDatabase.Tables)
+		{
+			
+			Response.Write(string.Format("Processing Table {0} ... \r\n", sourceTable.FullName));
+			if (false)
+			{
+				Response.WriteLine("skipped, no primary key");
+			}
+			else
+			{
+				try
+				{
+					string BatisMap = sourceTable.Name;
+					if (BatisMap.StartsWith(RemoveTablePrefix))
+						BatisMap = BatisMap.Substring(RemoveTablePrefix.Length);
+	
+					if(!Directory.Exists(OutputDirectory+"/map/"))
+					{
+							Directory.CreateDirectory(OutputDirectory+"/map/");
+					}
+					string classFileName =  BatisMap;
+					classFileName += ".xml";
+					classFileName = Path.Combine(OutputDirectory+"/map/", classFileName);
+	
+	
+					this.BatisMapTemplate.SetProperty("SourceTable", sourceTable);
+					this.BatisMapTemplate.SetProperty("ProjectName", this.ProjectName);
+	
+					this.BatisMapTemplate.RenderToFile(classFileName, true);
+	             	_csharpTemplate = null;
+					
+					Response.Write(classFileName+"\n");
+	
+					this.DaoImplTemplate.SetProperty("SourceTable",sourceTable);
+					this.DaoImplTemplate.SetProperty("ProjectName",ProjectName);
+					
+					classFileName = BatisMap+"Dao.cs";
+					
+					if(!Directory.Exists(OutputDirectory+"/DAL/"))
+					{
+							Directory.CreateDirectory(OutputDirectory+"/DAL/");
+					}
+					classFileName = Path.Combine(OutputDirectory+"/DAL/", classFileName);
+					this.DaoImplTemplate.RenderToFile(classFileName, true);
+					_mappingTemplate = null;
+					Response.Write(classFileName+"\n");
+					
+					if(!Directory.Exists(OutputDirectory+"/BLL/"))
+					{
+							Directory.CreateDirectory(OutputDirectory+"/BLL/");
+					}
+					classFileName = BatisMap+"BLL.cs";
+					this.BLLTemplate.SetProperty("SourceTable",sourceTable);
+					this.BLLTemplate.SetProperty("ProjectName",ProjectName);
+					classFileName = Path.Combine(OutputDirectory+"/BLL/", classFileName);
+					this.BLLTemplate.RenderToFile(classFileName, true);
+					_bllTemplate = null;
+					
+					
+					
+					if(!Directory.Exists(OutputDirectory+"/Model/"))
+					{
+							Directory.CreateDirectory(OutputDirectory+"/Model/");
+					}
+					classFileName = BatisMap+".cs";
+					this.ModelTemplate.SetProperty("SourceTable",sourceTable);
+					this.ModelTemplate.SetProperty("ProjectName",ProjectName);
+					classFileName = Path.Combine(OutputDirectory+"/Model/", classFileName);
+					this.ModelTemplate.RenderToFile(classFileName, true);
+					_modelTemplate = null;
+					
+					
+
+				}
+				catch (Exception ex)
+				{
+					Response.WriteLine("Error: " + ex);
+				}
+			}
+		}
+	}
+</script>
+
+<% this.Generate();  %>

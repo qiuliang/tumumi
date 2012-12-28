@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我要悬赏 - 土木迷</title>
+<link type="text/css" href="css/pub.css" rel="stylesheet" />
+<link href="css/my.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<div id="s_landh">
+    <div class="d_submenu_wapper">
+        <div class="d_submenubox">
+            <div class="d_yn-sub-nav">
+                <ul>
+                    <li class=""><a href="/app/my/docin/myBook">我的文档</a></li>
+                    <li class="d_current"><a href="/app/my/docin/myBook">悬赏文档</a></li>
+                    <li class="" style="position:relative"><a href="/app/friends/myfriends">我的好友</a></li>
+                    <li class=""><a href="/app/my/msg/system">消息<span style="font-weight:normal;">(2<img align='absmiddle' vspace='8' src='http://img.wanlibo.com/images_cn/newDocin/docin_xx.gif' />)</span></A></li>
+                    <li class="">
+                        <div style="float:left; padding:0px; margin:0px;"> <a href="/spidermanlhg" target="_blank" style=" padding-right:2px;">我的主页</a> </div>
+                        <div style="float:left; padding:0px; margin:0px;"><a href="/app/user/editUserInfo">编辑</a></div>
+                    </li>
+                    <li class=""><a href="/app/my/docin/myFavorite">我的收藏</a></li>
+                    <li class=""><a href="/app/my/docin/myBuy">我的购买</a></li>
+                    <li class=""><a href="/app/my/fin/addmoney">充值/兑换</a></li>
+                    <li class=""><a href="/app/my/docin/password">基本设置</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="searchformy">
+        <form action="/app/docsearch" method="get">
+            <input type="hidden" name="fn" id="fn" value="" />
+            <input type="hidden" name="searchType_banner" id="searchType_banner" value="p" />
+            <div class="searchBox" id="searchBox">
+                <div class="searchNew">
+                    <h3>搜索全球最大中文文档库</h3>
+                    <div class="searchbar">
+                        <input baiduSug="2" id="topsearch" type="text" maxlength="100" class='listTopDefault' name="dky" onkeydown="if(event.keyCode==13){ return searchNew()}" value="在一亿文档库里搜索文档" onfocus="if(this.value=='在一亿文档库里搜索文档') this.value='';this.className='listTopInput';" onblur="if(this.value=='') {this.value='在一亿文档库里搜索文档';this.className='listTopDefault';}"/>
+                        <div id="search-listbtn">
+                            <h5>文档</h5>
+                            <div id="search-listtags">
+                                <ul>
+                                    <li><a href="#nogo" onmousedown="document.getElementById('searchType_banner').value='p';">文档</a></li>
+                                    <li><a href="#nogo" onmousedown="document.getElementById('searchType_banner').value='u';">用户</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn" value="搜索" onclick="return searchNew();" />
+                        <a href="/app/docsearch?fn=more" title="高级">高级</a> </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="w980 clearfix" >
+    <div id="mcpmain">
+        <div id="appTab">
+            <ul>
+                <li><a href="book_request.php"><span>我要投稿</span></a></li>
+                <li class="thisTab"><a href="book_request_add.php"><span>我要悬赏</span></a></li>
+                <li><a href="book_request_add.php"><span>我的悬赏</span></a></li>
+                <li><a href="book_request_add.php"><span>我的投稿</span></a></li>
+            </ul>
+        </div>
+        <form onsubmit="return checkSubmit();" method="post" action="book_request.php?dopost=add" name="addcontent" class="mTB10 mR10 mL10">
+            <div id="mainCp">
+                <div class="postForm">
+                    <p class="cellBg">
+                        <label>文档名称：</label>
+                        <input type="text" class="intxt" maxlength="100" id="doctitle" name="doctitle">
+                    </p>
+                    <p class="cellBg">
+                        <label>悬赏积分：</label>
+                        <select name="score">
+                            <option value="10">10分</option>
+                            <option value="20">20分</option>
+                            <option value="30">30分</option>
+                            <option value="40">40分</option>
+                            <option value="50">50分</option>
+                        </select>
+                    </p>
+                    <p class="cellBg">
+                        <label>备注信息：</label>
+                        <textarea name="remark"></textarea>
+                    </p>
+                    <p class="cellBg">
+                        <label>有效期限：</label>
+                        <input type="text" value="2012-10-11" class="intxt" id="validate" name="validate">
+                    </p>
+                    <p class="cellBg">
+                        <label>验证码：</label>
+                        <input type="text" style="width: 50px; text-transform: uppercase;" class="intxt" maxlength="100" id="vdcode" name="vdcode">
+                        <img align="absmiddle" onclick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="../include/vdimgck.php"></p>
+                    <p>
+                        <button type="submit" class="button2">提交</button>
+                        <button onclick="location.reload();" type="reset" class="button2 ml10">重置</button>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

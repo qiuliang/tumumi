@@ -1,0 +1,559 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>tumumi 土木迷</title>
+<link href="css/pub.css" type="text/css" rel="stylesheet"/>
+<link href="css/index_before.css" type="text/css" rel="stylesheet"/>
+</head>
+<body >
+<div id="wapper-101">
+    <div id="head_k">
+        <div class="headBox">
+            <div class="logo_k" id="logo_common"><a href="/"><img src="images/tumumi_logo.gif" width="220" height="60" /></a></div>
+            <div class="quick_link" > <a href="/app/login">登录</a> <a href="#">注册</a> <a href="#" target="_blank">常见问题</a> </div>
+            <ul id="nav">
+                <li><a href="#" class="on"><span>首页</span></a></li>
+                <li><a href="#" class=""><span>浏览</span></a></li>
+                <li><a href="#" class=""><span>悬赏文档</span></a></li>
+                <li><a href="#" class=""><span>我的文档</span></a></li>
+                <li class="upload"><a href="#"><span>我要上传</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <form action="/app/docsearch" method="get">
+        <input type="hidden" name="fn" id="fn" value="" />
+        <input type="hidden" name="searchType_banner" id="searchType_banner" value="p" />
+        <div class="searchBox" id="searchBox">
+            <div class="searchNew">
+                <h3>搜索全球最大中文文档库</h3>
+                <div class="searchbar">
+                    <input baiduSug="2" id="topsearch" type="text" maxlength="100" class='listTopDefault' name="dky" onkeydown="if(event.keyCode==13){ return searchNew()}" value="在一亿文档库里搜索文档" onfocus="if(this.value=='在一亿文档库里搜索文档') this.value='';this.className='listTopInput';" onblur="if(this.value=='') {this.value='在一亿文档库里搜索文档';this.className='listTopDefault';}"/>
+                    <div id="search-listbtn">
+                        <h5>文档</h5>
+                        <div id="search-listtags">
+                            <ul>
+                                <li><a href="#nogo" onmousedown="document.getElementById('searchType_banner').value='p';">文档</a></li>
+                                <li><a href="#nogo" onmousedown="document.getElementById('searchType_banner').value='u';">用户</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn" value="搜索" onclick="return searchNew();" />
+                    <a href="/app/docsearch?fn=more" title="高级">高级</a> </div>
+            </div>
+        </div>
+    </form>
+    <div id="outer" class="clear">
+        <div class="boxleft">
+            <!-- 大家在看什么 -->
+            <div class="box" id="readcolumn"><span class="rd_tl"></span><span class="rd_tr"></span>
+                <div id="allreadDiv1" class="readbox">
+                    <h2><a class="fr" href="/app/allread" target="_blank">更多&gt;&gt;</a>看看大家在阅读什么...</h2>
+                    <div class="hot" id="hot_wrapper"> <span title="下一页" class="noright" id="next">下一页</span> <span title="上一页" class="left" id="stepup">上一页</span>
+                        <div class="outer_container">
+                            <ul id="hot_container" >
+                                <li> <a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);"><img alt="Javascript高级程序设计" src="http://img.wanlibo.com/upload/recommend/1/2010/10/28/14/1288247094729.jpg"></a>
+                                    <p><a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);">Javascript高级程序设计</a></p>
+                                </li>
+                                <li> <a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);"><img alt="Javascript高级程序设计" src="http://img.wanlibo.com/upload/recommend/1/2010/10/28/14/1288247094729.jpg"></a>
+                                    <p><a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);">Javascript高级程序设计</a></p>
+                                </li>
+                                <li> <a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);"><img alt="Javascript高级程序设计" src="http://img.wanlibo.com/upload/recommend/1/2010/10/28/14/1288247094729.jpg"></a>
+                                    <p><a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);">Javascript高级程序设计</a></p>
+                                </li>
+                                <li> <a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);"><img alt="Javascript高级程序设计" src="http://img.wanlibo.com/upload/recommend/1/2010/10/28/14/1288247094729.jpg"></a>
+                                    <p><a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);">Javascript高级程序设计</a></p>
+                                </li>
+                                <li> <a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);"><img alt="Javascript高级程序设计" src="http://img.wanlibo.com/upload/recommend/1/2010/10/28/14/1288247094729.jpg"></a>
+                                    <p><a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);">Javascript高级程序设计</a></p>
+                                </li>
+                                <li> <a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);"><img alt="Javascript高级程序设计" src="http://img.wanlibo.com/upload/recommend/1/2010/10/28/14/1288247094729.jpg"></a>
+                                    <p><a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);">Javascript高级程序设计</a></p>
+                                </li>
+                                <li> <a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);"><img alt="Javascript高级程序设计" src="http://img.wanlibo.com/upload/recommend/1/2010/10/28/14/1288247094729.jpg"></a>
+                                    <p><a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);">Javascript高级程序设计</a></p>
+                                </li>
+                                <li> <a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);"><img alt="Javascript高级程序设计" src="http://img.wanlibo.com/upload/recommend/1/2010/10/28/14/1288247094729.jpg"></a>
+                                    <p><a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);">Javascript高级程序设计</a></p>
+                                </li>
+                                <li> <a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);"><img alt="Javascript高级程序设计" src="http://img.wanlibo.com/upload/recommend/1/2010/10/28/14/1288247094729.jpg"></a>
+                                    <p><a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);">Javascript高级程序设计</a></p>
+                                </li>
+                                <li> <a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);"><img alt="Javascript高级程序设计" src="http://img.wanlibo.com/upload/recommend/1/2010/10/28/14/1288247094729.jpg"></a>
+                                    <p><a target="docin_p_end" title="Javascript高级程序设计" href="http://www.docin.com/p-90050855.html" onmousedown="return inpmv(731);">Javascript高级程序设计</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <span class="rd_bl"></span><span class="rd_br"></span> </div>
+            <!-- 大家在看什么 end -->
+            <!--广告-->
+            <div class="box" ><img src="http://img.wanlibo.com/upload/recommend/1/2010/10/9/17/1286615217762.jpg" width="705" height="160" /></div>
+            <!--广告end-->
+            <!--分类阅读-->
+            <div id="classread" class="box">
+                <div class="classbox">
+                    <div class="classcolumn">
+                        <ul class="classlist">
+                            <li class="title">专业资料分类<span></span></li>
+                            <li> <a title="建筑资料" target="_blank" href="/Jianz/"><b>建筑</b></a><a title="建筑论文" target="_blank" href="/Jianz/Discourse/">论文</a><a title="建筑图纸" target="_blank" href="/Jianz/Drawing/">图纸</a> <a title="建筑方案" target="_blank" href="/Jianz/Plan/">方案</a><a title="建筑规范" target="_blank" href="/Jianz/Standand/">规范</a><a title="建筑软件" target="_blank" href="/Jianz/Software/">软件</a><a title="建筑培训" target="_blank" href="/Jianz/Train/">培训</a><a title="建筑毕业设计" target="_blank" href="/Jianz/Graduate/">毕业设计</a> </li>
+                            <li> <a title="结构资料" target="_blank" href="/Jieg/"><b>结构</b></a><a title="结构论文" target="_blank" href="/Jieg/Discourse/">论文</a><a title="结构图纸" target="_blank" href="/Jieg/Drawing/">图纸</a><a title="结构方案" target="_blank" href="/Jieg/Plan/">方案</a><a title="结构规范" target="_blank" href="/Jieg/Standand/">规范</a><a title="结构软件" target="_blank" href="/Jieg/Software/">软件</a><a title="结构培训" target="_blank" href="/Jieg/Train/">培训</a><a title="结构毕业设计" target="_blank" href="/Jieg/Graduate/">毕业设计</a> </li>
+                            <li> <a title="电气资料" target="_blank" href="/Dianq/"><b>电气</b></a><a title="电气论文" target="_blank" href="/Dianq/Discourse/">论文</a><a title="电气图纸" target="_blank" href="/Dianq/Drawing/">图纸</a><a title="电气方案" target="_blank" href="/Dianq/Plan/">方案</a><a title="电气规范" target="_blank" href="/Dianq/Standand/">规范</a><a title="电气软件" target="_blank" href="/Dianq/Software/">软件</a><a title="电气培训" target="_blank" href="/Dianq/Train/">培训</a><a title="电气毕业设计" target="_blank" href="/Dianq/Graduate/">毕业设计</a> </li>
+                            <li> <a title="给排水资料" target="_blank" href="/Geips/"><b>给排水</b></a><a title="给排水论文" target="_blank" href="/Geips/Discourse/">论文</a><a title="给排水图纸" target="_blank" href="/Geips/Drawing/">图纸</a><a title="给排水方案" target="_blank" href="/Geips/Plan/">方案</a><a title="给排水规范" target="_blank" href="/Geips/Standand/">规范</a><a title="给排水软件" target="_blank" href="/Geips/Software/">软件</a><a title="给排水培训" target="_blank" href="/Geips/Train/">培训</a><a title="给排水毕业设计" target="_blank" href="/Geips/Graduate/">毕业设计</a> </li>
+                            <li> <a title="暖通空调资料" target="_blank" href="/Nuantkt/"><b>暖通空调</b></a><a title="暖通空调论文" target="_blank" href="/Nuantkt/Discourse/">论文</a><a title="暖通空调图纸" target="_blank" href="/Nuantkt/Drawing/">图纸</a><a title="暖通空调方案" target="_blank" href="/Nuantkt/Plan/">方案</a><a title="暖通空调规范" target="_blank" href="/Nuantkt/Standand/">规范</a><a title="暖通空调软件" target="_blank" href="/Nuantkt/Software/">软件</a><a title="暖通空调培训" target="_blank" href="/Nuantkt/Train/">培训</a><a title="暖通空调毕业设计" target="_blank" href="/Nuantkt/Graduate/">毕业设计</a> </li>
+                            <li> <a title="市政路桥资料" target="_blank" href="/Shizlq/"><b>市政路桥</b></a><a title="市政路桥论文" target="_blank" href="/Shizlq/Discourse/">论文</a><a title="市政路桥图纸" target="_blank" href="/Shizlq/Drawing/">图纸</a><a title="市政路桥方案" target="_blank" href="/Shizlq/Plan/">方案</a><a title="市政路桥规范" target="_blank" href="/Shizlq/Standand/">规范</a><a title="市政路桥软件" target="_blank" href="/Shizlq/Software/">软件</a><a title="市政路桥培训" target="_blank" href="/Shizlq/Train/">培训</a><a title="市政路桥毕业设计" target="_blank" href="/Shizlq/Graduate/">毕业设计</a> </li>
+                            <li> <a title="园林资料" target="_blank" href="/Yuanl/"><b>园林</b></a><a title="园林论文" target="_blank" href="/Yuanl/Discourse/">论文</a><a title="园林图纸" target="_blank" href="/Yuanl/Drawing/">图纸</a><a title="园林方案" target="_blank" href="/Yuanl/Plan/">方案</a><a title="园林规范" target="_blank" href="/Yuanl/Standand/">规范</a><a title="园林软件" target="_blank" href="/Yuanl/Software/">软件</a><a title="园林培训" target="_blank" href="/Yuanl/Train/">培训</a><a title="园林毕业设计" target="_blank" href="/Yuanl/Graduate/">毕业设计</a> </li>
+                            <li> <a title="水利资料" target="_blank" href="/Shuil/"><b>水利</b></a><a title="水利论文" target="_blank" href="/Shuil/Discourse/">论文</a><a title="水利图纸" target="_blank" href="/Shuil/Drawing/">图纸</a><a title="水利方案" target="_blank" href="/Shuil/Plan/">方案</a><a title="水利规范" target="_blank" href="/Shuil/Standand/">规范</a><a title="水利软件" target="_blank" href="/Shuil/Software/">软件</a><a title="水利培训" target="_blank" href="/Shuil/Train/">培训</a><a title="水利毕业设计" target="_blank" href="/Shuil/Graduate/">毕业设计</a> </li>
+                            <li> <a title="规划资料" target="_blank" href="/Guih/"><b>规划</b></a><a title="规划论文" target="_blank" href="/Guih/Discourse/">论文</a><a title="规划方案" target="_blank" href="/Guih/Plan/">方案</a><a title="规划规范" target="_blank" href="/Guih/Standand/">规范</a><a title="规划软件" target="_blank" href="/Guih/Software/">软件</a><a title="规划培训" target="_blank" href="/Guih/Train/">培训</a><a title="规划考试" target="_blank" href="/Guih/Exam/">考试</a> </li>
+                            <li> <a title="环保资料" target="_blank" href="/Huanb/"><b>环保</b></a><a title="环保论文" target="_blank" href="/Huanb/Discourse/">论文</a><a title="环保图纸" target="_blank" href="/Huanb/Drawing/">图纸</a><a title="环保方案" target="_blank" href="/Huanb/Plan/">方案</a><a title="环保规范" target="_blank" href="/Huanb/Standand/">规范</a><a title="环保毕业设计" target="_blank" href="/Huanb/Graduate/">毕设</a><a title="环保软件" target="_blank" href="/Huanb/Software/">软件</a><a title="环保培训" target="_blank" href="/Huanb/Train/">培训</a><a title="环保考试" target="_blank" href="/Huanb/Exam/">考试</a> </li>
+                        </ul>
+                        <ul class="classlist">
+                            <li class="title">行业资料分类</li>
+                            <li> <a title="施工资料" target="_blank" href="/Shig/"><b>施工</b></a><a title="施工论文" target="_blank" href="/Shig/Discourse/">论文</a><a title="施工图纸" target="_blank" href="/Shig/Drawing/">图纸</a><a title="施工方案" target="_blank" href="/Shig/Plan/">方案</a><a title="施工规范" target="_blank" href="/Shig/Standand/">规范</a><a title="施工软件" target="_blank" href="/Shig/Software/">软件</a><a title="施工培训" target="_blank" href="/Shig/Train/">培训</a> </li>
+                            <li> <a title="造价资料" target="_blank" href="/Zaoj/"><b>造价</b></a><a title="造价论文" target="_blank" href="/Zaoj/Discourse/">论文</a><a title="造价方案" target="_blank" href="/Zaoj/Plan/">方案</a><a title="造价规范" target="_blank" href="/Zaoj/Standand/">规范</a><a title="造价软件" target="_blank" href="/Zaoj/Software/">软件</a><a title="造价培训" target="_blank" href="/Zaoj/Train/">培训</a> </li>
+                            <li> <a title="节能资料" target="_blank" href="/Jien/"><b>节能</b></a><a title="节能论文" target="_blank" href="/Jien/Discourse/">论文</a><a title="节能图纸" target="_blank" href="/Jien/Drawing/">图纸</a><a title="节能方案" target="_blank" href="/Jien/Plan/">方案</a><a title="节能规范" target="_blank" href="/Jien/Standand/">规范</a><a title="节能软件" target="_blank" href="/Jien/Software/">软件</a><a title="节能培训" target="_blank" href="/Jien/Train/">培训</a> </li>
+                            <li> <a title="监理资料" target="_blank" href="/Jianl/"><b>监理</b></a><a title="监理论文" target="_blank" href="/Jianl/Discourse/">论文</a><a title="监理图纸" target="_blank" href="/Jianl/Drawing/">图纸</a><a title="监理方案" target="_blank" href="/Jianl/Plan/">方案</a><a title="监理规范" target="_blank" href="/Jianl/Standand/">规范</a><a title="监理软件" target="_blank" href="/Jianl/Software/">软件</a><a title="监理培训" target="_blank" href="/Jianl/Train/">培训</a> </li>
+                            <li> <a title="装修" target="_blank" href="/Zhuangx/"><b>装修</b></a><a title="装修论文" target="_blank" href="/Zhuangx/Discourse/">论文</a><a title="装修图纸" target="_blank" href="/Zhuangx/Drawing/">图纸</a><a title="装修方案" target="_blank" href="/Zhuangx/Plan/">方案</a><a title="装修规范" target="_blank" href="/Zhuangx/Standand/">规范</a><a title="装修软件" target="_blank" href="/Zhuangx/Software/">软件</a><a title="装修培训" target="_blank" href="/Zhuangx/Train/">培训</a> </li>
+                            <li> <a title="房地产" target="_blank" href="/Fangdc/"><b>房地产</b></a><a title="房地产论文" target="_blank" href="/Fangdc/Discourse/">论文</a><a title="房地产图纸" target="_blank" href="/Fangdc/Drawing/">图纸</a><a title="房地产方案" target="_blank" href="/Fangdc/Plan/">方案</a><a title="房地产规范" target="_blank" href="/Fangdc/Standand/">规范</a><a title="房地产软件" target="_blank" href="/Fangdc/Software/">软件</a><a title="房地产培训" target="_blank" href="/Fangdc/Train/">培训</a> </li>
+                        </ul>
+                        <ul class="classlist exam">
+                            <li class="title">考试资料分类</li>
+                            <li><a target="_blank" title="监理工程师" href="http://info.tgnet.cn/Jianz/Exam/1/1/">监理工程师</a>(222)</li>
+                            <li><a target="_blank" title="咨询工程师" href="http://info.tgnet.cn/Jianz/Exam/2/1/">咨询工程师</a>(97)</li>
+                            <li><a target="_blank" title="安全工程师" href="http://info.tgnet.cn/Jianz/Exam/3/1/">安全工程师</a>(95)</li>
+                            <li><a target="_blank" title="设备监理师" href="http://info.tgnet.cn/Jianz/Exam/4/1/">设备监理师</a>(58)</li>
+                            <li><a target="_blank" title="造价工程师" href="http://info.tgnet.cn/Jianz/Exam/5/1/">造价工程师</a>(308)</li>
+                            <li><a target="_blank" title="土木工程师" href="http://info.tgnet.cn/Jianz/Exam/6/1/">土木工程师</a>(56)</li>
+                            <li><a target="_blank" title="房地产估价师" href="http://info.tgnet.cn/Jianz/Exam/7/1/">房地产估价师</a>(67)</li>
+                            <li><a target="_blank" title="土地估价师" href="http://info.tgnet.cn/Jianz/Exam/8/1/">土地估价师</a>(35)</li>
+                            <li><a target="_blank" title="建造师" href="http://info.tgnet.cn/Jianz/Exam/9/1/">建造师</a>(245)</li>
+                            <li><a target="_blank" title="结构工程师" href="http://info.tgnet.cn/Jianz/Exam/10/1/">结构工程师</a>(52)</li>
+                            <li><a target="_blank" title="质量资格" href="http://info.tgnet.cn/Jianz/Exam/11/1/">质量资格</a>(78)</li>
+                            <li><a target="_blank" title="投资项目管理师" href="http://info.tgnet.cn/Jianz/Exam/12/1/">投资项目管理师</a>(15)</li>
+                            <li><a target="_blank" title="安全评价师" href="http://info.tgnet.cn/Jianz/Exam/13/1/">安全评价师</a>(17)</li>
+                            <li><a target="_blank" title="房地产经纪人" href="http://info.tgnet.cn/Jianz/Exam/14/1/">房地产经纪人</a>(22)</li>
+                            <li><a target="_blank" title="更多考试分类" href="http://info.tgnet.cn/Jianz/Exam/">更多&gt;&gt;&gt;</a></li>
+                        </ul>
+                    </div>
+                    <span class="class_l"></span><span class="class_r"></span> </div>
+            </div>
+            <!--分类阅读end-->
+            <!-- *************************************************************************** -->
+            <!--广告-->
+            <div class="box ad" id="banner46"> <a target='_blank'title="兑换之星二期" href="http://www.docin.com/topic/exchange_star/index.jsp"> <img src="http://img.wanlibo.com/upload/recommend/1/2010/10/9/17/1286615217762.jpg"/></a> </div>
+            <!--广告end-->
+        </div>
+        <!-- *************************************************************************** -->
+        <div class="boxright">
+            <!--登录与注册-->
+            <div class="box loginbox_new">
+                <ul id="login_tag">
+                    <li class="selectTag"> <a onFocus="this.blur()" onClick="selectSearchLoginDiv('login_tagnum0',this)" href="javascript:void(0)">登录</a> </li>
+                    <li class=""> <a onFocus="this.blur()" onClick="selectSearchLoginDiv('login_tagnum1',this)" href="javascript:void(0)">注册</a> </li>
+                </ul>
+                <div id="login_tagnum">
+                    <!-- 登陆 -->
+                    <div id="login_tagnum0" class="login_tagnum login_fillet selectSearch" style="display: block;"> <span class="rd_bl"></span><span class="rd_br"></span><span class="rd_tr"></span>
+                        <div class="login_new">
+                            <form onSubmit="return check();" id="login" name="login" method="post" action="/app/login">
+                                <p class="dl_box mttips">
+                                    <label for="username">用户名/邮箱</label>
+                                </p>
+                                <p class="dl_box mttips fortext_mail">
+                                    <input type="text" value="" id="username" name="username"/>
+                                </p>
+                                <p class="dl_box">
+                                    <label for="password">登录密码</label>
+                                </p>
+                                <p class="dl_box mttips">
+                                    <input type="password" onkeyDown="if(event.keyCode==32) return false" id="password" name="password"/>
+                                </p>
+                                <p class="dl_box checkcode login_rem clear"><span class="fl">
+                                    <input type="checkbox" value="1" id="save" name="save"/>
+                                    <label for="save">记住我</label>
+                                    </span><a title="忘记密码" href="/app/forward?forward=findPsw1" target="_blank" class="forget-password">忘记密码？</a></p>
+                                <p class="skills mttips10">
+                                    <input type="submit" value="登录" title="登录"  class="btn" align="bottom"/>
+                                    <span>或&nbsp;<a href="#nogo" title="马上注册" onClick="selectSearchLoginDiv('login_tagnum1',this)">马上注册</a></span></p>
+                                <xn:login-button autologoutlink="false" onMouseDown="return inpmv(734);"  onlogin="window.location.href = '/app/rr/login';"></xn:login-button>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- 注册 -->
+                    <div id="login_tagnum1" class="login_tagnum login_fillet" style="display: none;">
+                        <div class="login_new reg_new">
+                            <form id="loginForm" name="loginForm" method="post" action="/app/createUser">
+                                <p class="dl_box mttips">
+                                    <label for="regloginname">用户名:</label>
+                                    <input type="text" value="支持英文及数字组合" id="regloginname" class="regloginname" name="login_name" onFocus="if(this.value=='支持英文及数字组合') this.value='';this.className='foroldname'" onBlur="javascript:index_checkRegName('blur');">
+                                    <img class="val" id="showBlurUserName" src="images/reg_icon_cw.gif" alt=""/></p>
+                                <p class="dl_box mttips fortext_mail">
+                                    <label for="regloginemail">邮箱:</label>
+                                    <input type="text" value="" id="regloginemail" name="login_email" onBlur="javascript:index_checkRegEmail('blur');" />
+                                    <img class="val" id="showBlurEmail" src="images/reg_icon_cw.gif" alt=""/></p>
+                                <p class="dl_box">
+                                    <label for="regpassword">密码:</label>
+                                    <input type="password" onkeyDown="if(event.keyCode==32) return false" id="regpassword" name="password" onBlur="javascript:index_checkRegPassword('blur');" />
+                                    <img class="val" id="showBlurPwd" src="images/reg_icon_cw.gif" alt=""/></p>
+                                <p class="dl_box checkcode">
+                                    <label for="yanzhengma">验证码:</label>
+                                    <span class="tips">
+                                    <input type="text" value="" id="yanzhengma" name="yanzhengma" maxlength="4"/>
+                                    &nbsp;<img onclick="javascript:refCode();" style="cursor: pointer;" id="regimg" name="regimg" src="/servlet/getimg" alt=""/>&nbsp;<a title="换张图片" href="javascript:refCode();">换张图</a></span></p>
+                                <p style="margin: 0pt 0pt 0pt 50px;" class="dl_box">
+                                    <input type="checkbox" checked="checked" class="selectd" id="chAgree" name="chAgree" value="1" >
+                                    <label for="chAgree" style="float: none;top:0">已阅读并同意</label>
+                                    &nbsp; <a title="土木迷网服务条款" target="_blank" href="#">服务条款</a></p>
+                                <p class="mttips">
+                                    <input type="button" value="确定注册" title="确定注册" onClick="javascript:index_createuser();"  class="reg regtips"/>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--登录end-->
+            <!--用户排行-->
+            <div id="userrank" class="box slills fr"> <span class="rd_tl"></span><span class="rd_tr"></span>
+                <div class="userbox userbox-freeDoc">
+                    <div class="forboxbg clear">
+                        <!-- 消息 -->
+                        <h4><a href="/app/my/msg/system" onMouseDown="return inpmv(736);" target="_blank" class="fr">更多&gt;&gt;</a>新闻公告</h4>
+                        <div class="recombox">
+                            <ul class="announce">
+                                <li class="tips clear">
+                                    <ul>
+                                        <li><span>【官方秘籍】</span><a title="如何在土木迷赚钱？" target="_blank" onMouseDown="return inpmv(736);" href="/p-44907311.html">如何在土木迷赚钱</a></li>
+                                        <li><span>【用户心得】</span><a title="土木迷赚钱实战攻略" target="_blank" onMouseDown="return inpmv(736);" href="/p-32823462.html">土木迷赚钱实战攻略</a></li>
+                                    </ul>
+                                </li>
+                                <li><a onMouseDown="return inpmv(736);" title="土木迷社区团队上线，团长火热招募！" href="javascript:showMessageDiv(4891210);">土木迷社区团队上线，团！</a>
+                                    <div id="messageTitle4891210" style="display:none">土木迷社区团队上线，团长火热招募！</div>
+                                    <div id="messageContent4891210" style="display:none">
+                                        <p>土木迷社区团队千呼万唤始出来，这次社区给大家带来了真正属于豆友的组织，只要你在自己的专业领域有自己的见地，并且有你的组织能力，就能在土木迷成就一番霸业，接受至高荣耀的洗礼！</p>
+                                        <p>招募详情：http://shequ.docin.com/app/shequ/themeview?tid=31622</p>
+                                    </div>
+                                </li>
+                                <li><a onMouseDown="return inpmv(736);" title="“兑换之星”专访正在播出" href="javascript:showMessageDiv(4891209);">“兑换之星”专访正在播出</a>
+                                    <div id="messageTitle4891209" style="display:none">“兑换之星”专访正在播出</div>
+                                    <div id="messageContent4891209" style="display:none">
+                                        <p>亲爱的豆友们，</p>
+                                        <p>大家好！</p>
+                                        <p>欢迎观看“分享文档，快乐你我”第二期“土木迷兑换之星”专访节目。土木迷在2010年10月13日上午10：00播出了“土木迷兑换之星”网络专访节目，邀请到通过不到6个月的时间就赚取了9000元的“土木迷兑换之星”“管理咨询全案”，以及2位漂亮的北京地区特别豆友颁奖嘉宾共同出席了本节目，节目精彩连连，不可错过哦！</p>
+                                        <p>视频节目地址：</p>
+                                        <p>http://www.docin.com/topic/exchange_star/index.jsp</p>
+                                    </div>
+                                </li>
+                                <li><a onMouseDown="return inpmv(736);" title="关于“侵权文档删除”的声明" href="javascript:showMessageDiv(4891205);"><span style='color:red;'>关于“侵权文档删除”的声明</span></a>
+                                    <div id="messageTitle4891205" style="display:none"><span style='color:red;'>关于“侵权文档删除”的声明</span></div>
+                                    <div id="messageContent4891205" style="display:none">
+                                        <p>鉴于本网站接到告知，用户名为kaoyanimm（昵称:五指图集）在本网站上传的《彩色电视机I2C总线调整与维修》一书，用户名为yangmucheng001上传的（昵称:yangmucheng001）《家庭影院的组建与配置比例》一书，用户名为zylibra（昵称:水边的antiphy）上传的《家用电器控制与保护应用电路集集粹》、《灯光控制应用电路集粹》、《报警器、警示器应用电路集粹集机械工业出版社》、《科教、娱乐应用电路集粹》、《电源应用电路集粹》系未经著作权人授权发布的侵权作品，本网站特此告知各用户，上述文件已被删除，特此通告。</p>
+                                        <p></p>
+                                        <p>日期:2010年8月31日</p>
+                                        <p>土木迷世纪（北京）网络技术有限公司</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--消息end-->
+                        <!--阅读前10-->
+                        <h4><a href="/jsp_cn/top_outtrans_user.jsp" onMouseDown="return inpmv(735);" target="_blank" class="fr">更多&gt;&gt;</a>最近兑换</h4>
+                        <div class="foractiveuser">
+                            <ol class="activeuser">
+                                <li><span class="num">1</span><img class="userpic" alt="山东小管" src="http://img.wanlibo.com/upload/users/1/2010/4/27/21/8650289/1272376396346_48x48.jpg" />
+                                    <p class="fcb">男,河北省石家庄市</p>
+                                    <p class="fc6">兑换<span class="fco">100</span>元</p>
+                                    <p>累计已兑换<span>100</span>元</p>
+                                </li>
+                                <li><span class="num">2</span><img class="userpic" alt="完美世界" src="http://img.wanlibo.com/upload/users/1/2010/8/8/19/5648821/1281268729682_48x48.gif" />
+                                    <p class="fcb">男,福州</p>
+                                    <p class="fc6">兑换<span class="fco">100</span>元</p>
+                                    <p>累计已兑换<span>900</span>元</p>
+                                </li>
+                                <li><span class="num">3</span><img class="userpic" alt="Emily" src="http://img.wanlibo.com/upload/users/1/2009/5/13/15/1162670/1242198552595_48x48.jpg" />
+                                    <p class="fcb">女,北京</p>
+                                    <p class="fc6">兑换<span class="fco">8300</span>元</p>
+                                    <p>累计已兑换<span>8500</span>元</p>
+                                </li>
+                                <li><span class="num">4</span><img class="userpic" alt="一言书屋" src="http://img.wanlibo.com/upload/users/1/2010/10/13/23/649926/1286982139798_48x48.jpg" />
+                                    <p class="fcb">女,山东青岛</p>
+                                    <p class="fc6">兑换<span class="fco">100</span>元</p>
+                                    <p>累计已兑换<span>200</span>元</p>
+                                </li>
+                                <li><span class="num">5</span><img class="userpic" alt="廖俊辉" src="http://img.wanlibo.com/upload/users/1/2008/12/12/10/539421/1229050481770_48x48.jpg" />
+                                    <p class="fcb">男,安徽</p>
+                                    <p class="fc6">兑换<span class="fco">300</span>元</p>
+                                    <p>累计已兑换<span>4300</span>元</p>
+                                </li>
+                                <li><span class="num">6</span><img class="userpic" alt="shigongzuzhi&#46;com" src="http://img.wanlibo.com/upload/users/1/2010/8/3/11/7340898/1280805054470_48x48.jpg" />
+                                    <p class="fcb">男,成都</p>
+                                    <p class="fc6">兑换<span class="fco">100</span>元</p>
+                                    <p>累计已兑换<span>900</span>元</p>
+                                </li>
+                            </ol>
+                        </div>
+                        <!--阅读前10end-->
+                    </div>
+                </div>
+                <span class="rd_bl"></span><span class="rd_br"></span> </div>
+            <!--用户排行end-->
+        </div>
+        <!--精选和最新文档-->
+        <div id="lowercont" class="box slills"> <span class="rd_tl"></span><span class="rd_tr"></span>
+            <div class="lowerbox">
+                <div class="lowercolumn borderskills">
+                    <h4>精选文档</h4>
+                    <dl>
+                        <dt><a onMouseDown="return inpmv(737);" href="/p-60527178.html" target="docin_p_end"><img alt="高效时间管理经典培训教材" src="http://img.wanlibo.com/upload/recommend/1/2010/10/25/14/1287988122286.jpg"/></a></dt>
+                        <dd class="first"> <a onMouseDown="return inpmv(737);" title="高效时间管理经典培训教材" href="/p-60527178.html" target="docin_p_end">高效时间管理经典培训教材</a> </dd>
+                        <dd> 上传人:&nbsp;<img class="userhead_min" src="http://img.wanlibo.com/upload/users/1/2010/4/7/11/7563709/1270611082579_48x48.jpg" alt="共分享齐欢乐"/> <a onMouseDown="return inpmv(737);" target="_blank" title="共分享齐欢乐" href="/cbhsun">共分享齐欢乐</a> </dd>
+                        <dd>2010-06-18 13:11</dd>
+                        <dd>热度:<span class='viewhot5'></span></dd>
+                    </dl>
+                    <dl>
+                        <dt><a onMouseDown="return inpmv(737);" href="/p-84242421.html" target="docin_p_end"><img alt="公共基础理论知识重点整理（全）" src="http://img.wanlibo.com/upload/recommend/1/2010/10/25/14/1287987733626.jpg"/></a></dt>
+                        <dd class="first"> <a onMouseDown="return inpmv(737);" title="公共基础理论知识重点整理（全）" href="/p-84242421.html" target="docin_p_end">公共基础理论知识重点整理（全）</a> </dd>
+                        <dd> 上传人:&nbsp;<img class="userhead_min" src="http://img.wanlibo.com/upload/users/1/2010/9/7/9/15150594/1283822595616_48x48.jpg" alt="wgwok"/> <a onMouseDown="return inpmv(737);" target="_blank" title="wgwok" href="/Wgw11607">wgwok</a> </dd>
+                        <dd>2010-09-29 17:55</dd>
+                        <dd>热度:<span class='viewhot5'></span></dd>
+                    </dl>
+                    <dl>
+                        <dt><a onMouseDown="return inpmv(737);" href="/p-56119408.html" target="docin_p_end"><img alt="基于java的博客网站设计与开发毕业论文" src="http://img.wanlibo.com/upload/recommend/1/2010/10/21/12/1287636975051.jpg"/></a></dt>
+                        <dd class="first"> <a onMouseDown="return inpmv(737);" title="基于java的博客网站设计与开发毕业论文" href="/p-56119408.html" target="docin_p_end">基于java的博客网站设计与开发..</a> </dd>
+                        <dd> 上传人:&nbsp;<img class="userhead_min" src="http://img.wanlibo.com/upload/users/1/2010/3/4/14/1903374/1267684999121_48x48.jpg" alt="wangdy"/> <a onMouseDown="return inpmv(737);" target="_blank" title="wangdy" href="/2008wangdy">wangdy</a> </dd>
+                        <dd>2010-05-23 19:04</dd>
+                        <dd>热度:<span class='viewhot5'></span></dd>
+                    </dl>
+                    <dl>
+                        <dt><a onMouseDown="return inpmv(737);" href="/p-87282604.html" target="docin_p_end"><img alt="美国版时尚杂志Cosmopolitan_2010-11_1/2" src="http://img.wanlibo.com/upload/recommend/1/2010/10/20/9/1287539711853.jpg"/></a></dt>
+                        <dd class="first"> <a onMouseDown="return inpmv(737);" title="美国版时尚杂志Cosmopolitan_2010-11_1/2" href="/p-87282604.html" target="docin_p_end">美国版时尚杂志Cosmopolitan_2..</a> </dd>
+                        <dd> 上传人:&nbsp;<img class="userhead_min" src="http://img.wanlibo.com/upload/users/1/2010/6/25/8/11883716/1277425768128_48x48.jpg" alt="大众文档"/> <a onMouseDown="return inpmv(737);" target="_blank" title="大众文档" href="/austes">大众文档</a> </dd>
+                        <dd>2010-10-11 16:33</dd>
+                        <dd>热度:<span class='viewhot5'></span></dd>
+                    </dl>
+                    <dl>
+                        <dt><a onMouseDown="return inpmv(737);" href="/p-41368033.html" target="docin_p_end"><img alt="高考新题型《英语•七选五阅读填空》" src="http://img.wanlibo.com/upload/recommend/1/2010/10/20/9/1287539282824.jpg"/></a></dt>
+                        <dd class="first"> <a onMouseDown="return inpmv(737);" title="高考新题型《英语•七选五阅读填空》" href="/p-41368033.html" target="docin_p_end">高考新题型《英语•七选五阅读填..</a> </dd>
+                        <dd> 上传人:&nbsp;<img class="userhead_min" src="http://img.wanlibo.com/upload/users/1/2010/1/6/19/2844345/1262778803064_48x48.jpg" alt="高中教学资源库"/> <a onMouseDown="return inpmv(737);" target="_blank" title="高中教学资源库" href="/davidasm">高中教学资源库</a> </dd>
+                        <dd>2010-01-08 19:08</dd>
+                        <dd>热度:<span class='viewhot5'></span></dd>
+                    </dl>
+                    <dl>
+                        <dt><a onMouseDown="return inpmv(737);" href="/p-81213166.html" target="docin_p_end"><img alt="小学六年级语文上册1-8单元试卷&#46;doc" src="http://img.wanlibo.com/upload/recommend/1/2010/10/19/9/1287451785506.jpg"/></a></dt>
+                        <dd class="first"> <a onMouseDown="return inpmv(737);" title="小学六年级语文上册1-8单元试卷&#46;doc" href="/p-81213166.html" target="docin_p_end">小学六年级语文上册1-8单元试卷..</a> </dd>
+                        <dd> 上传人:&nbsp;<img class="userhead_min" src="http://img.wanlibo.com/upload/users/1/2010/3/19/20/5978614/1269000116106_48x48.jpg" alt="学海无涯"/> <a onMouseDown="return inpmv(737);" target="_blank" title="学海无涯" href="/zbh624">学海无涯</a> </dd>
+                        <dd>2010-09-18 18:54</dd>
+                        <dd>热度:<span class='viewhot4'></span></dd>
+                    </dl>
+                    <dl>
+                        <dt><a onMouseDown="return inpmv(737);" href="/p-84125922.html" target="docin_p_end"><img alt="日全食观测" src="http://img.wanlibo.com/upload/recommend/1/2010/10/18/9/1287367057547.jpg"/></a></dt>
+                        <dd class="first"> <a onMouseDown="return inpmv(737);" title="日全食观测" href="/p-84125922.html" target="docin_p_end">日全食观测</a> </dd>
+                        <dd> 上传人:&nbsp;<img class="userhead_min" src="http://img.wanlibo.com/upload/users/1/2010/9/4/16/15753385/1283587787309_48x48.jpg" alt="雪儿"/> <a onMouseDown="return inpmv(737);" target="_blank" title="雪儿" href="/funnydoudou">雪儿</a> </dd>
+                        <dd>2010-09-29 10:22</dd>
+                        <dd>热度:<span class='viewhot5'></span></dd>
+                    </dl>
+                </div>
+                <div class="lowercolumn">
+                    <h4>最新文档<span><a href="/list-0-0-1.html" onMouseDown="return inpmv(739);" class="fr">更多&gt;&gt;</a></span></h4>
+                    <dl>
+                        <dt><a onMouseDown="return inpmv(739);" href="/p-91260893.html" target="docin_p_end"><img alt="空气压缩机永磁同步电动机控制系统的设计" src="http://img2.yimk.com/docin_91260893_90x80.jpg"/></a></dt>
+                        <dd class="first"> <a onMouseDown="return inpmv(739);" title="空气压缩机永磁同步电动机控制系统的设计" href="/p-91260893.html" target="docin_p_end">空气压缩机永磁同步电动机控制..</a> </dd>
+                        <dd> 上传人:&nbsp;<img class="userhead_min" src="http://img.wanlibo.com/images_cn/people01_48x48.gif" alt="gzb2050"/> <a onMouseDown="return inpmv(739);" target="_blank" title="gzb2050" href="/gaozhengbiao2010">gzb2050</a> </dd>
+                        <dd>2010-10-25 16:41
+                            <p>5<span>小时前</span></p>
+                        </dd>
+                        <dd>热度:<span class='viewhot4'></span></dd>
+                    </dl>
+                    <dl>
+                        <dt><a onMouseDown="return inpmv(739);" href="/p-91260489.html" target="docin_p_end"><img alt="国金证券-软饮料行业：主产国减产促橙汁价格上行,看涨国内果汁出口价格-100113" src="http://img2.yimk.com/docin_91260489_90x80.jpg"/></a></dt>
+                        <dd class="first"> <a onMouseDown="return inpmv(739);" title="国金证券-软饮料行业：主产国减产促橙汁价格上行,看涨国内果汁出口价格-100113" href="/p-91260489.html" target="docin_p_end">国金证券-软饮料行业：主产国减..</a> </dd>
+                        <dd> 上传人:&nbsp;<img class="userhead_min" src="http://img.wanlibo.com/images_cn/people01_48x48.gif" alt="fangsheke66"/> <a onMouseDown="return inpmv(739);" target="_blank" title="fangsheke66" href="/fangsheke66">fangsheke66</a> </dd>
+                        <dd>2010-10-25 16:36
+                            <p>5<span>小时前</span></p>
+                        </dd>
+                        <dd>热度:<span class='viewhot4'></span></dd>
+                    </dl>
+                    <dl>
+                        <dt><a onMouseDown="return inpmv(739);" href="/p-91260267.html" target="docin_p_end"><img alt="影响教师一生的100个好习惯" src="http://img4.yimk.com/docin_91260267_90x80.jpg"/></a></dt>
+                        <dd class="first"> <a onMouseDown="return inpmv(739);" title="影响教师一生的100个好习惯" href="/p-91260267.html" target="docin_p_end">影响教师一生的100个好习惯</a> </dd>
+                        <dd> 上传人:&nbsp;<img class="userhead_min" src="http://img.wanlibo.com/upload/users/1/2010/9/17/16/14394200/1284711254231_48x48.jpg" alt="宰相"/> <a onMouseDown="return inpmv(739);" target="_blank" title="宰相" href="/zai_xiang">宰相</a> </dd>
+                        <dd>2010-10-25 16:56
+                            <p>5<span>小时前</span></p>
+                        </dd>
+                        <dd>热度:<span class='viewhot4'></span></dd>
+                    </dl>
+                    <dl>
+                        <dt><a onMouseDown="return inpmv(739);" href="/p-91259814.html" target="docin_p_end"><img alt="影响100年的24个营销启示" src="http://img3.yimk.com/docin_91259814_90x80.jpg"/></a></dt>
+                        <dd class="first"> <a onMouseDown="return inpmv(739);" title="影响100年的24个营销启示" href="/p-91259814.html" target="docin_p_end">影响100年的24个营销启示</a> </dd>
+                        <dd> 上传人:&nbsp;<img class="userhead_min" src="http://img.wanlibo.com/upload/users/1/2010/9/17/16/14394200/1284711254231_48x48.jpg" alt="宰相"/> <a onMouseDown="return inpmv(739);" target="_blank" title="宰相" href="/zai_xiang">宰相</a> </dd>
+                        <dd>2010-10-25 16:38
+                            <p>6<span>小时前</span></p>
+                        </dd>
+                        <dd>热度:<span class='viewhot4'></span></dd>
+                    </dl>
+                    <dl>
+                        <dt><a onMouseDown="return inpmv(739);" href="/p-91259611.html" target="docin_p_end"><img alt="输血感染性安全问题的现状与展望" src="http://img4.yimk.com/docin_91259611_90x80.jpg"/></a></dt>
+                        <dd class="first"> <a onMouseDown="return inpmv(739);" title="输血感染性安全问题的现状与展望" href="/p-91259611.html" target="docin_p_end">输血感染性安全问题的现状与展望</a> </dd>
+                        <dd> 上传人:&nbsp;<img class="userhead_min" src="http://img.wanlibo.com/upload/users/1/2010/8/19/7/5798449/1282175598065_48x48.jpg" alt="104090103"/> <a onMouseDown="return inpmv(739);" target="_blank" title="104090103" href="/jimmy555">104090103</a> </dd>
+                        <dd>2010-10-25 16:04
+                            <p>6<span>小时前</span></p>
+                        </dd>
+                        <dd>热度:<span class='viewhot4'></span></dd>
+                    </dl>
+                    <dl>
+                        <dt><a onMouseDown="return inpmv(739);" href="/p-91259190.html" target="docin_p_end"><img alt="[通讯标准]-YDT1313-2004" src="http://img3.yimk.com/docin_91259190_90x80.jpg"/></a></dt>
+                        <dd class="first"> <a onMouseDown="return inpmv(739);" title="[通讯标准]-YDT1313-2004" href="/p-91259190.html" target="docin_p_end">[通讯标准]-YDT1313-2004</a> </dd>
+                        <dd> 上传人:&nbsp;<img class="userhead_min" src="http://img.wanlibo.com/upload/users/1/2010/7/20/11/6425976/1279595622852_48x48.gif" alt="yuanwei0412"/> <a onMouseDown="return inpmv(739);" target="_blank" title="yuanwei0412" href="/yuanwei0412">yuanwei0412</a> </dd>
+                        <dd>2010-10-25 16:53
+                            <p>6<span>小时前</span></p>
+                        </dd>
+                        <dd>热度:<span class='viewhot4'></span></dd>
+                    </dl>
+                    <dl>
+                        <dt><a onMouseDown="return inpmv(739);" href="/p-91258829.html" target="docin_p_end"><img alt="国金证券-英威腾-002334-需求增长、品牌及渠道优势促成公司业绩增长-100112" src="http://img2.yimk.com/docin_91258829_90x80.jpg"/></a></dt>
+                        <dd class="first"> <a onMouseDown="return inpmv(739);" title="国金证券-英威腾-002334-需求增长、品牌及渠道优势促成公司业绩增长-100112" href="/p-91258829.html" target="docin_p_end">国金证券-英威腾-002334-需求增..</a> </dd>
+                        <dd> 上传人:&nbsp;<img class="userhead_min" src="http://img.wanlibo.com/images_cn/people01_48x48.gif" alt="fangsheke66"/> <a onMouseDown="return inpmv(739);" target="_blank" title="fangsheke66" href="/fangsheke66">fangsheke66</a> </dd>
+                        <dd>2010-10-25 16:54
+                            <p>6<span>小时前</span></p>
+                        </dd>
+                        <dd>热度:<span class='viewhot4'></span></dd>
+                    </dl>
+                </div>
+                <div class="rightcolumn fr">
+                    <!--机构-->
+                    <h4 class="fs14"><a href="/app/company/index" onMouseDown="return inpmv(1197);"target="_blank" class="fr">更多&gt;&gt;</a>最新悬赏 TOP10 </h4>
+                    <div class="recombox">
+                       <ul class="doing">
+                          <li><span class="num">1</span>【<a href="#">点击投稿</a>】 <span class="blue">yuwei</span> 发布了文档悬赏：建筑师的理想，悬赏金额：<strong>10元</strong></li>
+                          <li><span class="num">2</span>【<a href="#">点击投稿</a>】 <span class="blue">yuwei</span> 发布了文档悬赏：建筑师的理想，悬赏金额：<strong>10元</strong></li>
+                          <li><span class="num">3</span>【<a href="#">点击投稿</a>】 <span class="blue">yuwei</span> 发布了文档悬赏：建筑师的理想，悬赏金额：<strong>10元</strong></li>
+                          <li><span class="num">4</span>【<a href="#">点击投稿</a>】 <span class="blue">yuwei</span> 发布了文档悬赏：建筑师的理想，悬赏金额：<strong>10元</strong></li>
+                          <li><span class="num">5</span>【<a href="#">点击投稿</a>】 <span class="blue">yuwei</span> 发布了文档悬赏：建筑师的理想，悬赏金额：<strong>10元</strong></li>
+                          <li><span class="num">6</span>【<a href="#">点击投稿</a>】 <span class="blue">yuwei</span> 发布了文档悬赏：建筑师的理想，悬赏金额：<strong>10元</strong></li>
+                          <li><span class="num">7</span>【<a href="#">点击投稿</a>】 <span class="blue">yuwei</span> 发布了文档悬赏：建筑师的理想，悬赏金额：<strong>10元</strong></li>
+                          <li><span class="num">8</span>【<a href="#">点击投稿</a>】 <span class="blue">yuwei</span> 发布了文档悬赏：建筑师的理想，悬赏金额：<strong>10元</strong></li>
+                          <li><span class="num">9</span>【<a href="#">点击投稿</a>】 <span class="blue">yuwei</span> 发布了文档悬赏：建筑师的理想，悬赏金额：<strong>10元</strong></li>
+                          <li style=" border-bottom:0; "><span class="num">10</span>【<a href="#">点击投稿</a>】 <span class="blue">yuwei</span> 发布了文档悬赏：建筑师的理想，悬赏金额：<strong>10元</strong></li>
+                          
+                       </ul>
+                    </div>
+                    <!--机构结束-->
+                    <!--阅读排行-->
+                    <h4>阅读TOP10</h4>
+                    <div class="recombox">
+                        <ul class="date_new">
+                            <li id="monthLi" class="ahover"><a onMouseOver="javascript:changeDayNum('month');" href="/list-0-0-1-3-1-1.html">月</a></li>
+                            <li id="weekLi" class="ahover"><a onMouseOver="javascript:changeDayNum('week');" href="/list-0-0-1-2-1-1.html">周</a></li>
+                            <li id="todayLi" class="active"><a onMouseOver="javascript:changeDayNum('today');" href="/list-0-0-1-1-1-1.html">日</a></li>
+                        </ul>
+                        <ol id="readToday">
+                            <li> <span>1</span> <a onMouseDown="return inpmv(738);"  target="_blank" title="考研英语12句作文法(适用初、高中及大学" href="/p-90775484.html">考研英语12句作文法(适用初..</a> </li>
+                            <li> <span>2</span> <a onMouseDown="return inpmv(738);"  target="_blank" title="巧手易Hand Made 38(上)" href="/p-90846459.html">巧手易Hand Made 38(上)</a> </li>
+                            <li> <span>3</span> <a onMouseDown="return inpmv(738);"  target="_blank" title="生物化学习题与辅导" href="/p-90884175.html">生物化学习题与辅导</a> </li>
+                            <li> <span>4</span> <a onMouseDown="return inpmv(738);"  target="_blank" title="意大利时尚杂志《io donna》2010-10-23_1/2" href="/p-90818289.html">意大利时尚杂志《io donna..</a> </li>
+                            <li> <span>5</span> <a onMouseDown="return inpmv(738);"  target="_blank" title="现代装饰-家居_2010年10月号_2/2" href="/p-90828581.html">现代装饰-家居_2010年10月..</a> </li>
+                            <li> <span>6</span> <a onMouseDown="return inpmv(738);"  target="_blank" title="《Collezioni_Haute_Couture》高级女装发布会合集（2010年秋冬号）_2/3" href="/p-90825125.html">《Collezioni_Haute_Coutu..</a> </li>
+                            <li> <span>7</span> <a onMouseDown="return inpmv(738);"  target="_blank" title="最新(免费)教育学心理学试题及答案2010" href="/p-90867441.html">最新(免费)教育学心理学试..</a> </li>
+                            <li> <span>8</span> <a onMouseDown="return inpmv(738);"  target="_blank" title="2010-11赛季NBA版漫画英雄：姚明化身“绿巨人”" href="/p-90811507.html">2010-11赛季NBA版漫画英雄..</a> </li>
+                            <li> <span>9</span> <a onMouseDown="return inpmv(738);"  target="_blank" title="现代室内光环境设计趋势" href="/p-90859214.html">现代室内光环境设计趋势</a> </li>
+                            <li> <span>10</span> <a onMouseDown="return inpmv(738);"  target="_blank" title="《通信原理》第04章 模拟信号的数字化" href="/p-88878940.html">《通信原理》第04章 模拟信..</a> </li>
+                        </ol>
+                        <ol id="readWeek" style="display:none;">
+                            <li> <span>1</span> <a onMouseDown="return inpmv(738);" target="_blank" title="保险资金运用法律问题分析" href="/p-89807133.html">保险资金运用法律问题分析</a> </li>
+                            <li> <span>2</span> <a onMouseDown="return inpmv(738);" target="_blank" title="2010证券交易真题及答案" href="/p-89496780.html">2010证券交易真题及答案</a> </li>
+                            <li> <span>3</span> <a onMouseDown="return inpmv(738);" target="_blank" title="2010全球99大最性感女人" href="/p-89329424.html">2010全球99大最性感女人</a> </li>
+                            <li> <span>4</span> <a onMouseDown="return inpmv(738);" target="_blank" title="组织行为：时间管理的方法和技巧" href="/p-89566880.html">组织行为：时间管理的方法..</a> </li>
+                            <li> <span>5</span> <a onMouseDown="return inpmv(738);" target="_blank" title="考研英语12句作文法(适用初、高中及大学" href="/p-90775484.html">考研英语12句作文法(适用初..</a> </li>
+                            <li> <span>6</span> <a onMouseDown="return inpmv(738);" target="_blank" title="2010年IELTS套句式写作大全" href="/p-89269577.html">2010年IELTS套句式写作大全</a> </li>
+                            <li> <span>7</span> <a onMouseDown="return inpmv(738);" target="_blank" title="迈克尔·杰克逊经典高清壁纸" href="/p-89304817.html">迈克尔·杰克逊经典高清壁纸</a> </li>
+                            <li> <span>8</span> <a onMouseDown="return inpmv(738);" target="_blank" title="故宫旧藏珍宝欣赏_split_22" href="/p-89266986.html">故宫旧藏珍宝欣赏_split_22</a> </li>
+                            <li> <span>9</span> <a onMouseDown="return inpmv(738);" target="_blank" title="时尚先锋杂志L´Officiel_2010年10月_2/2" href="/p-89411546.html">时尚先锋杂志L´Officiel_2..</a> </li>
+                            <li> <span>10</span> <a onMouseDown="return inpmv(738);" target="_blank" title="海贼王(通缉令全集)" href="/p-87497881.html">海贼王(通缉令全集)</a> </li>
+                        </ol>
+                        <ol id="readmonth" style="display:none;">
+                            <li> <span>1</span> <a onMouseDown="return inpmv(738);" target="_blank" title="凝固的艺术之建筑美学（内有优美配乐）differentsarchitectures" href="/p-84670122.html">凝固的艺术之建筑美学（内..</a> </li>
+                            <li> <span>2</span> <a onMouseDown="return inpmv(738);" target="_blank" title="Excel在统计中的应用与数据统计分析" href="/p-84961957.html">Excel在统计中的应用与数据..</a> </li>
+                            <li> <span>3</span> <a onMouseDown="return inpmv(738);" target="_blank" title="百煲精汤：煲汤，秋冬滋补佳品 PPT" href="/p-83535473.html">百煲精汤：煲汤，秋冬滋补..</a> </li>
+                            <li> <span>4</span> <a onMouseDown="return inpmv(738);" target="_blank" title="如何设计一份令人舒服的PPT" href="/p-87870409.html">如何设计一份令人舒服的PPT</a> </li>
+                            <li> <span>5</span> <a onMouseDown="return inpmv(738);" target="_blank" title="职业经理人培训教材" href="/p-85019214.html">职业经理人培训教材</a> </li>
+                            <li> <span>6</span> <a onMouseDown="return inpmv(738);" target="_blank" title="Shipping Operate(货运资料全部内容）" href="/p-87076206.html">Shipping Operate(货运资料..</a> </li>
+                            <li> <span>7</span> <a onMouseDown="return inpmv(738);" target="_blank" title="优秀商务ppt模板之改变管理模式change management" href="/p-84816312.html">优秀商务ppt模板之改变管理..</a> </li>
+                            <li> <span>8</span> <a onMouseDown="return inpmv(738);" target="_blank" title="花茶作用及功效" href="/p-84476418.html">花茶作用及功效</a> </li>
+                            <li> <span>9</span> <a onMouseDown="return inpmv(738);" target="_blank" title="PPT制作实战技巧教程" href="/p-84987862.html">PPT制作实战技巧教程</a> </li>
+                            <li> <span>10</span> <a onMouseDown="return inpmv(738);" target="_blank" title="(677)［北师大版］七年级数学教案全套[上下两册]（232页）" href="/p-85026745.html">(677)［北师大版］七年级数..</a> </li>
+                        </ol>
+                    </div>
+                    <!--阅读排行-->
+                    <!-- 标签 start -->
+                    <h4><a href="/jsp_cn/searchNew/tag_hot.jsp" onMouseDown="return inpmv(741);"  target="_blank" class="fr">更多&gt;&gt;</a>热门Tag</h4>
+                    <div class="recombox" >
+                        <ul id="tags">
+                            <li class=""><a onMouseDown="return inpmv(741);" target="_blank" href="/app/docsearch?keyword=%E9%92%93%E9%B1%BC%E5%B2%9B" title="钓鱼岛">钓鱼岛</a></li>
+                            <li class=""><a onMouseDown="return inpmv(741);" target="_blank" href="/app/docsearch?keyword=%E8%8F%B2%E5%BE%8B%E5%AE%BE" title="菲律宾">菲律宾</a></li>
+                            <li class=""><a onMouseDown="return inpmv(741);" target="_blank" href="/app/docsearch?keyword=%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93" title="工作总结">工作总结</a></li>
+                            <li class=""><a onMouseDown="return inpmv(741);" target="_blank" href="/app/docsearch?keyword=%E7%81%AB%E5%B1%B1" title="火山">火山</a></li>
+                            <li class=""><a onMouseDown="return inpmv(741);" target="_blank" href="/app/docsearch?keyword=%E5%BB%BA%E7%AD%91%E6%8A%97%E9%9C%87" title="建筑抗震">建筑抗震</a></li>
+                            <li class=""><a onMouseDown="return inpmv(741);" target="_blank" href="/app/docsearch?keyword=%E6%95%99%E5%AD%A6%E8%AE%BE%E8%AE%A1" title="教学设计">教学设计</a></li>
+                            <li class=""><a onMouseDown="return inpmv(741);" target="_blank" href="/app/docsearch?keyword=%E7%90%86%E8%AE%BA%E7%89%A9%E7%90%86" title="理论物理">理论物理</a></li>
+                            <li class=""><a onMouseDown="return inpmv(741);" target="_blank" href="/app/docsearch?keyword=%E6%97%85%E6%B8%B8" title="旅游">旅游</a></li>
+                            <li class="hottag"><a onMouseDown="return inpmv(741);" target="_blank" href="/app/docsearch?keyword=%E8%AE%BA%E6%96%87" title="论文">论文</a></li>
+                            <li class=""><a onMouseDown="return inpmv(741);" target="_blank" href="/app/docsearch?keyword=%E6%B7%B1%E5%9C%B3%E7%89%B9%E5%8C%BA" title="深圳特区">深圳特区</a></li>
+                            <li class=""><a onMouseDown="return inpmv(741);" target="_blank" href="/app/docsearch?keyword=%E5%B0%8F%E6%9C%88%E6%9C%88" title="小月月">小月月</a></li>
+                            <li class=""><a onMouseDown="return inpmv(741);" target="_blank" href="/app/docsearch?keyword=%E6%96%B0%E8%A5%BF%E5%85%B0" title="新西兰">新西兰</a></li>
+                            <li class=""><a onMouseDown="return inpmv(741);" target="_blank" href="/app/docsearch?keyword=%E4%BC%8A%E6%98%A5" title="伊春">伊春</a></li>
+                            <li class=""><a onMouseDown="return inpmv(741);" target="_blank" href="/app/docsearch?keyword=%E6%9C%88%E9%A5%BC" title="月饼">月饼</a></li>
+                            <li class=""><a onMouseDown="return inpmv(741);" target="_blank" href="/app/docsearch?keyword=%E6%A0%BD%E5%9F%B9%E6%8A%80%E6%9C%AF" title="栽培技术">栽培技术</a></li>
+                            <li class=""><a onMouseDown="return inpmv(741);" target="_blank" href="/app/docsearch?keyword=%E4%B8%AD%E7%A7%8B" title="中秋">中秋</a></li>
+                        </ul>
+                    </div>
+                    <!-- 标签 end -->
+                </div>
+            </div>
+            <span class="rd_bl"></span><span class="rd_br"></span> </div>
+        <div class="box sitesearch">
+            <form action="/app/docsearch" method="post">
+                <label for="topsearchZh">站内搜索</label>
+                <input id="topsearchZh" type="text" name="topsearch" onkeyDown="if(event.keyCode==13) searchNewDown()" />
+                <input type="submit" value="确定" title="确定" class="btn" onClick="return searchNewDown()" />
+            </form>
+        </div>
+        <div class="box column-yqlj">
+            <dl>
+                <dt>友情链接：</dt>
+                <dd><a href="http://www.zcool.com.cn/" title="站酷网" target="_blank">站酷网</a><a href="http://www.csdn.net/" title="CSDN" target="_blank">CSDN</a><a href="http://www.cnmo.com/" title="手机中国" target="_blank">手机中国</a><a href="http://www.caistv.com/" title="商界财视网" target="_blank">商界财视网</a><a href="http://www.youth.cn/" title="中国青年网" target="_blank">中国青年网</a><a href="http://www.tiexue.net/" title="铁血网" target="_blank">铁血网</a><a href="http://www.beareyes.com.cn/" title="小熊在线" target="_blank">小熊在线</a><a href="http://www.kuwo.cn/" title="酷我音乐" target="_blank">酷我音乐</a><a href="http://www.17k.com/" title="17k小说网" target="_blank">17k小说网</a><a href="http://www.daqi.com/" title="大旗网" target="_blank">大旗网</a><a href="http://mobile.pcpop.com/" title="泡泡网手机" target="_blank">泡泡网手机</a><a href="http://www.igo.cn/" title="留学" target="_blank">留学</a><a href="http://www.howbuy.com/" title="好买基金网" target="_blank">好买基金网</a><a href="http://www.lanrentuku.com/" title="懒人图库" target="_blank">懒人图库</a><a href="http://www.qianzheng88.com/" title="中国签证网" target="_blank">中国签证网</a><a href="http://www.yaolan.com/" title="摇篮育儿网" target="_blank">摇篮育儿网</a><a href="http://www.sanhaostreet.com/" title="网上三好街" target="_blank">网上三好街</a><a href="http://www.hjenglish.com/" title="沪江英语" target="_blank">沪江英语</a><a href="http://www.babytree.com/" title="宝宝树" target="_blank">宝宝树</a><a href="http://www.yx007.com/" title="007小游戏" target="_blank">007小游戏</a><a href="http://www.cyzone.cn/" title="创业邦" target="_blank">创业邦</a><a href="http://www.exam8.com/" title="考试" target="_blank">考试</a><a href="http://www.examda.com/" title="考试大" target="_blank">考试大</a><a href="http://www.lijiangcn.com/" title="丽江旅游" target="_blank">丽江旅游</a><a href="http://www.icycn.com/" title="创业中国" target="_blank">创业中国</a><a href="http://www.51job.com/careerpost/jianlishuoming/" title="简历模板" target="_blank">简历模板</a><a href="http://www.tongcard.net/" title="通卡" target="_blank">通卡</a><a href="http://www.tiexue.net/" target="_blank" title="铁血军事">铁血军事</a><a href="http://www.zhiyin.cn/" target="_blank" title="知音网">知音网</a><a href="http://www.edulife.com.cn/" title="教育人生网" target="_blank">教育人生网</a><a href="http://www.wangqi.com/" title="网站设计" target="_blank">网站设计</a><a href="http://www.seo.com.cn/" title="SEO" target="_blank">SEO</a><a href="http://www.online.cq.cn/" title="重庆热线" target="_blank">重庆热线</a><a href="http://www.21food.cn/" title="食品商务网" target="_blank">食品商务网</a><a href="http://www.kuakao.com/" title="跨考考研网" target="_blank">跨考考研网</a><a href="http://www.docin.com/about/doc_yqlj.jsp" title="更多&gt;&gt;" target="_blank">更多&gt;&gt;</a></dd>
+            </dl>
+        </div>
+        <!--友情链接-->
+    </div>
+    <script type="text/javascript" src="js/index1.js"></script>
+    <script type="text/javascript" src="js/index2.js"></script>
+    <script type='text/javascript'>
+	_pageId=60;
+	</script>
+    <script language="javascript" src="js/jquery.js"></script>
+    <script language="javascript" src="js/ajaxUtil.js"></script>
+    <div class="item-skills-wapper skills-w500 notice" id="tcc" style="display:none;">
+        <div class="item-skills-bg">
+            <div class="item-skills">
+                <div class="list-shop"> <a href="javascript:closeShowMessage();" title="关闭" class="closed"> <img src="http://img.wanlibo.com/images_cn/group/item_skills_close.gif" alt="关闭"/> </a> </div>
+                <div class="notice-cont">
+                    <div>
+                        <h5 id="showTitle">标题</h5>
+                    </div>
+                    <div id="showContent">内容简介</div>
+                    <div id="showContentAll" style="display:none;">全部内容</div>
+                    <div class="txt-r"> <a href="javascript:display_all();" id="descLink"><span id="key" style="cursor: pointer;">展开</span></a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--页尾-->
+    <div id="foot_k">
+        <p class="p1"> <a href="#">关于土木迷</a> <a href="#">使用须知</a> <a href="#">常见问题</a> <a href="#">广告刊例</a> <a href="#">联系我们</a> 网站备案   备案号 </p>
+        <p class="copy">©2007-2010 tumumi.com Inc. All Rights Reserved</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+2011-04-10 12:38:16 [4] ERROR TMM.Core.Utils.Log4Net (null) - 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 TMM.Core.Controller.Admin.DocController.DoEditDoc(DDocInfo doc) 位置 E:\tmm\Trunk\TMM.Core\Controller\Admin\DocController.cs:行号 269

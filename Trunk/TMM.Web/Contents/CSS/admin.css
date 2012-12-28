@@ -1,0 +1,40 @@
+﻿#foot_k {margin-top:10px;}
+/* layout */
+.tdleft,.tdright {vertical-align:top;padding:5px 5px;}
+.tdleft{width:170px;border:solid 0px #ccc;padding-left:20px;}
+
+.node a {margin-left:20px;}
+.node a.curmenu{color:red;}
+
+/* common */
+.abtn {cursor:pointer;}
+.bigt {width:800px;}
+.middlet {width:500px;}
+.smallt {width:300px;}
+/* content wrap / table list */
+.wrapa {border:solid 1px #ccc;overflow:hidden;padding-bottom:10px;}
+.wrapa .title {background:#efefef;height:20px;padding:3px 0px 3px 5px;font-weight:bold;}
+.wrapa .cont {padding:10px;}
+.wrapa .cont table {border:solid 2px #1C70C1;border-collapse:collapse;clear:both;}
+.wrapa .cont table td,.wrapa .cont table th {border:solid 1px #ccc;text-align:left;padding-left:4px;padding-right:4px;}
+.cont .op {margin-top:-10px;margin-bottom:5px;}
+.cont .op2 {margin:10px 0px 0px 0px;}
+.cont .form .input .text{border:solid 1px #326FA8;width:300px;}
+.cont .form .btn {margin-top:10px;}
+.cont .form .field {border-bottom:dashed 1px #ccc;width:360px;margin-bottom:7px;}
+.cont .form .input strong {color:Orange;}
+.replymsg {border-bottom:dashed 1px green;padding:8px;margin-bottom:10px;}
+
+.wrapa .cont table#sTable {border:solid 0px #ccc;border-collapse:collapse;clear:both;margin-bottom:7px;}
+.wrapa .cont table#sTable td,.wrapa .cont table#sTable th {border:solid 0px #ccc;text-align:left;padding-left:4px;padding-right:4px;}
+
+/* tree */
+.subcont {width:760px;}
+.subcont .tree {width:180px;border:solid 1px #ccc;float:left;padding:7px;margin-right:10px;}
+.subcont .tree strong {font-size:15px;}
+.subcont .tree .node {margin-left:-10px;}
+.subnode {margin-left:15px;}
+
+.search ul li {float:left;margin-left:10px;}
+
+

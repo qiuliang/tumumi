@@ -1,0 +1,6 @@
+﻿#Layer1 {position:absolute;left:476px;top:348px;width:270px;z-index:1;background-color: #F6FFE8;}
+#Layer1 .Layer1_css{ font-weight:bold;}
+#Layer1 .Layer1_button{ width:44px; height:19px; background:url(../images/button_3.gif) no-repeat; cursor:pointer;  padding:0px; margin:0px; border-style:none;  color:#555557;}
+#Layer2 {position:absolute;left:300px;top:150px;width:133px; z-index:1;background-color: #F6FFE8;}
+#Layer2 .Layer2_css{ width:170px; height:20px; padding-top:20px; font-size:14px;}
+#Layer2 .Layer2_button{ width:44px; height:19px; background:url(../images/button_3.gif) no-repeat; cursor:pointer;  padding:0px; margin:0px; border-style:none; color:#555557;}

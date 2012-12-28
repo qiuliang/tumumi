@@ -1,0 +1,12 @@
+2011-04-23 11:29:10 [5] ERROR TMM.Core.Utils.Log4Net (null) - 线程正在运行或被终止；它无法重新启动。
+   在 System.Threading.Thread.StartupSetApartmentStateInternal()
+   在 System.Threading.Thread.Start()
+   在 TMM.Core.Common.AsynMessage.Send() 位置 E:\tmm\Trunk\TMM.Core\Common\AsynMessage.cs:行号 36
+2011-04-23 11:30:39 [5] ERROR TMM.Core.Utils.Log4Net (null) - 线程出现故障；无法访问状态。
+   在 System.Threading.Thread.SetBackgroundNative(Boolean isBackground)
+   在 System.Threading.Thread.set_IsBackground(Boolean value)
+   在 TMM.Core.Common.AsynMessage.Send() 位置 E:\tmm\Trunk\TMM.Core\Common\AsynMessage.cs:行号 35
+2011-04-23 11:30:39 [5] ERROR TMM.Core.Utils.Log4Net (null) - 线程出现故障；无法访问状态。
+   在 System.Threading.Thread.SetBackgroundNative(Boolean isBackground)
+   在 System.Threading.Thread.set_IsBackground(Boolean value)
+   在 TMM.Core.Common.AsynMessage.Send() 位置 E:\tmm\Trunk\TMM.Core\Common\AsynMessage.cs:行号 35

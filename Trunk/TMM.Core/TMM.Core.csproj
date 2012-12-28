@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6718DC7A-C2AE-4014-8E95-849F8EFD0584}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TMM.Core</RootNamespace>
+    <AssemblyName>TMM.Core</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Components.Binder, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\Castle.Components.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Components.Common.EmailSender, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\Castle.Components.Common.EmailSender.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Components.Validator, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\Castle.Components.Validator.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.MonoRail.Framework, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\Castle.MonoRail.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.MonoRail.Framework.Views.NVelocity, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\Castle.MonoRail.Framework.Views.NVelocity.dll</HintPath>
+    </Reference>
+    <Reference Include="Hubble.Analyzer, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\Hubble.Analyzer.DLL</HintPath>
+    </Reference>
+    <Reference Include="Hubble.Framework, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\Hubble.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Hubble.SQLClient, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\Hubble.SQLClient.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.Common, Version=1.6.1.0, Culture=neutral, PublicKeyToken=ed781d9fc396c6ca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\IBatisNet.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.Common.Logging.Log4Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\IBatisNet.Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.DataAccess, Version=1.9.1.0, Culture=neutral, PublicKeyToken=ed781d9fc396c6ca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\IBatisNet.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.DataMapper, Version=1.6.1.0, Culture=neutral, PublicKeyToken=ed781d9fc396c6ca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\IBatisNet.DataMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NVelocity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\NVelocity.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\PanGu.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AsynMessage.cs" />
+    <Compile Include="Common\ListPage.cs" />
+    <Compile Include="Common\OrderCallBack.cs" />
+    <Compile Include="Common\TmmException.cs" />
+    <Compile Include="Controller\Admin\BaseController.cs" />
+    <Compile Include="Controller\Admin\HomeController.cs" />
+    <Compile Include="Controller\Admin\UserController.cs" />
+    <Compile Include="Controller\Admin\MessageController.cs" />
+    <Compile Include="Controller\Admin\DocController.cs" />
+    <Compile Include="Controller\Admin\ConfigController.cs" />
+    <Compile Include="Controller\Admin\OrderController.cs" />
+    <Compile Include="Controller\FileController.cs" />
+    <Compile Include="Controller\PayController.cs" />
+    <Compile Include="Controller\SearchController.cs" />
+    <Compile Include="Controller\AboutController.cs" />
+    <Compile Include="Filter\AdminFilter.cs" />
+    <Compile Include="Helper\FormatHelper.cs" />
+    <Compile Include="Helper\UserHelper.cs" />
+    <Compile Include="Module\AutoLoginHttpModule.cs" />
+    <Compile Include="Pay\AliPay\AliPayAPI.cs" />
+    <Compile Include="Pay\AliPay\AliPayPackage.cs" />
+    <Compile Include="Pay\ChinaBank\ChinaBankPayAPI.cs" />
+    <Compile Include="Pay\TenPay\Md5Pay.cs" />
+    <Compile Include="Pay\TenPay\TenPayAPI.cs" />
+    <Compile Include="Search\Index.cs" />
+    <Compile Include="Utils\Random.cs" />
+    <Compile Include="Utils\TmmUtils.cs" />
+    <Compile Include="Common\ValidationAware.cs" />
+    <Compile Include="Controller\BaseController.cs" />
+    <Compile Include="Controller\HomeController.cs" />
+    <Compile Include="Controller\BrowseController.cs" />
+    <Compile Include="Controller\RewardController.cs" />
+    <Compile Include="Controller\MyController.cs" />
+    <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\UploadController.cs" />
+    <Compile Include="Controller\AjaxController.cs" />
+    <Compile Include="Extends\ExtendsMethod.cs" />
+    <Compile Include="Filter\MyTmmFilter.cs" />
+    <Compile Include="Helper\ConfigHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Log4Net.cs" />
+    <Compile Include="ViewComponents\HeadComponent.cs" />
+    <Compile Include="ViewComponents\FriendLinkComponent.cs" />
+    <Compile Include="ViewComponents\MyHeadComponent.cs" />
+    <Compile Include="ViewComponents\MsgNavComponent.cs" />
+    <Compile Include="ViewComponents\UrlPageBarAComponent.cs" />
+    <Compile Include="ViewComponents\UrlPageBarComponent.cs" />
+    <Compile Include="ViewComponents\ValidationAwareComponent.cs" />
+    <Compile Include="ViewComponents\AdminHeadComponent.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TMM.Models\TMM.Models.csproj">
+      <Project>{E36CD77F-F96D-4245-8504-E88F5E5BD549}</Project>
+      <Name>TMM.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TMM.Persistence\TMM.Persistence.csproj">
+      <Project>{56FD13EB-3455-41A9-B1A9-B7ED58EC4D30}</Project>
+      <Name>TMM.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TMM.Service\TMM.Service.csproj">
+      <Project>{F66313DF-7E1D-445E-AB08-470CEA1D2529}</Project>
+      <Name>TMM.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

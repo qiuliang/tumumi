@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>$!title - $!{sysConfig.WebName}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="#if($!{customeKeywords})$!{customeKeywords}#else$!{sysConfig.Keywords}#end" />
+    <meta name="description" content="#if($!{customeDescription})$!{customeDescription}#else$!{sysConfig.Description}#end" />
+    <meta property="qc:admins" content="142545510764555516375" />
+    <link href="/contents/css/pub.css" type="text/css" rel="stylesheet"/>
+    <link href="/contents/css/index_before.css" type="text/css" rel="stylesheet"/>
+    
+    <script type="text/javascript" src="/contents/js/Common.js"></script>
+    <script type="text/javascript" src="/contents/js/jquery.js"></script>
+    
+    $!{head}
+</head>
+<body>
+<div id="wapper-101">
+    #component(HeadComponent with "UserInfo=$Context.Session.logonUser")
+    
+    $!childContent
+    <!--页尾-->
+    <div id="foot_k">
+        <p class="p1">
+        <a href="/About/AboutUs.do" target="_blank">关于土木迷</a>         
+        <a href="/About/Faq.do" target="_blank">常见问题</a> 
+        <a href="/About/Help.do" target="_blank">帮助中心</a> 
+        <a href="/About/Service.do" target="_blank">服务条款</a> 
+        <a href="/About/Qqcl.do" target="_blank">侵权处理</a> 
+        <a href="/About/mzsm.do" target="_blank">免责声明</a> 
+        <a href="/About/Private.do" target="_blank">隐私保护</a> 
+        <a href="/About/Copyright.do" target="_blank">版权声明</a>
+        <a href="/About/Business.do" target="_blank">商务合作</a>
+        <a href="/About/FriendLink.do" target="_blank">友情链接</a>
+        <a href="/About/Contact.do" target="_blank">联系我们</a>
+        <a href="/About/JoinUs.do" target="_blank">加入我们</a>
+        <a href="/About/SiteMap.do" target="_blank">网站地图</a>
+        网站备案   备案号 
+        </p>
+        <p class="copy">©2007-2010 tumumi.com Inc. All Rights Reserved
+        <script src="http://s4.cnzz.com/stat.php?id=3568714&web_id=3568714&show=pic1" language="JavaScript"></script>
+        </p>
+    </div>
+    #component(ValidationAwareComponent)
+</div>
+    $!{footScript}
+    
+</body>
+</html>

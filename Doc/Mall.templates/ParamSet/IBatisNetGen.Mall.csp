@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
+  <propertySets>
+    <propertySet output="IBatisNetGen.cs" template="F:\ftp\soft\编程\智能模板\Mall.templates\IBatisNetGen.DaoImpl.cst">
+      <property name="SourceTable">
+        <connectionString>Data Source=192.168.1.68,1500;Database=Mall.0-6.com;User ID=sa;Password=jueo67wv;Connection Lifetime=3;Min Pool Size=1;Max Pool Size=50</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+      <owner>dbo</owner>
+      <name>MParam</name>
+    </table>
+      </property>
+      <property name="EntityOption">
+        <EntityOption xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="">
+      <Namespace>MamShare.Mall.Models</Namespace>
+      <IsPartial>false</IsPartial>
+      <Usings>
+        <string>MamShare.Mall.Utils</string>
+      </Usings>
+      <NameFmt>{0}Info</NameFmt>
+    </EntityOption>
+      </property>
+      <property name="MemberOption">
+        <MemberOption xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="" />
+      </property>
+      <property name="SqlOption">
+        <SqlOption xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="">
+      <IncludeDbType>false</IncludeDbType>
+    </SqlOption>
+      </property>
+      <property name="DaoIntfOption">
+        <DaoIntfOption xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="">
+      <Namespace>MamShare.Mall.Services.DAL</Namespace>
+      <IsPartial>false</IsPartial>
+      <Usings />
+    </DaoIntfOption>
+      </property>
+      <property name="DaoImplOption">
+        <DaoImplOption xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="">
+      <Namespace>MamShare.Mall.Services.DAL</Namespace>
+      <IsPartial>false</IsPartial>
+      <Usings>
+        <string>MamShare.Mall.Persistence</string>
+        <string>MamShare.Mall.Utils</string>
+      </Usings>
+      <NameFmt>{0}DAL</NameFmt>
+      <SqlMapperFmt>MallMapper.Instance()</SqlMapperFmt>
+    </DaoImplOption>
+      </property>
+      <property name="DaoMethodSetOption">
+        <DaoMethodSetOption xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="">
+      <GetCountOption>
+        <IdFmt>{0}GetCount</IdFmt>
+      </GetCountOption>
+      <FindOption>
+        <IdFmt>{0}Find</IdFmt>
+      </FindOption>
+      <FindNonLobOption>
+        <IdFmt>{0}QuickFind</IdFmt>
+      </FindNonLobOption>
+      <FindAllOption>
+        <IdFmt>{0}FindAll</IdFmt>
+      </FindAllOption>
+      <FindNonLobAllOption>
+        <IdFmt>{0}QuickFindAll</IdFmt>
+      </FindNonLobAllOption>
+      <FindByOption>
+        <IdFmt>{0}FindBy{1}</IdFmt>
+      </FindByOption>
+      <FindNonLobByOption>
+        <IdFmt>{0}QuickFindBy{1}</IdFmt>
+      </FindNonLobByOption>
+      <InsertOption>
+        <IdFmt>{0}Insert</IdFmt>
+      </InsertOption>
+      <UpdateOption>
+        <IdFmt>{0}Update</IdFmt>
+      </UpdateOption>
+      <DeleteOption>
+        <IdFmt>{0}Delete</IdFmt>
+      </DeleteOption>
+      <DeleteByOption>
+        <IdFmt>{0}DeleteBy{1}</IdFmt>
+      </DeleteByOption>
+      <ReloadOption>
+        <IdFmt>{0}Reload</IdFmt>
+      </ReloadOption>
+    </DaoMethodSetOption>
+      </property>
+      <property name="FileOption">
+        <FileOption Save="True" DefaultSave="False" Dir="Output\DaoImpl" DefaultDir="Output\DaoImpl" FileNameFmt="{0}DAL.cs" DefaultFileNameFmt="{0}Dao.cs" xmlns="" />
+      </property>
+    </propertySet>
+  </propertySets>
+</codeSmith>

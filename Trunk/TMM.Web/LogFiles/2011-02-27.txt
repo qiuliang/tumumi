@@ -1,0 +1,21 @@
+2011-02-27 21:34:17 [9] ERROR TMM.Core.Utils.Log4Net (null) - 未将对象引用设置到对象的实例。
+   在 TMM.Core.Controller.LoginController.DoRegister(U_UserInfo userInfo) 位置 E:\tmm\Trunk\TMM.Core\Controller\LoginController.cs:行号 28
+2011-02-27 21:34:26 [9] ERROR TMM.Core.Utils.Log4Net (null) - 未将对象引用设置到对象的实例。
+   在 TMM.Core.Controller.LoginController.DoRegister(U_UserInfo userInfo) 位置 E:\tmm\Trunk\TMM.Core\Controller\LoginController.cs:行号 28
+2011-02-27 21:37:02 [9] ERROR TMM.Core.Utils.Log4Net (null) - 未将对象引用设置到对象的实例。
+   在 TMM.Core.Controller.LoginController.DoRegister(U_UserInfo userInfo) 位置 E:\tmm\Trunk\TMM.Core\Controller\LoginController.cs:行号 28
+2011-02-27 21:41:41 [9] ERROR TMM.Core.Utils.Log4Net (null) - 发送邮件失败。
+   在 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   在 TMM.Core.Utils.TmmUtils.SendEmail(String recieveAddr, String subject, String body) 位置 E:\tmm\Trunk\TMM.Core\Utils\TmmUtils.cs:行号 167
+2011-02-27 21:45:58 [9] ERROR TMM.Core.Utils.Log4Net (null) - 邮箱不可用。 服务器响应为: IP is rejected
+   在 System.Net.Mail.SmtpConnection.GetConnection(String host, Int32 port)
+   在 System.Net.Mail.SmtpTransport.GetConnection(String host, Int32 port)
+   在 System.Net.Mail.SmtpClient.GetConnection()
+   在 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   在 TMM.Core.Utils.TmmUtils.SendEmail(String recieveAddr, String subject, String body) 位置 E:\tmm\Trunk\TMM.Core\Utils\TmmUtils.cs:行号 167
+2011-02-27 21:51:03 [9] ERROR TMM.Core.Utils.Log4Net (null) - 参数或变量中有语法错误。 服务器响应为: mail from address must be same as authorization user
+   在 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   在 System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, String from)
+   在 System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, SmtpFailedRecipientException& exception)
+   在 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   在 TMM.Core.Utils.TmmUtils.SendEmail(String recieveAddr, String subject, String body) 位置 E:\tmm\Trunk\TMM.Core\Utils\TmmUtils.cs:行号 167

@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>上传成功 - 土木迷</title>
+<link type="text/css" href="css/pub.css" rel="stylesheet" />
+<link type="text/css" href="css/upload.css" rel="stylesheet" />
+<script type="text/javascript" language="javascript" src="js/swfobject.js" ></script>
+</head>
+<body>
+
+
+
+<div class="wapper clear">
+	
+	
+	<div id="uploadbox" class="upload-shop">
+		<embed height="140" align="middle" width="420" flashvars="uploadPage=http://upload.docin.com/uploadfile&amp;countryId=1" wmode="transparent" allowscriptaccess="always" allowfullscreen="true" quality="high" bgcolor="#000" name="uploadswf" id="uploadswf" style="" src="http://img.wanlibo.com/players/mainUpload.swf?rand=20100722" type="application/x-shockwave-flash">
+	 	<div id="otheroption_url" class="upload-options" style="display: none;">
+			<h4>其他上传选项：</h4>
+			<span onclick="showUrlUpload()">上传文档的 URL地址</span>（输入文档的网络绝对URL地址，土木迷会自动帮助你上传）
+	 	</div>
+	 </div>
+ 
+ 
+    <div class="upload-end" id="second" >
+    <table class="upload-edit">
+        <colgroup>
+        <col span="1" class="col1">
+        <col span="1" class="col2">
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+                <td><img src="http://img.wanlibo.com/images_cn/text_faq.gif" alt="收益小秘籍"><span class="fcr">收益小秘籍：</span><span class="fch">准确填选以下各项内容，有助于文档更快被人找到，快速增加收益。</span></td>
+            </tr>
+        </thead>
+        <form action="/app/uploadFile/upload" onsubmit="return checkDocin(true)" method="post" enctype="multipart/form-data" name="uploadDesc" id="uploadDesc" target="uploadTag">
+            <input type="hidden" name="productId" id="productId" value="">
+            <input type="hidden" name="shopId" id="shopId" value="2">
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <td><input type="submit" value="确定" title="确定" name="Submit" class="btn"></td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <th>标题:</th>
+                    <td><input type="text" maxlength="50" value="" id="productName" name="productName" class="txt" gtbfieldid="3"></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>文档简介:</th>
+                    <td><textarea id="productDesc" name="productDesc" ></textarea></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>文档标签:</th>
+                    <td><input type="text" maxlength="250" id="tagAll" name="tagAll" class="txt" gtbfieldid="4">
+                        <p>可定义10项，标签之间用“,”或“ ”分隔</p>
+            </td>
+            </tr>
+            </tbody>
+            
+            <tbody>
+                <tr>
+                    <th>分类:</th>
+                    <td><select size="17" onchange="changeCategory(this.value);" id="productParentCategoryId" name="productParentCategoryId" gtbfieldid="5">
+                        </select>
+                        <select  size="17"  id="productCategoryId" name="productCategoryId" gtbfieldid="5">
+                        </select></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>下载:</th>
+                    <td><div class="upload_end_skills">收费下载&nbsp;￥
+                            <input type="text" value="0.00"  id="downPrice" name="downPrice" gtbfieldid="7" class="price">
+                            
+                        </div></td>
+                </tr>
+            </tbody>
+        </form>
+    </table>
+	</div>
+	<!-- upload-end end  -->
+
+</div>
+
+
+
+</body>
+</html>

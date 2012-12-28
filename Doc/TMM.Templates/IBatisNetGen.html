@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>IBatisNetGen - IBatisNet SQL mapping generator.</title>
+    <link href="..\..\SolutionFiles\doc-style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <strong>IBatisNetGen</strong> generates <a href="http://ibatis.apache.org">IBatisNet</a>
+    SQL mapping file and a group of CSharp classes from a database table.<br />
+    Written by Yao Jian, smrtk@hotmail.com.
+    <hr />
+    <h4>Overview</h4>
+    <h5>Output for each database table</h5>
+    <ul title="IBatisNetGen generated files">
+        <li><strong>Entity</strong>, the C# class that represents a database record.</li>
+        <li><strong>DaoIntf</strong>, the C# DAO interface contains a group of data manipulation methods, such as:
+            <ul title="Data manipulation methods">
+                <li>GetCount, gets the count of all records.</li>
+                <li>FindAll, loads all database records.</li>
+                <li>Find, loads a database record using primary key value(s).</li>
+                <li>FindBy<span style="font-style: italic;">XXX</span>, loads a group of records by the value of a column.</li>
+                <li>Delete, deletes a database record.</li>
+                <li>DeleteBy<span style="font-style: italic;">XXX</span>, deletes a group of records of by the value of a column.</li>
+                <li>Update, updates a database record.</li>
+            </ul>
+        </li>
+        <li><strong>DaoImpl</strong>, the C# DAO implementation class that implements the interface referred by <strong>DaoIntf</strong>.</li>
+        <li><strong>SqlMap</strong>, the IBatis.NET SQL mapping file that contains SQL statements used in the <strong>DaoImpl</strong> above.</li>
+    </ul>
+    <h5>Files shipped with IBatisNetGen:</h5>
+    <ul title="IBatisNetGen templates">
+        <li><code>IBatisNetGen.Entity.cst</code>, the CodeSmith template for generating C# entity class from a single table.</li>
+        <li><code>IBatisNetGen.DaoIntf.cst</code>, the CodeSmith template for generating DAO interface from a single table.</li>
+        <li><code>IBatisNetGen.DaoImpl.cst</code>, the CodeSmith template for generating DAO implementation class from a single table.</li>
+        <li><code>IBatisNetGen.SqlMap.cst</code>, the CodeSmith template for generating IBatisNet SqlMap from a single table.</li>
+        <li><code>IBatisNetGen.Database.cst</code>, the CodeSmith master template for generating from a <strong>collection</strong> of tables.</li>
+        <li><code>CSBatisBuilder.cs</code>, the code-behind C# file contains base template classes and utilities.</li>
+    </ul>
+    <hr/>
+    <h4>IBatisNetGen generation options</h4>
+    <h5>A brief introduction of generation options</h5>
+    Generation options are organized into following categories:
+    <ul title="A brief introduction of generation options:">
+        <li><code>SourceTable(s)</code>, sets a list of tables for generating.</li>
+        <li><code>EntityOption</code>, sets the options for entity class generation.</li>
+        <li><code>MemberOption</code>, sets the options for entity member property/variable generation.</li>
+        <li><code>DaoIntfOption</code>, sets the options for DAO interface generation.</li>
+        <li><code>DaoImplOption</code>, sets the options for DAO implementation class generation.</li>
+        <li><code>DaoMethodSetOption</code>, set the options for DAO methods of DAO interface/class.</li>
+        <li><code>SqlOption</code>, sets the options for IBatis.NET SQL mapping.</li>
+        <li><code>FileOption</code>, sets the options for output file.</li>
+        <li><code>FileSetOption</code>, sets the options for output files of sub-templates.</li>
+    </ul>
+    <h5>Common options for <code>Entity</code>, <code>DaoIntf</code>, <code>DaoImpl</code>:</h5>
+    <ul title="interface/class options">
+        <li><code>NameFmt</code>, specifies the format string of a class/interface, the format arg is a string converted from the underlying database object.</li>
+        <li><code>BaseType</code>, specifies the base type declaraction of a class/interface. Multiple base class/interface can be specified with comma delimited.</li>
+        <li><code>IsPartial</code>, indicates if to generate a partial class/interface. This option is highly recommanded in .NET 2.0.</li>
+        <li><code>Assembly</code>, specifies the assembly of the generated class/interface.</li>
+        <li><code>Namespace</code>, specifies the namespace of the generated class/interface.</li>
+        <li><code>Usings</code>, specifies the additional namespaces imported into the generated class/interface, one namespace per line.</li>
+    </ul>
+    <h5>EntityOption</h5>
+    <ul title="EntityOption details">
+        <li><code>PrefixToTrim</code>, specifies the prefix that will be trimmed from the underlying table name.</li>
+        <li><code>SuffixToTrim</code>, specifies the suffix that will be trimmed from the underlying table name.</li>
+        <li><code>InPascalCase</code>, indicates if to apply the Microsoft guidelines for class name.</li>
+        <li><code>InSingluar</code>, indicates if to trim the trailing 's' character from the underlying table name.</li>
+    </ul>
+    <h5>MemberOption</h5>
+    <ul title="MemberOption details">
+        <li><code>PrefixToTrim</code>, specifies the prefix that will be trimmed from the underlying column name.</li>
+        <li><code>SuffixToTrim</code>, specifies the suffix that will be trimmed from the underlying column name.</li>
+        <li><code>TrimTablePrefix</code>, indicates if to trim the leading table name from the column name.</li>
+        <li><code>TrimTableSuffix</code>, indicates if to trim the trailing table name from the column name.</li>
+        <li><code>TablePrePrefixToTrim</code>, specifies the table prefix that will be trimmed before applying <code>TrimTablePrefix</code>.</li>
+        <li><code>TablePostSuffixToTrim</code>, specifies the table suffix that will be trimmed before applying <code>TrimTableSuffix</code>.</li>
+        <li><code>PropInPascalCase</code>, indicates if to apply the Microsoft guidelines for the property name.</li>
+        <li><code>VarInCamelCase</code>, indiciates if to apply the Microsoft guidelines for the member variable name.</li>
+        <li><code>VarPrefix</code>, specifies the prefix that will be appended to the string converted from the underlying column name.</li>
+        <li><code>PropAccess</code>, specifies the access modifier of the generated properties.</li>
+        <li><code>VarAccess</code>, specifies the access modifier of the generated member variables.</li>
+        <li><code>UseNullable</code>, indicates if to generate Nullable{T} properties/member variables for columns allow database <code>NULL</code>.</li>
+    </ul>
+    <h5>DaoIntfOption</h5>
+        DaoIntfOption has no addtional attribute.        
+    <h5>DaoImplOption</h5>
+    <ul title="DaoImplOption details">
+        <li><code>SqlMapperFmt</code>, specifies the expression that returns a <code>SqlMapper</code> instance.</li>
+    </ul>
+    <h5>DaoMethodSetOption</h5>
+    DaoMethodSetOption contains following options <strong>for each</strong> DAO method:
+    <ul title="Options for each DAO method">
+        <li><code>GenerateIntf</code>, indicates if to generate method declaraction in the DAO interface.</li>
+        <li><code>GenerateImpl</code>, indicates if to generate method implementation in the DAO implementation class.</li>
+        <li><code>IdFmt</code>, specifies the format string for the ID of the SQL statement in the SQL mapping file.</li>
+    </ul>
+    <h5>SqlOption</h5>
+    <ul title="Options for SQL generation">
+        <li><code>VendorId</code>, specifies the database vendor ID. Each vendor ID represents a <code>IDbVendor</code> implementation class.</li>
+        <li><code>IdPattern</code>, specifies the pattern of the SQL statement ID.</li>
+        <ul title="IdPattern">
+            <li><code>Local</code>, the statement ID is in short format.</li>
+            <li><code>Classified</code>, the statement ID is prefixed with the entity class name.</li>
+            <li><code>NamespaceClassfied</code>, the statement ID is prefixed with the full name of the entity class.</li>
+        </ul>
+        <li><code>IdDelimiter</code>, specifies the delimiter for parts of statement ID.</li>
+        <li><code>IncludeDbType</code>, indiciates if to include <code>dbType</code> in inline parameter maps.</li>
+        <li><code>TableQualified</code>, indiciates if to use qualified table name.</li>
+        <li><code>FullResultMapFmt</code>, specifies the format string for the ID of the result map that contains all columns.</li>
+        <li><code>NonLobResultMapFmt</code>, specifies the format string for the ID of the result map that contains non-LOB columns only.</li>
+    </ul>
+    <h5>FileOption</h5>
+    <ul title="Options for file output">
+        <li><code>Dir</code>, the directory of output file. Either absolute or relative to the CodeSmith template.</li>
+        <li><code>FileNameFmt</code>, the format string of the file name.</li>
+        <li><code>Save</code>, indiciates if to save the file.</li>
+    </ul>
+    <h5>FileSetOption</h5>
+    See <code>FileOption</code> above.
+    <hr />
+    <h4>Common tasks</h4>
+    <h5>Table-Class name conversion</h5>
+    Typical mismatches between table names and its class names are:
+    <ol title="Table/Class name mismatches">
+        <li>All tables have a fixed prefix/suffix. For example, "tbl_" for all tables, or "acct_" for all tables in accounting system,
+        and should be removed from the class name.</li>
+        <li>Table names contains underscores, all letters in uppercase, or other violations against the Microsoft guidelines for class name.</li>
+        <li>Table names use abbrevations. Such as "ACCT" is the table name while "Account" is preferred as a class name.</li>
+    </ol>
+    You can apply zero or more following strategies:
+    <ul title="Class nameing options">
+        <li>Set <code>PrefixToTrim</code>/<code>SuffixToTrim</code> to strip the prefix/suffix from the generated class name.</li>
+        <li>Set <code>InPascalCase</code> to <code>true</code> for applyling Micorsoft guidelines for the class name.<br /> This option will:
+        <ol>
+            <li>The table name is splitted into parts at characters other then alphabetic or numeric.</li>
+            <li>Lowercase a part if it contains uppcase characters only.</li>
+            <li>Uppercase the first letter.</li>
+            <li>Concat each parts.</li>
+        </ol>
+        </li>
+        <li>Set <code>InSingular</code> to ensure the class name is in singular form, i.e., NOT ends with "<code>s</code>".</li>
+        <li>Set <code>NameFmt</code> to add prefix/suffix to the generated name.</li>
+    </ul>
+    <h5>Column-Property/MemberVariable name conversion</h5>
+    Typical mismatches between a column name and its property are:
+    <ol title="Column/property name mismatches">
+        <li>All columns have a fixed prefix/suffix. For example, "col_" for all database columns in all tables.</li>
+        <li>Columns in a table have prefix/suffix as its table name. For example, "user_" for columns of the "users" table.</li>
+        <li>Columns in a table have prefix/suffix as its stripped table name. For example, "user_" for columns in "tbl_user"/"user_tbl".</li>
+        <li>Column names use abbrevations. Such as "Desc" is a column name while "Description" is preferred as a property name.</li>
+    </ol>
+    You can apply zero or more following strategies:
+    <ul title="Property naming options">
+        <li>Set <code>PrefixToTrim</code>/<code>SuffixToTrim</code> to strip the prefix/suffix from the generated property name.</li>
+        <li>Set <code>TrimTablePrefix</code>/<code>TrimTableSuffix</code> to <code>true</code> for mismatch <strong>2</strong>.</li>
+        <li>Set <code>TablePrePrefix</code>/<code>TablePostSuffix</code> for mismatch <strong>3</strong>.</li>
+        <li>Set <code>InPascalCase</code> for applying Microsoft guidelines for property names.</li>
+        <li>Set <code>VarPrefix</code> if a prefix such as "m_" is preferred for member variable.</li>
+    </ul>
+    <hr />
+    <h5>TODO:</h5>
+    <hr />
+    <h4>Implementation Notes</h4>
+    <code>BatisBuilder.cs</code> defines builder classes used in generation.<br />
+    <code><span style="font-style: italic;">XXX</span>Option</code> define the input of generation.<br />
+    <hr />
+    <h5>Revision history</h5>
+    <h6>2007.02.20</h6>
+    + <code>NameFmt</code> for entity class
+    + Individual control for each data access method.
+    <h6>2007.02.14</h6>
+    + Output generated SqlMap and data class into seprated files.
+    + Generate persister interface and implementor class.
+    <h6>2007.02.09</h6>
+    + <code>Quotation</code><br />
+    + <code>TableQualified</code><br />
+    + <code>GenerateNonPkFinds</code><br />
+    + <code>GenerateNonPkDeletes</code><br />
+    + All statement Id are now customizable.<br />
+    + Table/Column can be qualified.<br />
+    + A result map for non-lob columns.<br />
+</body>
+</html>

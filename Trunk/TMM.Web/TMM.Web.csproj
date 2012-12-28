@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D65D876E-9718-4BC9-B179-45AFEF7CE8C7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TMM.Web</RootNamespace>
+    <AssemblyName>TMM.Web</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Contents\CSS\adsearch.css" />
+    <Content Include="Contents\CSS\cat_list.css" />
+    <Content Include="Contents\CSS\doc.css" />
+    <Content Include="Contents\CSS\gb.css" />
+    <Content Include="Contents\CSS\index_after.css" />
+    <Content Include="Contents\CSS\index_before.css" />
+    <Content Include="Contents\CSS\list.css" />
+    <Content Include="Contents\CSS\my.css" />
+    <Content Include="Contents\CSS\pub.css" />
+    <Content Include="Contents\CSS\recharge.css" />
+    <Content Include="Contents\CSS\reg.css" />
+    <Content Include="Contents\CSS\search.css" />
+    <Content Include="Contents\CSS\showauction.css" />
+    <Content Include="Contents\CSS\upload.css" />
+    <Content Include="Contents\CSS\user.css" />
+    <Content Include="Contents\Images\111.gif" />
+    <Content Include="Contents\Images\1112.gif" />
+    <Content Include="Contents\Images\1267687412555.jpg" />
+    <Content Include="Contents\Images\1279242706755.gif" />
+    <Content Include="Contents\Images\1286615186176.jpg" />
+    <Content Include="Contents\Images\bank-tag.jpg" />
+    <Content Include="Contents\Images\bgleft.gif" />
+    <Content Include="Contents\Images\bgright.gif" />
+    <Content Include="Contents\Images\bqbg.gif" />
+    <Content Include="Contents\Images\bt.png" />
+    <Content Include="Contents\Images\btn_search2.gif" />
+    <Content Include="Contents\Images\btn_upload.gif" />
+    <Content Include="Contents\Images\button_ssan.gif" />
+    <Content Include="Contents\Images\doc-icon.png" />
+    <Content Include="Contents\Images\docin_1048610_90x80.jpg" />
+    <Content Include="Contents\Images\docin_1048871_90x80.jpg" />
+    <Content Include="Contents\Images\docin_1349344_90x80.jpg" />
+    <Content Include="Contents\Images\docin_1462809_90x80.jpg" />
+    <Content Include="Contents\Images\docin_23324789_90x80.jpg" />
+    <Content Include="Contents\Images\docin_2493675_90x80.jpg" />
+    <Content Include="Contents\Images\docin_37657459_90x80.jpg" />
+    <Content Include="Contents\Images\docin_37819447_90x80.jpg" />
+    <Content Include="Contents\Images\docin_41762642_90x80.jpg" />
+    <Content Include="Contents\Images\docin_42032172_90x80.jpg" />
+    <Content Include="Contents\Images\docin_42743590_90x80.jpg" />
+    <Content Include="Contents\Images\docin_43391301_90x80.jpg" />
+    <Content Include="Contents\Images\docin_47861654_90x80.jpg" />
+    <Content Include="Contents\Images\docin_48701581_90x80.jpg" />
+    <Content Include="Contents\Images\docin_51728703_90x80.jpg" />
+    <Content Include="Contents\Images\docin_56486870_90x80.jpg" />
+    <Content Include="Contents\Images\docin_67124414_40x50.jpg" />
+    <Content Include="Contents\Images\docin_674995_90x80.jpg" />
+    <Content Include="Contents\Images\docin_70328896_40x50.jpg" />
+    <Content Include="Contents\Images\docin_79720791_90x80.jpg" />
+    <Content Include="Contents\Images\docin_80361236_40x50.jpg" />
+    <Content Include="Contents\Images\docin_8223235_90x80.jpg" />
+    <Content Include="Contents\Images\docin_84743176_40x50.jpg" />
+    <Content Include="Contents\Images\docin_87201470_40x50.jpg" />
+    <Content Include="Contents\Images\docin_87754939_40x50.jpg" />
+    <Content Include="Contents\Images\doc_logo.gif" />
+    <Content Include="Contents\Images\d_bgt.gif" />
+    <Content Include="Contents\Images\d_dlogo.gif" />
+    <Content Include="Contents\Images\d_icon_email_new.gif" />
+    <Content Include="Contents\Images\d_main_bg1.gif" />
+    <Content Include="Contents\Images\d_main_bg2.gif" />
+    <Content Include="Contents\Images\d_nav_bg.gif" />
+    <Content Include="Contents\Images\d_wzbgt.gif" />
+    <Content Include="Contents\Images\free-bg.png" />
+    <Content Include="Contents\Images\icon-bh.jpg" />
+    <Content Include="Contents\Images\icon-bj.jpg" />
+    <Content Include="Contents\Images\icon-classsearch.gif" />
+    <Content Include="Contents\Images\icon-dy.jpg" />
+    <Content Include="Contents\Images\icon-gd.jpg" />
+    <Content Include="Contents\Images\icon-gdyh.jpg" />
+    <Content Include="Contents\Images\icon-gf.jpg" />
+    <Content Include="Contents\Images\icon-gs.jpg" />
+    <Content Include="Contents\Images\icon-gz.jpg" />
+    <Content Include="Contents\Images\icon-hx.jpg" />
+    <Content Include="Contents\Images\icon-jh.jpg" />
+    <Content Include="Contents\Images\icon-js.jpg" />
+    <Content Include="Contents\Images\icon-mq.jpg" />
+    <Content Include="Contents\Images\icon-ms.jpg" />
+    <Content Include="Contents\Images\icon-nb.jpg" />
+    <Content Include="Contents\Images\icon-new1.gif" />
+    <Content Include="Contents\Images\icon-nj.jpg" />
+    <Content Include="Contents\Images\icon-ny.jpg" />
+    <Content Include="Contents\Images\icon-pa.jpg" />
+    <Content Include="Contents\Images\icon-pf.jpg" />
+    <Content Include="Contents\Images\icon-renren.gif" />
+    <Content Include="Contents\Images\icon-rss.png" />
+    <Content Include="Contents\Images\icon-sd.jpg" />
+    <Content Include="Contents\Images\icon-sh.jpg" />
+    <Content Include="Contents\Images\icon-sn.jpg" />
+    <Content Include="Contents\Images\icon-sz.jpg" />
+    <Content Include="Contents\Images\icon-xy.jpg" />
+    <Content Include="Contents\Images\icon-yz.jpg" />
+    <Content Include="Contents\Images\icon-zh.jpg" />
+    <Content Include="Contents\Images\icon-zs.jpg" />
+    <Content Include="Contents\Images\icon-zx.jpg" />
+    <Content Include="Contents\Images\icon_1_1.gif" />
+    <Content Include="Contents\Images\icon_2_1.gif" />
+    <Content Include="Contents\Images\icon_addmoney.gif" />
+    <Content Include="Contents\Images\icon_bank_cft.jpg" />
+    <Content Include="Contents\Images\icon_bank_jw.jpg" />
+    <Content Include="Contents\Images\icon_bank_yb.jpg" />
+    <Content Include="Contents\Images\icon_bank_zfb.jpg" />
+    <Content Include="Contents\Images\icon_date.gif" />
+    <Content Include="Contents\Images\icon_del.gif" />
+    <Content Include="Contents\Images\icon_doc.gif" />
+    <Content Include="Contents\Images\icon_fdj2.gif" />
+    <Content Include="Contents\Images\icon_hot.gif" />
+    <Content Include="Contents\Images\icon_jianhao.gif" />
+    <Content Include="Contents\Images\icon_jtx.gif" />
+    <Content Include="Contents\Images\icon_money.gif" />
+    <Content Include="Contents\Images\icon_more_ybe.jpg" />
+    <Content Include="Contents\Images\icon_pdf.gif" />
+    <Content Include="Contents\Images\icon_ppt.gif" />
+    <Content Include="Contents\Images\icon_tb.gif" />
+    <Content Include="Contents\Images\icon_title_bank.jpg" />
+    <Content Include="Contents\Images\icon_title_pp.jpg" />
+    <Content Include="Contents\Images\icon_title_szx.jpg" />
+    <Content Include="Contents\Images\icon_title_wht.jpg" />
+    <Content Include="Contents\Images\icon_title_wy.jpg" />
+    <Content Include="Contents\Images\icon_txt.gif" />
+    <Content Include="Contents\Images\images_bgbottom.gif" />
+    <Content Include="Contents\Images\images_bgbottomhui.gif" />
+    <Content Include="Contents\Images\images_bgbottomlan.gif" />
+    <Content Include="Contents\Images\images_bgtophui.gif" />
+    <Content Include="Contents\Images\images_bgtoplan.gif" />
+    <Content Include="Contents\Images\images_tabbg2_zdmx.gif" />
+    <Content Include="Contents\Images\images_tabbg3.gif" />
+    <Content Include="Contents\Images\index_bg.png" />
+    <Content Include="Contents\Images\item_skills_close.gif" />
+    <Content Include="Contents\Images\item_tips.gif" />
+    <Content Include="Contents\Images\login-after.png" />
+    <Content Include="Contents\Images\mc_bg_repeatv7.gif" />
+    <Content Include="Contents\Images\nav_bg_l.png" />
+    <Content Include="Contents\Images\newsend_v4.png" />
+    <Content Include="Contents\Images\news_tips.gif" />
+    <Content Include="Contents\Images\n_1.gif" />
+    <Content Include="Contents\Images\people01_118x118.gif" />
+    <Content Include="Contents\Images\recharge_bg.png" />
+    <Content Include="Contents\Images\reg_bg.png" />
+    <Content Include="Contents\Images\reg_icon_cw.gif" />
+    <Content Include="Contents\Images\sear-side.png" />
+    <Content Include="Contents\Images\sel-btn.gif" />
+    <Content Include="Contents\Images\side-com.jpg" />
+    <Content Include="Contents\Images\subnav_bg1.gif" />
+    <Content Include="Contents\Images\tr_back.gif" />
+    <Content Include="Contents\Images\tumumi_logo.gif" />
+    <Content Include="Contents\Images\zfb-tag.jpg" />
+    <Content Include="Contents\JS\ajaxutil.js" />
+    <Content Include="Contents\JS\index1.js" />
+    <Content Include="Contents\JS\index2.js" />
+    <Content Include="Contents\JS\jquery.js" />
+    <Content Include="Contents\JS\swfobject.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VerifyImg.aspx.cs">
+      <DependentUpon>verifyImg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Contents\CSS\admin.css" />
+    <Content Include="Contents\JS\Common.js" />
+    <Content Include="Contents\JS\index.js" />
+    <Content Include="Contents\JS\mydate.js" />
+    <Content Include="Contents\swfuploadv2.20b3\fileprogress.js" />
+    <Content Include="Contents\swfuploadv2.20b3\Handlers.js" />
+    <Content Include="Contents\swfuploadv2.20b3\style.css" />
+    <Content Include="Contents\swfuploadv2.20b3\swfupload.js" />
+    <Content Include="Contents\swfuploadv2.20b3\swfupload.queue.js" />
+    <Content Include="Contents\swfuploadv2.20b3\swfupload.swf" />
+    <Content Include="Global.asax" />
+    <Content Include="SqlMap.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="verifyImg.aspx" />
+    <None Include="Views\About\AboutUs.vm" />
+    <None Include="Views\About\Contact.vm" />
+    <None Include="Views\About\Copyright.vm" />
+    <None Include="Views\About\Faq.vm" />
+    <None Include="Views\About\FriendLink.vm" />
+    <None Include="Views\About\Mzsm.vm" />
+    <None Include="Views\About\Private.vm" />
+    <None Include="Views\About\Qqcl.vm" />
+    <None Include="Views\About\SiteMap.vm" />
+    <None Include="Views\About\JoinUs.vm" />
+    <None Include="Views\About\Service.vm" />
+    <None Include="Views\About\Business.vm" />
+    <None Include="Views\About\Help.vm" />
+    <None Include="Views\Admin\Config\EditFriendLink.vm" />
+    <None Include="Views\Admin\Config\FriendLink.vm" />
+    <None Include="Views\Admin\Config\Default.vm" />
+    <None Include="Views\Admin\Doc\Catalog.vm" />
+    <None Include="Views\Admin\Doc\Comment.vm" />
+    <None Include="Views\Admin\Doc\DeleteCatalog.vm" />
+    <None Include="Views\Admin\Doc\EditCatalog.vm" />
+    <None Include="Views\Admin\Doc\EditDoc.vm" />
+    <None Include="Views\Admin\Doc\Reward.vm" />
+    <None Include="Views\Admin\Doc\Contribute.vm" />
+    <None Include="Views\Admin\Doc\Index.vm" />
+    <None Include="Views\Admin\Doc\UploadReplaceDoc.vm" />
+    <None Include="Views\Admin\Home\Login.vm" />
+    <None Include="Views\Admin\Home\Index.vm" />
+    <None Include="Views\Admin\Home\TestSql.vm" />
+    <None Include="Views\Admin\Home\ChangePwd.vm" />
+    <None Include="Views\Admin\Message\System.vm" />
+    <None Include="Views\Admin\Message\AddSysMsg.vm" />
+    <None Include="Views\Admin\Message\Question.vm" />
+    <None Include="Views\Admin\Message\ReplyQuestion.vm" />
+    <None Include="Views\Admin\Message\SendMsg.vm" />
+    <None Include="Views\Admin\Message\UserMsg.vm" />
+    <None Include="Views\Admin\Order\Index.vm" />
+    <None Include="Views\Admin\Order\Detail.vm" />
+    <None Include="Views\Admin\Order\ExchangeDetail.vm" />
+    <None Include="Views\Admin\User\ManualOperate.vm" />
+    <None Include="Views\Admin\User\Index.vm" />
+    <None Include="Views\Admin\User\Account.vm" />
+    <None Include="Views\Admin\User\AccountLog.vm" />
+    <None Include="Views\Ajax\CommentList.vm" />
+    <None Include="Views\Ajax\CateTree.vm" />
+    <None Include="Views\Browse\Index.vm" />
+    <None Include="Views\Browse\Default.vm" />
+    <None Include="Views\Browse\GotoDown.vm" />
+    <None Include="Views\Components\AdminHeadComponent\Default.vm" />
+    <None Include="Views\Components\FriendLinkComponent\Default.vm" />
+    <None Include="Views\Components\HeadComponent\Default.vm" />
+    <None Include="Views\Components\HeadComponent\docHead.vm" />
+    <None Include="Views\Components\MsgNavComponent\Default.vm" />
+    <None Include="Views\Components\MyHeadComponent\Default.vm" />
+    <None Include="Views\Components\ValidationAwareComponent\default.vm" />
+    <None Include="Views\Home\Default.vm" />
+    <None Include="Views\Home\LogonDefault.vm" />
+    <None Include="Views\Layouts\Default.vm" />
+    <None Include="Views\Layouts\Default_admin.vm" />
+    <None Include="Views\Layouts\adminContent.vm" />
+    <None Include="Views\Layouts\doc.vm" />
+    <None Include="Views\Login\Default.vm" />
+    <None Include="Views\Login\Register.vm" />
+    <None Include="Views\Login\FindPwd.vm" />
+    <None Include="Views\Login\QQLogin.vm" />
+    <None Include="Views\Login\RegFromOpenApi.vm" />
+    <None Include="Views\My\MyDoc.vm" />
+    <None Include="Views\My\SysMsg.vm" />
+    <None Include="Views\My\SysInform.vm" />
+    <None Include="Views\My\RecieveMsg.vm" />
+    <None Include="Views\My\SentMsg.vm" />
+    <None Include="Views\My\SendTo.vm" />
+    <None Include="Views\My\EditUser.vm" />
+    <None Include="Views\My\Security.vm" />
+    <None Include="Views\My\ReadMsg.vm" />
+    <None Include="Views\My\Reply.vm" />
+    <None Include="Views\My\EditDoc.vm" />
+    <None Include="Views\My\MyFav.vm" />
+    <None Include="Views\My\HomePage.vm" />
+    <None Include="Views\My\AddReward.vm" />
+    <None Include="Views\My\MyReward.vm" />
+    <None Include="Views\My\AddContribute.vm" />
+    <None Include="Views\My\MyContribute.vm" />
+    <None Include="Views\My\AccountDetail.vm" />
+    <None Include="Views\My\DoCharge.vm" />
+    <None Include="Views\My\Exchange.vm" />
+    <None Include="Views\My\Purchase.vm" />
+    <None Include="Views\My\SendMsg.vm" />
+    <None Include="Views\My\ExchangeList.vm" />
+    <None Include="Views\My\SelectContribute.vm" />
+    <None Include="Views\My\SetZb.vm" />
+    <None Include="Views\Pay\PayError.vm" />
+    <None Include="Views\Pay\PayResult.vm" />
+    <None Include="Views\Pay\PayOk.vm" />
+    <None Include="Views\Reward\Index.vm" />
+    <None Include="Views\Search\Index.vm" />
+    <None Include="Views\Share\SearchBar.vm" />
+    <None Include="Views\Share\admin\menu.vm" />
+    <None Include="Views\Rescues\error.vm" />
+    <None Include="Views\Share\rewardHead.vm" />
+    <None Include="Views\Share\accountHead.vm" />
+    <None Include="Views\Share\AboutNav.vm" />
+    <None Include="Views\Upload\Default.vm" />
+    <None Include="Views\Upload\UploadSuccess.vm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TMM.Core\TMM.Core.csproj">
+      <Project>{6718DC7A-C2AE-4014-8E95-849F8EFD0584}</Project>
+      <Name>TMM.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1660</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

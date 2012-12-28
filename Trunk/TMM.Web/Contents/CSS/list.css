@@ -1,0 +1,190 @@
+﻿/* CSS Document */
+.wapper{ width:960px; margin:10px auto; color:#666}
+.main{ float:right; width:785px;}
+.side{ float:left; width:165px;}
+/*recommendation*/
+.recommendation{ border:1px #E6E6E6 solid; padding:10px; margin:0 0 10px}
+.recommendation h4{font-size:14px;line-height:1; padding:0 0 10px; color:#333}
+.recommendation dl{ float:left;width:98px; height:143px; overflow:hidden; position:relative; padding:0 5px}
+.recommendation dt{ float:left; padding:0 10px 5px; clear:both}
+.recommendation dt a{ float:left;border:1px solid #e9e9e9; padding:3px;}
+.recommendation dt a img{ height:90px; width:70px; overflow:hidden}
+.recommendation dt a:hover{ padding:1px;}
+.recommendation dt a:hover img{ border:2px solid #86abd1;}
+.recommendation dd{ float:left;text-align:center; position:relative}
+
+/*doc-list*/
+.doc-list{ width:100%; padding:0 0 20px}
+.doc-list span.t{ font-size:11px}
+.doc-list dl{ padding:15px 0 15px 10px; width:775px; border-bottom:1px #E6E6E6 solid}
+.doc-list dt{ float:left; width:96px; height:130px; text-align:center}
+.doc-list dt span{ display:block;}
+.doc-list dt a{ position:relative; z-index:2; display:block; width:100%;}
+.doc-list dt a img{ border:1px solid #ccc;padding:2px; max-height:140px; max-width:110px; overflow:hidden;width:90px;}
+.doc-list dt a:hover img{ border:2px solid #86abd1;padding:1px}
+
+.doc-list dt img.hide{position:absolute;top:-10px;left:-5%;filter: Alpha(opacity=0);-moz-opacity:0;opacity:0}
+.doc-list dt a:hover img.hide{ border:#86abd1 2px solid;padding:1px;cursor:pointer; clear:both; background:#fff}
+
+.doc-list dd{ float:left; width:640px; padding:0 0 0 34px;}
+.doc-list dd.title{ position:relative; font-weight:bold;font-size:14px;}
+.doc-list dd.summary{height:72px; line-height:18px; overflow:hidden; margin:8px 0}
+.doc-list dd li{ float:left;position:relative}
+.doc-list dd li img{ width:13px; height:13px; overflow:hidden;position:absolute;top:3px;}
+.doc-list dd li span{ margin:0 3px 0 5px}
+.doc-list dd li a{ margin:0 0 0 18px}
+.doc-list dd li.viewhot-tips .viewhot1,.doc-list dd li.viewhot-tips .viewhot2,.doc-list dd li.viewhot-tips .viewhot3,.doc-list dd li.viewhot-tips .viewhot4,.doc-list dd li.viewhot-tips .viewhot5{position:relative;+top:2px;_top:3px;+margin:4px 0;_margin:5px 0;}
+.doc-list dd li.padding-l{ padding:0 0 0 20px; font-size:11px}
+.doc-list dd li.padding-l em{ left:0}
+/*doc-list-style2*/
+.doc-list-style2 dl{overflow:hidden; float:left; padding:0 18px; width:154px; height:265px;}
+.doc-list-style2 dt,.doc-list-style2 dd{ width:154px; text-align:center;}
+.doc-list-style2 dt{height:146px;display:table-cell;vertical-align:bottom}
+.doc-list-style2 dd{padding:0 0 0 23px; text-align:left;height:20px; line-height:20px;font-size:12px;color:#343434}
+.doc-list-style2 dd img{ margin:2px 0 0 2px}
+.doc-list-style2 dd div img{ margin:-2px 0 0 2px}
+.doc-list-style2 dd a.from{ margin:0 0 0 4px}
+.doc-list-style2 dd span,.doc-list-style2 dd.num{ font-size:11px}
+.doc-list-style2 dd.num{color:#676767;text-align:center; margin:0; height:20px; line-height:20px; padding:0; overflow:hidden}
+.doc-list-style2 dd.tips{ position:relative; padding:0; text-align:center;height:43px;overflow:hidden; line-height:20px}
+.doc-list-style2 dd.tips div{ position:absolute; bottom:0; left:0;width:100%}
+.doc-list-style2 dd.tips div img{ float:left; margin:1px 0 0}
+.doc-list-style2 dd.tips div .del{ float:right; margin:2px 0 0}
+.doc-list-style2 dd strong{font:normal 11px tahoma,Arial}
+.doc-list-style2 dt a img{border:1px solid #eee;padding:2px; background:#fff}
+.doc-list-style2 dt a:hover img{ background:#86ABD1}
+.doc-list-style2 dd div a{ font-size:14px}
+.doc-list-style2 dd.tips a{ font-weight:bold; margin:0 0 0 3px}
+
+*.doc-list-style2 i {display:inline-block;height:100%;vertical-align:bottom}
+*.doc-list-style2 dt a img {vertical-align:bottom}
+.tipsLine{width:100%;color:#eee;background:#eee; border:none;height:1px;clear:both;float:left;margin:5px 0 20px;display:inline}
+/*doc-mark*/
+.doc-mark em{ background:url(../images/doc-icon.png) no-repeat 0 0; float:left; position:absolute;top:1px;left:8px;width:16px; height:16px; line-height:45px; overflow:hidden}
+.doc-list-style2 em{ position:relative; left:0}
+/*.recommendation*/
+.recommendation em{ position:relative; left:0; margin:0 5px 0 0}
+/*.recommendation*/
+
+.doc-mark em{ background-position:-16px 0px}
+.doc-mark em.doc{ background-position:-16px 0px}
+.doc-mark em.ppt{ background-position:-32px 0px}
+.doc-mark em.pps{ background-position:-48px 0px}
+.doc-mark em.pot{ background-position:-64px 0px}
+.doc-mark em.xls{ background-position:-80px 0px}
+.doc-mark em.pdf{ background-position:-96px 0px}
+.doc-mark em.txt{ background-position:-112px 0px}
+.doc-mark em.rtf{ background-position:-128px 0px}
+.doc-mark em.mpp{ background-position:-144px 0px}
+.doc-mark em.vsd{ background-position:-160px 0px}
+.doc-mark em.pub{ background-position:0px -16px}
+.doc-mark em.docx{ background-position:-16px -16px}
+.doc-mark em.xlsx{ background-position:-32px -16px}
+.doc-mark em.wps{ background-position:-48px -16px}
+.doc-mark em.et{ background-position:-64px -16px}
+.doc-mark em.dps{ background-position:-80px -16px}
+.doc-mark em.bmp{ background-position:-96px -16px}
+.doc-mark em.gif{ background-position:-112px -16px}
+.doc-mark em.jpg{ background-position:-128px -16px}
+.doc-mark em.jpeg{ background-position:-128px -16px}
+.doc-mark em.tif{ background-position:-144px -16px}
+.doc-mark em.tiff{ background-position:-144px -16px}
+.doc-mark em.pptx{ background-position:-160px -16px}
+.doc-mark em.ppsx{ background-position:0px -32px}
+.doc-mark em.potx{ background-position:-16px -32px}
+.doc-mark em.pdw{ background-position:-32px -32px}
+.doc-mark em.pxl{ background-position:-48px -32px}
+.doc-mark em.psw{ background-position:-64px -32px}
+.doc-mark em.xml{ background-position:-80px -32px}
+.doc-mark em.eml{ background-position:-96px -32px}
+.doc-mark em.ps{ background-position:-112px -32px}
+.doc-mark em.top{ background-position:-128px -32px}
+.doc-mark em.comments{ background-position:-144px -32px}
+.doc-mark em.favorites{ background-position:-160px -32px}
+
+/*scolumn*/
+.scolumn{ border:1px #E6E6E6 solid; margin:0 0 10px; clear:both; overflow:hidden; padding-bottom:10px; width:163px; }
+.scolumn h4{font-size:14px;line-height:1; padding:10px 0 5px 10px; color:#333}
+.scolumn ul{ padding:0 0 0 10px}
+.scolumn li{margin-top:5px; line-height:22px; }
+.scolumn li span{ float:right; margin-right:10px; width:11px; height:22px; line-height:22px;overflow:hidden; background: url(../images/icon_jianhao.gif) no-repeat;}
+.scolumn li .open{background-position:0px -45px;cursor:pointer}
+.scolumn li .close{background-position:0px -2px;cursor:pointer}
+.scolumn li .bg-none{ background:none}
+.scolumn li .open:hover{background-position:0px -67px;}
+.scolumn li .close:hover{background-position:0px -23px;}
+
+.scolumn .listcd{ padding:0 0 0 20px; background:#fff;}
+.scolumn .listcd li{ margin:0; background:#fff;}
+.scolumn .listcd li a{line-height:24px;padding:4px 3px 2px;}
+
+.scolumn li a.poa{ overflow:hidden;font-size:14px;font-weight:bold;line-height:22px;}
+.scolumn li a.cur {background:#88B6E3;}
+.scolumn li a:hover,.scolumn li a.normbg{ background:#88B6E3;color:#333; text-decoration:none;}
+
+.scolumn li.doc-icon1{background-position:0px 0px}
+.scolumn li.doc-icon2{background-position:0px -24px}
+.scolumn li.doc-icon3{background-position:0px -46px}
+.scolumn li.doc-icon4{background-position:0px -67px}
+.scolumn li.doc-icon5{background-position:0px -89px}
+.scolumn li.doc-icon6{background-position:0px -112px}
+.scolumn li.doc-icon7{background-position:0px -134px}
+.scolumn li.doc-icon8{background-position:0px -156px}
+.scolumn li.doc-icon9{background-position:0px -178px}
+.scolumn li.doc-icon10{background-position:0px -200px}
+.scolumn li.doc-icon11{background-position:0px -221px}
+.scolumn li.doc-icon12{background-position:0px -242px}
+.scolumn li.doc-icon13{background-position:0px -264px}
+.scolumn li.doc-icon14{background-position:0px -286px}
+.scolumn li.doc-icon15{background-position:0px -308px}
+/*hot-doc*/
+.hot-doc{ border:1px #E6E6E6 solid; margin:0 0 10px}
+.hot-doc h4{font-size:14px;line-height:1; padding:10px 0 8px 5px; color:#333; border-bottom:1px #E6E6E6 solid}
+.hot-doc li{ line-height:24px}
+.hot-doc span{ padding:0 10px; color:#779a00; font-size:14px; font-family: arial; font-weight:bold; line-height:24px;}
+.hot-doc span.hot{ color:#ff4c00;}
+.hot-doc span.li-style{ font:12px simsun;color:#333; padding:0 5px 0 10px}
+
+/*class-shop*/
+.class-shop,.class-hot li a,.class-read li a{background:url(../images/bqbg.gif) no-repeat;}
+.class-shop{height:65px; position:relative}
+
+.class-hot{padding:4px 0 3px 10px}
+.class-hot li{float:left;height:28px; margin:0 5px 0 0;text-align:center;width:71px;}
+.class-hot li a{ display:block; height:26px; background-position:-171px -77px;color:#333;padding:2px 0 0;}
+.class-hot li a.cur,.class-hot li a.cur:hover{background-position:-14px -70px; color:#fff; font-weight:bold;}
+.class-hot li a:hover{background-position:-91px -77px; color:#2284E2;}
+
+.class-date{padding:0 0 0 16px}
+.class-date li{ float:left; padding:0 4px}
+.class-date li a{ padding:5px;color:#00478B; text-align:center}
+.class-date li a.cur,.class-date li a:hover{background:#E6E4E7;}
+
+.class-read{ float:right; position:absolute;right:14px;top:38px}
+.class-read li{ float:left; padding:0 2px}
+.class-read li a{ display:block; width:23px; height:20px;text-indent:-999px; overflow:hidden; }
+.class-read li a.r1{width:15px;background-position:-607px -70px;}
+.class-read li a.r2{width:15px;background-position:-669px -71px;}
+.class-read li a.r1-cur{background-position:-634px -70px;}
+.class-read li a.r2-cur{background-position:-692px -70px;}
+
+/*no-class*/
+.no-class{ border:1px #C0E5F5 solid; background:#F3FBFE; padding:10px 0; margin:0 0 10px; position:relative;-webkit-border-radius:5px;-moz-border-radius:5px}
+.no-class div{margin:0 auto; width:450px}
+.no-class p{ line-height:25px; text-align:left; font-size:14px; padding:0 0 0 30px;background:url(../images/imp_light.gif) no-repeat 0 3px;}
+.no-class a{ position:absolute;right:10px; top:15px}
+/*ad-column*/
+.ad-column{ margin:0 0 10px}
+
+.xuanshang ul { margin:0px 5px; }
+.xuanshang ul li span { padding:0; }
+.xuanshang ul li em { color:#326FA8; }
+.xuanshang ul li strong{ color:#FC8D00; font-weight:normal; font-size:12px; }
+
+.xuanList { }
+.xuanList dt { font-size:14px; clear:both; overflow:hidden; float:none; width:auto; padding-left:15px; height:auto;  font-weight:bold; }
+.xuanList dt span { float:left; margin-right:10px; }
+.xuanList dt .tougao { float:left; width:70px; height:25px; background:url(../images/newsend_v4.png) no-repeat -346px -82px; text-align:center; font-size:12px; color:#fff;  }
+.xuanList dd { border-bottom:1px solid #E6E6E6; padding-bottom:15px; padding-left:10px; margin-bottom:15px; }
+
+

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>$!title - $!{sysConfig.WebName}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="#if($!{customeKeywords})$!{customeKeywords}#else$!{sysConfig.Keywords}#end" />
+    <meta name="description" content="#if($!{customeDescription})$!{customeDescription}#else$!{sysConfig.Description}#end" />
+    <link href="/contents/css/pub.css" type="text/css" rel="stylesheet"/>
+    <link href="/contents/css/doc.css" type="text/css" rel="stylesheet"/>
+    
+    <script type="text/javascript" src="/contents/js/Common.js"></script>
+    <script type="text/javascript" src="/contents/js/jquery.js"></script>
+    
+    $!{head}
+</head>
+
+<body>
+
+#component(HeadComponent with "UserInfo=$Context.Session.logonUser" "HeadType=2")
+
+
+$!childContent
+
+
+<script src="http://s4.cnzz.com/stat.php?id=3568714&web_id=3568714&show=pic1" language="JavaScript"></script>
+</body>
+</html>

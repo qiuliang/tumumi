@@ -1,0 +1,38 @@
+﻿  
+    #if(${validationAware})
+    <div id="validationAware">
+    
+      #if(${validationAware.HasMessages})
+        #foreach($message in $validationAware.Messages)
+            <div id="validationAware_message_${velocityCount}" class="validationError"><p>${message}</p></div>
+        #end
+      #end
+      
+      
+      #if(${validationAware.HasErrors})
+        
+   	    <script type="text/javascript">
+            <!--
+   	        alert("#foreach($error in $validationAware.Errors)$error\n#end");
+            -->
+        </script>
+   	  #end
+   	  
+   	  #if(${validationAware.HasSuccesses})
+   	    #*   	    
+   	    #foreach($success in $validationAware.Successes)
+   	        <div id="validationAware_success_${velocityCount}" class="validationSuccess"><p>${success}</p></div>
+   	        #set($vmsg = $success)
+   	    #end
+   	    *#
+   	    <script type="text/javascript">
+            <!--
+   	        alert("#foreach($success in $validationAware.Successes)$success\n#end");
+            -->
+        </script>
+   	  #end
+   	
+    </div>
+    #end
+    
+    

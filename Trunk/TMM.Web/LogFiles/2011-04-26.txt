@@ -1,0 +1,4 @@
+2011-04-26 20:09:49 [9] ERROR TMM.Core.Utils.Log4Net (null) - SaveAs 方法被配置为需要根路径，但是路径“”不是根路径。
+   在 System.Web.HttpPostedFile.SaveAs(String filename)
+   在 TMM.Core.Controller.Admin.DocController.SaveNewDocThumbnail(HttpPostedFile file, String oldThumbnailUrl) 位置 E:\tmm\Trunk\TMM.Core\Controller\Admin\DocController.cs:行号 467
+   在 TMM.Core.Controller.Admin.DocController.DoEditDoc(DDocInfo doc, HttpPostedFile file) 位置 E:\tmm\Trunk\TMM.Core\Controller\Admin\DocController.cs:行号 363

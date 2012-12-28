@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>注册 - 土木迷</title>
+<link href="css/pub.css" type="text/css" rel="stylesheet"/>
+<link href="css/reg.css" type="text/css" rel="stylesheet"/>
+</head>
+<body >
+
+
+<div id="outer">
+    <div id="shop">
+        <form action="/app/createUser" method="post" name="loginForm" id="loginForm" onKeyDown="enterKey(event,1)">
+            <input type="hidden" id="friendid" name="friendid" value="0" />
+            <input type="hidden" id="groupid" name="groupid" value="0" />
+            <input type="hidden" id="guid" name="guid" value="0" />
+            <input type="hidden" name="forwardUrl" value=""/>
+            <h2>欢迎注册土木迷网<span>如果已有账号，请<a href="/app/login" title="登录">登录</a></span></h2>
+            <table>
+                <!--<tr>
+                    <th><label for="login_name">用户名：</label></th>
+                    <td><input type="text" name="login_name" id="login_name" value="支持英文及数字组合" onFocus="if(this.value=='支持英文及数字组合') this.value='';this.style.color='#000'" onBlur="javascript:createuser_check_login_name();" /></td>
+                    <td><div class="tips" id="login_name_result">用于登录及主页的个性域名，请正确填写！</div></td>
+                </tr>-->
+                <tr>
+                    <th><label for="login_email">邮箱：</label></th>
+                    <td><input type="text" name="login_email" id="login_email" value="" onBlur="javascript:createuser_check_login_email();" /></td>
+                    <td><div class="tips" id="login_email_result">用于登录及接收验证邮件，请正确填写！</div></td>
+                </tr>
+                <tr>
+                    <th><label for="pwd">设置密码：</label></th>
+                    <td><div class="fortips">
+                            <input type="password" onKeyDown="if(event.keyCode==32) return false" id="pwd" name="password" maxlength="16" onKeyUp="javascript:createuser_showStrong();" onBlur="javascript:createuser_check_pwd();" />
+                            <div id="login_pwd_strong"></div>
+                        </div></td>
+                    <td><div class="tips" id="login_pwd_result">
+                            <p>长度6-16位，建议数字、符号或特殊字符组合！</p>
+                        </div></td>
+                </tr>
+                <tr>
+                    <th><label for="password2">确认密码：</label></th>
+                    <td><input type="password" onKeyDown="if(event.keyCode==32) return false" name="password2" id="password2" maxlength="16" onBlur="javascript:createuser_check_pwd_queren();" /></td>
+                    <td><div class="tips" id="login_pwd_result_queren">
+                            <p>重复输入密码确认无误。</p>
+                        </div>
+                </tr>
+                <tr>
+                    <th><label for="validate_code">验证码：</label></th>
+                    <td><input type="text" maxlength="4" class="validator" id="validate_code" name="validate_code" onBlur="javascript:createuser_checkCode();" />
+                        <img class="vor" id="regimg" name="regimg" src="/servlet/getimg"/> <a href="javascript:refCode();">换张图片</a> </td>
+                    <td><div id="validate_code_result"></div></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td colspan="2"><input type="checkbox" checked="checked" class="selectd" id="chAgree" name="chAgree" value="1" />
+                        <label for="chAgree">本人已经阅读并同意遵守</label>
+                        &nbsp; <a href="/about/doc_fwtk.jsp" target="_blank" title="土木迷网站服务条款">土木迷网站服务条款</a> </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><input type="button" value="确定注册" title="确定注册" class="btn" onClick="javascript:createuser_submit_doc();" /></td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div id="tips"> <span class="lt"></span><span class="rt"></span>
+        <div class="tipsbox">
+            <h3>为什么注册？</h3>
+            <ol>
+                <li>&middot;轻松上传文档</li>
+                <li>&middot;将文档分享或销售他人</li>
+                <li>&middot;播放器保护文档不被复制</li>
+                <li>&middot;专业平台管理维护文档</li>
+                <li>&middot;下载、收藏需要的文档</li>
+                <li>&middot;每月有上千万用户访问土木迷</li>
+            </ol>
+        </div>
+        <span class="lb"></span><span class="rb"></span> </div>
+</div>
+
+
+</body>
+</html>

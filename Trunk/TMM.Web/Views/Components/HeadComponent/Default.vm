@@ -1,0 +1,40 @@
+﻿<div id="head_k">
+    <div class="headBox">
+        <div class="logo_k" id="logo_common"><a href="/"><img src="/contents/images/tumumi_logo.gif" width="220" height="60" alt="土木迷" /></a></div>
+        <div class="quick_link" >
+            #if($userInfo) 
+                <a class="username" title="$!{userInfo.Email}" href="/home/$!{userInfo.UserId}.html" target="_blank">
+                #if($!{userInfo.NickName})
+                    $FormatHelper.CutString($!{userInfo.NickName},12)
+                #else
+                    $FormatHelper.CutString($!{userInfo.Email},12)
+                #end
+                </a>
+                <span>
+                    ￥<a href="/My/AccountDetail.do" target="_blank" class="mlrB mlb">
+                    $String.Format("{0:N2}",$accountBalance)</a>
+                    <a href="/My/DoCharge.do" class="mlfb" target="_blank">充</a>
+                </span>
+                #if($newMsgCount>0)
+                <a href="/my/sysinform.do" target="_blank">
+                <img src="http://img.wanlibo.com/images_cn/newDocin/d_icon_email_new.gif" alt="消息">
+                </a>
+                <a class="mlrB" href="/my/sysinform.do">$!newMsgCount</a>
+                #end
+                <a href="/app/loginOut" class="lo">退出</a> 
+            #else
+                <a href="/login">登录</a> 
+                <a href="/register">注册</a> 
+                <a href="#" target="_blank">常见问题</a> 
+            #end
+            
+        </div>
+        <ul id="nav">
+            <li><a #if($!Session.logonUser) href="/home/mydefault.do" #else href="/index.html" #end class="#if($Context.UrlInfo.Controller.ToLower()=="home")on#end"><span>首页</span></a></li>
+            <li><a href="/list-0-0-0-0-0-0.html" class="#if($Context.UrlInfo.Controller.ToLower()=="browse")on#end"><span>浏览</span></a></li>
+            <li><a href="/reward.html" class="#if($Context.UrlInfo.Controller.ToLower()=="reward")on#end"><span>悬赏文档</span></a></li>
+            <li><a href="/my/index.do" class="#if($Context.UrlInfo.Controller.ToLower()=="my")on#end"><span>我的土木迷</span></a></li>
+            <li class="upload"><a href="/Upload/Default.do"><span>我要上传</span></a></li>
+        </ul>
+    </div>
+</div>

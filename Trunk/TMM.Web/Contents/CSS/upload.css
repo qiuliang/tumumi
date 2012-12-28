@@ -1,0 +1,81 @@
+﻿.wapper{width: 970px;margin:15px auto;font-size:14px; }
+.wapper h4{color:#000;font-size:14px;padding:10px 0 5px;line-height:20px;  }
+.wapper h4 em{color:#666;font-size:18px;}
+.wapper h4 span{color:#666;font-weight:400;}
+.wapper h5{color:#ff7800;font:700 46px/1 "黑体",simhei;padding:75px 0 0;}
+.wapper img{vertical-align:middle;}
+.wapper .fcb{color:#000}
+.wapper .tips{padding:10px 0 5px;}
+/*layout*/
+.upload-shop{border:1px solid #eee;margin:0 0 5px;padding:0 20px 5px;text-align:center;}
+.upload-shop .upload-shop-sub{height: 240px;overflow:hidden;  }
+.upload-shop strong{font-size:14px;}
+
+.upload-url{width: 550px;margin:0 auto;  line-height:30px;text-align:left;font-size:12px;}
+.upload-url img{margin:0 3px; cursor:pointer;}
+.upload-url-tips{text-align:center;margin:10px 0 0;  }
+
+.upload-options{text-align:left; }
+.upload-options span{color:#036AD3;cursor:pointer;}
+.upload-options span:hover{text-decoration:underline; }
+
+.upload-shop input.txt{border:1px solid #A1BED9;padding:3px 0 2px 5px; width:500px;vertical-align:middle;}
+.upload-shop input.wid-80{width: 80px;}
+
+#urlform{height:240px;overflow:hidden; }
+#urlwaiting{height:200px;overflow:hidden; }
+#urlsuccess{height:200px;overflow:hidden; }
+/*.upload-shop*/
+.upload-cont{background:#F7FAFD;border:1px solid #E2EBF4;padding:10px 20px 5px; }
+.upload-cont p{line-height:22px;color:#666 }
+.upload-cont p img{margin:0 10px 0 0; cursor:pointer;}
+.upload-class-tips{float:right; }
+.upload-class{}
+.upload-class img{margin:0 3px 0 10px; }
+.upload-class th,.upload-class td{color:#666;padding:5px 10px 5px 0;font-size:12px;}
+.upload-class th{text-align:right; }
+.upload-class .col1{width: 140px; }
+.upload-class .col2{}
+
+/*upload-cont*/
+.upload-end{border:1px solid #eee;padding:0 35px 20px 55px; }
+.upload-edit{}
+.upload-edit .col1{width: 80px; }
+.upload-edit .col2{}
+.upload-edit th,.upload-edit td{vertical-align:top;font-size:12px;padding:5px 0; }
+.upload-edit th{font-size:14px;color:#000;text-align:left; }
+.upload-edit td select{width: 165px;height:250px; border:1px solid #A1BED9; padding: 5px;margin:0 5px 0 0}
+.upload-edit td input,.upload-edit td textarea{font-size:14px;}
+.upload-edit td textarea{height:118px;padding-left:5px;padding-top:5px;width:500px;border:1px solid #A1BED9;}
+.upload-edit td input.txt,.upload-edit td input.price{padding-left:5px;padding-top:5px;width:500px;border:1px solid #A1BED9;}
+.upload-edit td input.price{width: 50px;padding:0 0 0 2px; margin:0 8px;  }
+.upload-edit td input.btn{width: 60px;cursor:pointer; }
+
+.upload-edit .fcr{color:red}
+.upload-edit .fch{color:#666}
+.upload-edit img{vertical-align:middle;margin:0 3px 0 0;position:relative; top:-1px}
+
+.upload-edit .upload_end_skills{position:relative; }
+.upload-edit .upload_end_skills img{cursor:pointer;}
+.upload-edit .upload_end_tips{background:url(../../images_cn/uploadFile/upload_end_tips.png);width: 384px;padding:10px 12px 4px;line-height:18px;position:absolute;top:20px;left:307px;*left:313px;display:none; }
+/*upload-edit*/
+
+/* add by qiul */
+.uploadok {background:url(../images/right.jpg) no-repeat;font-size:20px;font-weight:bold;padding:30px 0px 0px 80px;height:28px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56FD13EB-3455-41A9-B1A9-B7ED58EC4D30}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TMM.Persistence</RootNamespace>
+    <AssemblyName>TMM.Persistence</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IBatisNet.Common, Version=1.6.1.0, Culture=neutral, PublicKeyToken=ed781d9fc396c6ca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\IBatisNet.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.Common.Logging.Log4Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\IBatisNet.Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.DataMapper, Version=1.6.1.0, Culture=neutral, PublicKeyToken=ed781d9fc396c6ca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\IBatisNet.DataMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SqlMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="providers.config" />
+    <None Include="SqlMap.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maps\D_Comment.xml" />
+    <EmbeddedResource Include="Maps\D_DocInfo.xml" />
+    <EmbeddedResource Include="Maps\D_FileInfo.xml" />
+    <EmbeddedResource Include="Maps\D_Rel_DocTag.xml" />
+    <EmbeddedResource Include="Maps\D_Tag.xml" />
+    <EmbeddedResource Include="Maps\M_Bill.xml" />
+    <EmbeddedResource Include="Maps\M_Catalog.xml" />
+    <EmbeddedResource Include="Maps\M_Favorite.xml" />
+    <EmbeddedResource Include="Maps\M_Message.xml" />
+    <EmbeddedResource Include="Maps\M_Purchase.xml" />
+    <EmbeddedResource Include="Maps\N_News.xml" />
+    <EmbeddedResource Include="Maps\S_Catalog.xml" />
+    <EmbeddedResource Include="Maps\T_JoinDoc.xml" />
+    <EmbeddedResource Include="Maps\T_ReqDoc.xml" />
+    <EmbeddedResource Include="Maps\U_UserInfo.xml" />
+    <EmbeddedResource Include="Maps\S_Config.xml" />
+    <EmbeddedResource Include="Maps\S_FriendLink.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maps\ManageUser.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maps\FileInfo.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maps\MAccount.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maps\MPayLog.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maps\AccountLog.xml" />
+    <EmbeddedResource Include="Maps\TOrder.xml" />
+    <EmbeddedResource Include="Maps\TOrderDetail.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maps\DownloadLog.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maps\ExchangeAccount.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

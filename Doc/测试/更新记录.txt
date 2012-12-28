@@ -1,0 +1,9 @@
+web.config
+core.dll service.dll
+MY/ReadMsg.vm RecieveMsg.vm Reply.vm
+share/admin/menu.vm
+admin/message/usermsg.vm
+admin/message/question.vm
+admin/message/system.vm
+admin/doc/editdoc.vm
+±íM_Message ÐÞ¸Ä×Ö¶Î Content nvarchar 4000

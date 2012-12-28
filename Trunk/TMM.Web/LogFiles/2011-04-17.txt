@@ -1,0 +1,2 @@
+2011-04-17 20:55:08 [4] ERROR TMM.Core.Utils.Log4Net (null) - 查询文档为空
+   在 TMM.Core.Controller.Admin.DocController.DoEditDoc(HttpPostedFile file) 位置 E:\tmm\Trunk\TMM.Core\Controller\Admin\DocController.cs:行号 343

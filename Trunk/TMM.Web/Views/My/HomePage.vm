@@ -1,0 +1,300 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<title>用户主页 -  土木迷</title>
+<link rel="stylesheet" type="text/css" href="/contents/css/pub.css">
+<link rel="stylesheet" type="text/css" href="/contents/css/user.css">
+</head>
+<body style="background:#ECDB95;">
+
+<div id="d_bg">
+    <div id="d_topnav">
+        <div class="leftbar">
+        <span class="d_fontsh12b"> <a class="d_fonth12" href="/">土木迷TuMuMi.com</a></span> - 分享文档, 帮助他人!</div>
+        <div class="rightbar"> 
+            <a class="d_fonth12" href="/"> 土木迷首页 </a> <span class="d_fonthui12">|</span> 
+            <a class="d_fonth12" href="/list-0-0-0-0-0-0.html">浏览</a> <span class="d_fonthui12">|</span> 
+            <a class="d_fonth12" href="/my/index.do"> 我的土木迷 </a>  
+            <span class="d_fonthui12">|</span> 
+            <a class="d_fonth12" href="/upload/default.do">我要上传</a> 
+            <span class="d_fonthui12">|</span> 
+            <a class="d_fonth12" href="/search/index.do">搜索</a> 
+            #if($Session.logonUser)
+            <span class="d_fonthui12">|</span>
+            <a class="d_fonth12" href="/app/loginOut">退出</a>
+            #end
+        </div>
+    </div>
+    <div id="d_main">
+        <div class="kg"></div>
+        <div class="bgt1">
+            <div class="leftcontent"><span class="d_fonthui10">Tumumi User Space 2010</span></div>
+            <div class="rightcontent"><span class="d_fonthui10">Tumumi User Space 2010</span></div>
+        </div>
+        <div class="bgt2">
+            <div class="kg"></div>
+            <!--主体内容左边开始-->
+            <div class="content2">
+                <div class="leftbox">
+                    <div class="leftcontent2">
+                        <div class="tilte1"><span class="d_fontqh26b">$!{homeUser.TmmDispName}</span></div>
+                        <div class="grtx210"> 
+                            <img alt="$!{homeUser.TmmDispName}" src="$!{homeUser.HeadIcon}" style="width:118px" /> 
+                        </div>
+                        <div style="height: 65px; color: rgb(0, 0, 0); position: relative;" class="gnzs"> 总文档：$!{allDocCount} <br>
+                            总浏览量：$!{allViewCount} <br>
+                            #if($Session.logonUser.UserId==$!{homeUser.UserId})
+                                
+                            #end
+                        </div>
+                        #if($Session.logonUser.UserId!=$!{homeUser.UserId})
+                        <div class="gnzs">
+                            <img src="/contents/images/d_icon_email.gif" />
+                            <a href="/my/sendmsg.do?recieverId=$!{homeUser.UserId}" target="_blank">给$!{homeUser.TmmDispName}发消息</a>
+                        </div>
+                        #end
+                        <div class="d_clear"></div>
+                    </div>
+                    <div class="leftcontent3_xbfb">
+                    <img height="25" width="320" src="http://img.wanlibo.com/images_cn/newDocin/d_wzbgt.gif"></div>
+                    <!--主体内容左边 基本信息开始-->
+                    <div class="leftcontent4">
+                        <div class="title_xx">基本信息</div>
+                        <div class="msg">
+                            <ul>
+                                <li>
+                                    <div class="leftmsg">昵称：</div>
+                                    <div class="rightmsg">$!{homeUser.TmmDispName}</div>
+                                </li>
+                                <li>
+                                    <div class="leftmsg">性别：</div>
+                                    <div class="rightmsg">
+                                    #if($!{homeUser.Sex})
+                                        男
+                                    #else
+                                        女
+                                    #end
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="leftmsg">生日：</div>
+                                    <div class="rightmsg">$!{homeUser.Birthday.ToShortDateString()}</div>
+                                </li>
+                            </ul>
+                            <div class="d_clear"></div>
+                        </div>
+                        <div class="d_clear"></div>
+                    </div>
+                    <!--主体内容左边 基本信息结束-->
+                    <!--主体内容左边 最近访客内容开始-->
+                    <div class="leftcontent4">
+                        <div class="title_xx">个人信息</div>
+                        <div class="msg">
+                            <ul>
+                                <li>
+                                    <div class="leftmsg">职业：</div>
+                                    <div class="rightmsg">$!{homeUser.JobTitle}</div>
+                                </li>
+                                <li>
+                                    <div class="leftmsg">工作单位：</div>
+                                    <div class="rightmsg">
+                                        $!UserHelper.GetCompanyType($!{homeUser.CompanyType})
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="leftmsg">专业：</div>
+                                    <div class="rightmsg">$!UserHelper.GetMajorType($!{homeUser.Major})</div>
+                                </li>
+                            </ul>
+                            <div class="d_clear"></div>
+                        </div>
+                        <div class="d_clear"></div>
+                    </div>
+                    <!--主体内容左边 最近访客内容结束-->
+                    <!--主体内容左边 他的好友开始-->
+                    <!--主体内容左边 他的好友结束-->
+                    <div class="d_clear"></div>
+                </div>
+                <!--主体内容左边结束-->
+                <!--主体内容右边开始-->
+                <div class="rightbox">
+                    <!--主体最近的文档开始-->
+                    <div class="zjwdbox">
+                        <!-- 文件夹 start -->
+                        <div id="showFolderDiv1" class="title title_class"> <span class="d_fonthei14b">文件夹</span> 
+                        (全部$!{folders.Count}个文件夹，<a href="/home/$!{homeUser.UserId}-0-0.html">全部文档</a>) 
+                        </div>
+                        <div id="showFolderDiv2" class="classlist">
+                            <ul>
+								#foreach($item in $folders)				
+                                <li>
+                                    <a onmousedown="return inpmv(699);" href="/home/$!{homeUser.UserId}-$!{item.CateId}-0.html" title="$!{item.CateText}">
+                                        <img src="/contents/images/icon-document.gif" />
+                                    </a>
+                                    <p>
+                                    <a href="/home/$!{homeUser.UserId}-$!{item.CateId}-0.html" #if($cateId==$!{item.CateId}) style="color:red;" #end title="$!{item.CateText}">
+                                    $!{item.CateText}
+                                    </a>
+                                    ($!{item.DocCount})
+                                    </p>
+                                </li>
+                                #end
+                        </ul>
+                        </div>
+                        
+                      
+                    </div>
+                    <div class="zjwdbox">
+		      			<!-- 文件夹 start -->
+		      			
+					    <!-- 文件夹 end -->
+		      				      		
+			     		<div style="padding-top: 25px;" class="title">
+			     			<span class="d_fonthei16b">最近的文档</span> 
+			     			
+			     			(全部$!{allDocCount}篇文档)
+							<!--<div class="userblog_search"><input type="text" onkeydown="if(event.keyCode==13) searchword(6618700)" onfocus="if(this.value=='查找该用户文档') this.value='';this.style.color='#333'" value="查找该用户文档" class="userblog_searchtext" name="sword" id="sword"><input type="image" value="搜索" src="http://pics.wanlibo.com/images_cn/docroo/button_ssan.gif" onclick="javascript:searchword(6618700);" onmousedown="return inpmv(708);">
+							</div>-->
+			     		</div>		     			  
+				 		<!--最近文档循环开始-->
+				 		#foreach($item in $docList.List)
+					 		<div class="neir">
+					   			<div class="nrleft">
+					      			<div class="img80box">
+					      				<a class="d_fontlan14b" target="_blank" href="/p-$!{item.DocId}.html">
+					      					<img class="d_img80" alt="$!{item.Title}" src="http://img1.yimk.com/docin_102540940_90x80.jpg">
+					      				</a>
+					      			</div>
+						  			<div class="fontbox">$!{item.PageCount} Pages</div>
+					   			</div>
+					   			<div class="nrright">
+						       		<div class="txicon">
+									    <div class="iconleft">
+										</div>
+										<div class="iconright">
+											<img src="/contents/images/icons/$!{item.DocType}.gif" alt="$!{item.DocType}" />
+						       			</div>
+						       		</div>
+						       		
+							   		<div class="neirbox">
+							     		<div class="nrtitle">
+							     			<a class="d_fontlan14b" target="_blank" title="$!{item.Title}" href="/p-$!{item.DocId}.html">$!{item.Title}</a> 
+							     			<span class="d_fonthui10">$!{item.CreateTime}</span> 
+							     		</div>								 		
+								 		<div class="nrgnwz">	                         		
+								 			<ul class="shopList">
+		   										
+		   										
+		   										<li><img alt="顶" src="http://pics.wanlibo.com/images_cn/news/tips4.gif">$!{item.UpCount}<span>|</span></li>
+		   									
+		   										<li><img alt="评论" src="http://pics.wanlibo.com/images_cn/news/tips3.gif">$!{item.CommentCount}<span>|</span></li>
+		   										<li><img alt="收藏" src="http://pics.wanlibo.com/images_cn/news/tips5.gif">$!{item.FavCount}<span>|</span></li>
+		   										<li class="tag">
+		   											分类:
+		   											
+	   												<a target="_blank" href="/list-$!{item.CateId}-0-0-0-0-0.html">
+	   													$!UserHelper.GetMyCatalog($!{item.CateId}).CateText
+	   												</a> 
+	   												
+	   												<span>|</span>
+		   										</li>
+                                                <li class="viewhot-tips">
+                                                    热度:
+                                                    <span class="viewhot$!FormatHelper.GetHotRule($!{item.ViewCount})"></span><span>|</span>
+                                                </li>
+		   										<li class="tag">
+		   											
+		   										</li>
+	   										</ul>
+		                         		</div>
+		                         		
+							     		<div class="d_clear"></div>
+							   		</div>
+						   	   		<div class="d_clear"></div>
+						   		</div>
+					  			<div class="d_clear"></div>
+					  		</div>
+					    #end
+			   			<!--最近文档循环结束-->
+						<p style="text-align: right;">
+						<div class="page">
+                        #component(UrlPageBarAComponent with "ObjectPage=$!docList")
+                        </div>
+						</p>
+						<div class="d_clear"></div>
+			  		</div>
+                    <!--主体最近的文档结束-->
+                    <!--主体收藏的文档开始-->
+                    <div class="scwdbox">
+                        <div class="title"> 
+                        <span class="d_fonthei16b">收藏的文档 </span> 
+                        (最近收藏的$!{favCount}篇文档) 
+                        </div>
+                        #foreach($item in $favList)
+                        <div class="scneir">
+                            <div class="scleft">
+                                
+                            </div>
+                            <div class="scleft"> 
+                            <img align="absmiddle" title="doc" style="width:25px;" src="/contents/images/icons/$!{item.DocType}.gif" /> 
+                            </div>
+                            <div class="scright">
+                                <div class="btwzleft">
+                                <a class="d_fontlan14b" target="_blank" href="/p-$!{item.DocId}.html">$!{item.Title}</a>
+                                </div>
+                                <div class="yhmright">
+                                <img height="20" width="20" align="absmiddle" src="$!{item.U_UserInfo.HeadIcon}" /> 
+                                <a class="d_fonth87" href="/home/$!{item.UserId}.html" >
+                                $!{item.U_UserInfo.TmmDispName}
+                                </a> 
+                                </div>
+                            </div>
+                            <div class="d_clear"></div>
+                        </div>
+                        #end
+                        <div class="d_clear"></div>
+                    </div>
+                    <!--主体收藏的文档结束-->
+                    <!--主体网友评论开始-->
+                    <!--主体网友评论结束-->
+                    <div class="d_clear"></div>
+                </div>
+                <!--主体内容右边结束-->
+                <div></div>
+                <div class="d_clear"></div>
+            </div>
+            <div class="d_clear"></div>
+        </div>
+        <div class="kg"></div>
+        <div class="d_clear"></div>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+
+
+<!--  交友对话框 start  -->
+<div style="top: 200px; left: 60%; display: none;" class="personal_skills" name="personal_skills" id="personal_skills">
+    <div class="p_box">
+        <h2><a title="关闭" href="javascript:hiddenAddFriendWin();">关闭</a>发送交友请求</h2>
+        <div class="skills_cont">
+            <dl>
+                <dt><img name="friend_img" id="friend_img"></dt>
+                <dd>您要添加<a target="_blank" name="friend_a" id="friend_a" title="" href=""></a>为好友</dd>
+                <dd>我们将向该会员发送好友请求，待其确认后将与您成为好友。</dd>
+            </dl>
+            <p>
+                <textarea onkeydown="if(this.value.length&gt;19) return false;" readonly="" name="add_friend_msg" id="add_friend_msg">你好！真的超欣赏你，可以加我为好友吗？</textarea>
+            </p>
+            <p>
+                <button onclick="checkFriendMsg()" class="btn" name="friend_btn" id="friend_btn">发送好友请求</button>
+                <button onclick="cancelAddFriendMsg();" class="btnclose">取消</button>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

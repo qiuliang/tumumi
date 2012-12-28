@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>充值 - 土木迷</title>
+<link type="text/css" href="css/pub.css" rel="stylesheet" />
+<link type="text/css" href="css/my.css" rel="stylesheet" />
+<link href="css/gb.css" rel="stylesheet" type="text/css" />
+<link href="css/recharge.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div  style="width:1000px; margin:0 auto; padding-left:15px;">
+
+    <div style="float:left; padding-top:9px;"> </div>
+    <div style="width:970px; margin:0 auto; padding-left:5px; margin-top:10px; ">
+        
+        
+        <div id="container" style="position:relative;">
+			<!--充值标签开始-->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="284"><div class="tab">
+							<div class="nav1" style="background:url(images/images_tabbg1.gif) no-repeat;">
+								<div style="width:80px; height:20px; margin-top:10px; margin-left:20px; text-align:center;"> <a href="/app/my/fin/transactionHistory_cn"  class="tabfonthui">账单明细</a> </div>
+							</div>
+							<div class="nav2" style="background:url(images/images_tabbg2.gif) no-repeat;">
+								<div style="width:78px; height:20px; margin-top:10px; margin-left:10px; text-align:center;"> <a href="/app/my/fin/addmoney"class="tabfont">充值</a> </div>
+							</div>
+							<div class="nav3" style="background:url(images/images_tabbg3.gif) no-repeat;">
+								<div style="width:80px; height:20px; margin-top:10px; margin-left:8px; text-align:center;"> <a href="/app/my/fin/settleAccounts" class="tabfont">兑换</a> </div>
+							</div>
+						</div></td>
+					<td>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="28" style=" border-bottom:1px solid #cccccc;">&nbsp;</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!--充值标签结束-->
+					
+			
+			
+			
+            <!--充值方式开始-->
+            <div class="box_recharge">
+			
+                <!--左侧功能-->
+                <h4><img src="images/icon_title_bank.jpg" alt="银行卡充值"/>银行卡充值<span>如果你的银行卡具有网上支付功能，就可以使用银行卡进行在线支付充值</span></h4>
+                <div class="skills_recharge forindex_recharge"> <span class="lt"></span><span class="rt"></span>
+                    <form action="/jsp_cn/my/fin/yeepay/req1.jsp"  onsubmit="return check();" method="post" name="f" style="margin-bottom:0; margin-left:0; margin-right:0; margin-top:0" id="formAddMoney" name="formAddMoney" >
+						<div>
+							<p class="attention">充值过程中，请关闭“弹出窗口拦截软件”</p>
+							<p>选择金额：
+								<select name='amount' id='amount'>
+									<option value="1">1.00元</option>
+									<option value="2">2.00元</option>
+									<option value="5">5.00元</option>
+									<option value="10" selected>10.00元</option>
+									<option value="20">20.00元</option>
+									<option value="50">50.00元</option>
+									<option value="100">100.00元</option>
+									<option value="200">200.00元</option>
+									<option value="500">500.00元</option>
+									<option value="1000">1000.00元</option>
+									<option value="1500">1500.00元</option>
+									<option value="2000">2000.00元</option>
+									<option value="5000">5000.00元</option>
+									<option value="10000">10000.00元</option>
+								</select>
+								选择银行：
+								<input input="text" class="sel" onclick="selBank();" value="工商银行" id="bankName"/>
+								<input id="frpId" name="frpId" type="hidden" value="2">
+								<input type="submit" value="确定充值" title="确定充值" class="btn"/>
+							</p>
+						</div>
+                    </form>
+                    <span class="lb"></span><span class="rb"></span>
+				</div>
+				
+				
+				
+				
+                <!--更多充值-->
+                <h4>你可以选择其他渠道进行充值</h4>
+                <table class="listtable_recharge" id="recharge_way">
+                    <tr>
+
+                        <td><div class="list_recharge">
+                                <dl>
+                                    <dt><img src="http://img.wanlibo.com/images_cn/recharge/icon_bank_zfb.jpg" alt="支付宝充值"/></dt>
+                                    <a href="/app/my/fin/alipaychannel">
+                                    <dd>
+                                        <h6>支付宝充值</h6>
+                                    </dd>
+                                    <dd>拥有支付宝账号的用户可以通过支付宝账号充值。</dd>
+                                    </a>
+                                </dl>
+                                <div><a href="/app/my/fin/alipaychannel">立即充值</a></div>
+                            </div></td>
+
+                        <td><div class="list_recharge">
+                                <dl>
+                                    <dt><img src="http://img.wanlibo.com/images_cn/recharge/icon_bank_cft.jpg" alt="财付通充值"/></dt>
+                                    <a href="/app/my/fin/tenpaychannel">
+                                    <dd>
+                                        <h6>财付通充值</h6>
+                                    <dd>拥有财付通账号的用户可以通过财付通账号充值。</dd>
+                                    </a>
+                                </dl>
+                                <div><a href="/app/my/fin/tenpaychannel">立即充值</a></div>
+                            </div></td>
+
+                    </tr>
+                </table>
+				
+            </div>
+            <!--充值方式结束-->
+			
+			
+			
+            <!--充值记录开始-->
+            <div>
+                <div class="ycbox" style=" margin-bottom:10px;">
+                    <div class="yctitle"><img src="http://img.wanlibo.com/images_cn/newDocin/icon_fdj2.gif" width="25" height="26" align="absmiddle" /> <a href="javascript:showList()" id="showListA" name="showListA" class="lanfont14weight">查看充值记录>></a></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+			
+            <div id="mylist" name="mylist" class="recordbox">
+                <table width="62%" height="68" border="0" align="left" cellpadding="0" cellspacing="0" style="margin-top:5px;">
+                    <tr>
+                        <td width="143" height="30"   align="center" ><div style="height:25px; padding-top:5px; background:#ECF4FA;"><span class="new_ssfont">时间</span></div></td>
+                        <td width="229" height="30" style="border-right:2px solid #FFFFFF; border-left:2px solid #FFFFFF;" ><div style="height:25px; padding-top:5px; background:#ECF4FA;">&nbsp;&nbsp;&nbsp;<a href="javascript:setOrderField()" class="font14">充值方式</a></div></td>
+                        <td width="136" height="30" align="center"  style="border-right:2px solid #FFFFFF;" ><div style="height:25px; padding-top:5px; background:#ECF4FA;"><span class="new_ssfont">金额（元）</span></div></td>
+                        <td width="86" height="30"><div style="height:25px; padding-top:5px; background:#ECF4FA;"><span class="new_ssfont">充值状态</span></div></td>
+                    </tr>
+					
+                    <!-- 记录开始 -->
+                    <tr>
+                        <td height="38" style="border-bottom:1px solid #e2ebf4; "><table width="100%" border="0" cellspacing="0" cellpadding="0"  style="margin-top:10px;" >
+                                <tr>
+                                    <td  align="center" valign="top" class="new_other">2010-05-06 13:35</td>
+                                </tr>
+                            </table></td>
+                        <td valign="middle" style="border-bottom:1px solid #e2ebf4; " class="new_other"><table width="94%" height="23" border="0" cellpadding="0" cellspacing="0"  style="margin-top:10px;">
+                                <tr>
+                                    <td height="23" align="left">&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <!-- img src="http://img.wanlibo.com/images_cn/newDocin/images_ebysm.gif" width="20" height="20" align="absmiddle" /-->
+                                        存款:支付宝</td>
+                                </tr>
+                            </table></td>
+                        <td valign="middle" style="border-bottom:1px solid #e2ebf4;"><table width="100%" height="27" border="0" cellpadding="0" cellspacing="0"  style="margin-top:10px;">
+                                <tr>
+                                    <td height="27" align="center"  class="font162">10.0</td>
+                                </tr>
+                            </table></td>
+                        <td colspan="2" valign="middle" style="border-bottom:1px solid #e2ebf4; "><table width="100%" height="19" border="0" cellpadding="0" cellspacing="0"  style="margin-top:10px;">
+                                <tr>
+                                    <td height="19" align="center" class="new_other">成功</td>
+                                </tr>
+                            </table></td>
+                    </tr>
+                    <!-- 记录结束 -->
+
+                </table>
+				
+				
+                <form action="/app/my/fin/addmoney" method="post" name="select_form" id="select_form" onSubmit="return check();">
+                    <input type="hidden" id="orderField" name="orderField" value="date"/>
+                    <div style="width:235px; float:right; margin-top:10px;">
+                        <div class="ycboxbottom"><img src="http://img.wanlibo.com/images_cn/newDocin/images_bgtop.gif" /></div>
+                        <div class="ycboxcen">
+                            <div class="tittop"><span style="font-size:16px; font-weight:bold; color:#666666;">查询特定记录</span></div>
+                            <div class="tittop2"><span style="font-size:14px;">开始日期</span><br />
+                                <label>
+                                <input name="startdate" id="startdate" type="text" size="10" maxlength="10" readonly="true" value='' onfocus="setday(this,'dataA1')" class="input" />
+                                </label>
+                                <img  style="cursor:hand;"  src="http://img.wanlibo.com/images_cn/newDocin/icon_date.gif" width="26" height="21" align="absmiddle"  title="选择日期" id="dataA1"    onclick="document.getElementById('startdate').focus();return false"/> </div>
+                            <div class="tittop2"><span style="font-size:14px;">结束日期</span><br />
+                                <label>
+                                <input name="enddate" id="enddate" type="text" size="10" maxlength="10" readonly="true" value='' onfocus="setday(this,'dataA2')" class="input" />
+                                </label>
+                                <img  style="cursor:hand;"  src="http://img.wanlibo.com/images_cn/newDocin/icon_date.gif" width="26" height="21" align="absmiddle" title="选择日期" id="dataA2" onClick="document.getElementById('enddate').focus();return false"/> </div>
+                            <div class="tittop3">
+                                <input id="formsubmitButt" name="formsubmitButt" type="submit" value="查询" />
+                                &nbsp;&nbsp;
+                                <input type="button" onclick="resetDate()" value="重置" />
+                            </div>
+                        </div>
+                        <div class="ycboxbottom"><img src="images/images_bgbottom.gif" /></div>
+                        <div class="clear"></div>
+                    </div>
+                </form>
+				
+                <div class="clare"></div>
+            </div>
+            <!--充值记录结束-->
+			
+			
+        </div>
+    </div>
+	
+	
+	<!-- 充值银行 -->
+    <div class="item-skills-wapper skills-w500 rechange-bank"id="bankDiv" style="display:none" >
+        <iframe src="" frameborder="0"></iframe>
+        <div class="item-skills-bg">
+            <div class="item-skills">
+                <div class="list-shop"><a class="closed" title="关闭" onclick="winOper('bankDiv','none');"><img alt="关闭" src="http://img.wanlibo.com/images_cn/group/item_skills_close.gif"/></a></div>
+                <div class="rechange-bank-cont clear" id="re-bank">
+                    <ul>
+                        <li>
+                            <label for="bank1">
+                            <input type="radio" name="selBank" value="2" id="bank1"/>
+                            <img src="images/icon-gs.jpg" alt="中国工商银行"/></label>
+                        </li>
+                        <li>
+                            <label for="bank2">
+                            <input type="radio" name="selBank" value="5" id="bank2"/>
+                            <img src="images/icon-zs.jpg" alt="招商银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank3">
+                            <input type="radio" name="selBank" value="4" id="bank3"/>
+                            <img src="images/icon-js.jpg" alt="中国建设银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank4">
+                            <input type="radio" name="selBank" value="9" id="bank4"/>
+                            <img src="images/icon-zh.jpg" alt="中国银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank5">
+                            <input type="radio" name="selBank" value="3" id="bank5"/>
+                            <img src="images/icon-ny.jpg" alt="中国农业银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank6">
+                            <input type="radio" name="selBank" value="14" id="bank6"/>
+                            <img src="images/icon-jh.jpg" alt="交通银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank7">
+                            <input type="radio" name="selBank" value="16" id="bank7"/>
+                            <img src="images/icon-sh.jpg" alt="上海农村商业银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank8">
+                            <input type="radio" name="selBank" value="33" id="bank8"/>
+                            <img src="images/icon-gdyh.jpg" alt="光大银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank9">
+                            <input type="radio" name="selBank" value="17" id="bank9"/>
+                            <img src="images/icon-pf.jpg" alt="浦发银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank10">
+                            <input type="radio" name="selBank" value="7" id="bank10"/>
+                            <img src="images/icon-ms.jpg" alt="民生银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank11">
+                            <input type="radio" name="selBank" value="34" id="bank11"/>
+                            <img src="images/icon-gf.jpg" alt="广东发展银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank12">
+                            <input type="radio" name="selBank" value="6" id="bank12"/>
+                            <img src="images/icon-yz.jpg" alt="中国邮政储蓄银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank13">
+                            <input type="radio" name="selBank" value="12" id="bank13"/>
+                            <img src="images/icon-xy.jpg" alt="兴业银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank14">
+                            <input type="radio" name="selBank" value="10" id="bank14"/>
+                            <img src="images/icon-sz.jpg" alt="深圳发展银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank15">
+                            <input type="radio" name="selBank" value="11" id="bank15"/>
+                            <img src="images/icon-bj.jpg" alt="北京银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank16">
+                            <input type="radio" name="selBank" value="35" id="bank16"/>
+                            <img src="images/icon-nj.jpg" alt="南京银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank17">
+                            <input type="radio" name="selBank" value="15" id="bank17"/>
+                            <img src="images/icon-gz.jpg" alt="广州商业银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank18">
+                            <input type="radio" name="selBank" value="20" id="bank18"/>
+                            <img src="images/icon-zx.jpg" alt="中信银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank19">
+                            <input type="radio" name="selBank" value="36" id="bank19"/>
+                            <img src="images/icon-hx.jpg" alt="华夏银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank20">
+                            <input type="radio" name="selBank" value="37" id="bank20"/>
+                            <img src="images/icon-pa.jpg" alt="平安银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank21">
+                            <input type="radio" name="selBank" value="13" id="bank21"/>
+                            <img src="images/icon-gd.jpg" alt="广东农村信用社" /></label>
+                        </li>
+                        <li>
+                            <label for="bank22">
+                            <input type="radio" name="selBank" value="19" id="bank22"/>
+                            <img src="images/icon-sd.jpg" alt="顺德农商银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank23">
+                            <input type="radio" name="selBank" value="38" id="bank23"/>
+                            <img src="images/icon-bh.jpg" alt="渤海银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank24">
+                            <input type="radio" name="selBank" value="39" id="bank24"/>
+                            <img src="images/icon-dy.jpg" alt="东亚银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank25">
+                            <input type="radio" name="selBank" value="18" id="bank25"/>
+                            <img src="images/icon-sn.jpg" alt="深圳农商银行" /></label>
+                        </li>
+                        <li>
+                            <label for="bank26">
+                            <input type="radio" name="selBank" value="8" id="bank26"/>
+                            <img src="images/icon-mq.jpg" alt="民生签约用户" /></label>
+                        </li>
+                        <li>
+                            <label for="bank27">
+                            <input type="radio" name="selBank" value="40" id="bank27"/>
+                            <img src="images/icon-nb.jpg" alt="宁波银行" /></label>
+                        </li>
+                    </ul>
+                    <p class="clear">
+                        <button class="btn" onclick="setSelectValue();">确定</button>
+                        <button class="btnclose" onclick="winOper('bankDiv','none');">取消</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="clear"></div>
+</div>
+
+</body>
+</html>

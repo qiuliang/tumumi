@@ -1,0 +1,252 @@
+﻿#capturefor(title)首页#end
+
+#capturefor(head)
+<link type="text/css" href="/contents/css/index_after.css" rel="stylesheet" />
+<script type="text/javascript" src="/contents/js/index.js"></script>
+#end
+
+#parse("Share/SearchBar.vm")
+    
+<div class="outer clear">
+<!--left-column-->
+<div class="l-col">
+    <!--myinfo-->
+    <div class="box">
+        <div class="tips-top">
+            <div></div>
+        </div>
+        <div class="myinfo clear">
+            <!--myinfo-left-->
+            <div class="l-my"> 
+            <a href="/home/$!{Session.logonUser.UserId}.html"> 
+            <img src="$!{Session.logonUser.HeadIcon}" alt="$!{Session.logonUser.TmmDispName}"/>
+            </a>
+                <ul>
+                    <li>已传文档:<a href="/my/mydoc.do" class="fs-11">$!{Session.logonUser.UploadCount}</a>篇</li>
+                    <!--<li>总浏览量:<a href="/my/mydoc.do" class="fs-11">0</a>次</li>-->
+                </ul>
+            </div>
+            <!--myinfo-left end-->
+            <!--myinfo-right-->
+            <div class="r-my">
+                <h2><a href="/home/$!{Session.logonUser.UserId}.html">$!{Session.logonUser.TmmDispName}</a><img src="http://img.wanlibo.com/images_cn/registration/icon-renren.gif" alt="人人网用户" class="icon-renren icon-renren-dn"/></h2>
+                <div class="shop">
+          
+                    <ul>
+                        <li><a href="/my/editUser.do">编辑资料</a></li>
+                    </ul>
+                </div>
+                <div class="row">账户余额:<span class="col-red fs-11">￥$String.Format("{0:N2}",$accountBalance)</span>
+                <a href="/my/DoCharge.do" class="fin">充值</a>
+                </div>
+                <div class="panel-wapper clear" id="panel-status">
+                    <div class="panel-cont" id="panel-cont">
+                        <ul>
+                            <li class="a091103">最近账单:</li>
+                        </ul>
+                        <div>
+                            <table class="myinfo-list">
+                            #foreach($item in $billList)
+                                <tr>
+                                    <td><span>$!{item.CreateTime}</span></td>
+                                    #if(${item.AccountWay}==23)
+                                        <td>                                    
+                                            <span class="col-yel">￥$String.Format("{0:N2}",$!{item.Amount})</span> 
+                                        
+                                        </td>
+                                        <td> 
+                                            买入：【悬赏文档】$!{item.AdminRemark}                                        
+                                        </td>
+                                    #elseif(${item.AccountWay}==10)
+                                        <td><span class="col-gre"> ￥$!{item.Amount} </span> </td>
+                                        <td> 
+                                            #if($!{item.PayWay}==1)
+                                                支付宝充值
+                                            #elseif($!{item.PayWay}==2)
+                                                财付通充值
+                                            #elseif($!{item.PayWay}==3)
+                                                网银在线充值
+                                            #end
+                                        </td>
+                                    #elseif(${item.AccountWay}==12)                                        
+                                        <td><span class="col-gre"> ￥$!{item.Amount} </span> </td>
+                                        <td> 备注：&nbsp;$!{item.AdminRemark} </td>
+                                    #elseif(${item.AccountWay}==20)
+                                        <td>                                    
+                                            <span class="col-yel">￥$String.Format("{0:N2}",$!{item.Amount})</span>
+                                        </td>
+                                        <td> 
+                                            买入：<a  href="/p-$!{item.Doc.DocId}.html" target="_blank">$!FormatHelper.CutString($!{item.Doc.Title},28)</a>
+                                        </td>
+                                    #elseif(${item.AccountWay}==24)                                        
+                                        <td><span class="col-yel"> ￥$!{item.Amount} </span> </td>
+                                        <td>兑换</td>
+                                    #elseif(${item.AccountWay}==90)                                        
+                                        <td><span class="col-gre"> ￥$!{item.Amount} </span> </td>
+                                        <td> 出售文档
+                                            :&nbsp;<a href="/p-$!{item.Doc.DocId}.html" target="_blank">$!{item.Doc.Title}</a> </td>
+                                    #elseif(${item.AccountWay}==91)                                        
+                                        <td><span class="col-gre"> ￥$!{item.Amount} </span> </td>
+                                        <td> 投稿
+                                            ：&nbsp;$!{item.AdminRemark} </td>
+                                    
+                                    #end
+                                </tr>
+                            #end
+                                
+                            </table>
+                            <span class="more"><a  href="/my/AccountDetail.do">更多..</a></span> </div>
+                    </div>
+                </div>
+            </div>
+            <!--myinfo-right end-->
+        </div>
+        <div class="tips-bottom">
+            <div></div>
+        </div>
+    </div>
+    <!--myinfo end-->
+    <!-- ad start -->
+    <div class="box clear"> <a target='_blank' title="土木迷" href="http://www.tumumi.com"> <img src="http://www.tumumi.com/contents/images/user_center_ad2.png"/></a> </div>
+    <!-- ad end -->
+    <!--guess-->
+    <div class="box clear">
+        <h3>土木迷猜你喜欢的文档<span class="fs-16-b">...</span></h3>
+        
+        <div class="doc-cover clear">
+        #foreach($item in $maybeLikeList)
+            <dl>
+                <dt>
+                    <a target="docin_p_end" href="/p-$!{item.DocId}.html">
+                    <img alt="$!{item.Title}" onerror="this.src='http://img.wanlibo.com/images_cn/no_image/90x80_no.gif'" src="$!FormatHelper.GetConvertUrl($!{item.ThumbnailUrl})"/> 
+                    </a> 
+                </dt>
+                <dd>
+                    <img align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_$!{item.DocType}.gif" alt="txt"/>
+                    <a title="$!{item.Title}" target="docin_p_end" href="/p-$!{item.DocId}.html"> $!{item.Title} </a>
+                </dd>
+            </dl>
+        #end
+        </div>
+        
+        <!--分类阅读-->
+	
+        <div id="classread" class="box">
+            <div class="classbox">
+                <div class="classcolumn2">
+                    #foreach($item in $firstCatalog)
+                        <ul class="classlist #if($!{item.CatalogName}=="执业考试资料") exam #end">
+                            <li class="title">$!{item.CatalogName}<span></span></li>
+                            #foreach($s in $item.SubCatalog)
+                            <li>
+                            <a title="$!{s.CatalogName}" target="_blank" href="/list-$!{s.CatalogId}-0-0-0-0-0.html">
+                                #if($!{item.CatalogName}=="执业考试资料")
+                                    $!{s.CatalogName}
+                                #else
+                                    <b>$!{s.CatalogName}</b>
+                                #end
+                            </a>
+                            #foreach($s2 in $s.SubCatalog)
+                                <a title="$!{s2.CatalogName}" target="_blank" href="/list-$!{s2.CatalogId}-0-0-0-0-0.html">$!{s2.CatalogName}</a>
+                            #end
+                            </li>
+                            #end
+                            #if($!{item.CatalogName}=="执业考试资料")
+                                <li><a href="/list-12-0-0-0-0-0.html">更多&gt;&gt;&gt;</a></li>
+                             #end
+                        </ul>
+                        #end
+                </div>
+                <span class="class_l"></span><span class="class_r"></span></div>
+        </div>
+    </div>
+    <!--guess end-->
+</div>
+<!--left-column end-->
+<!--right-column-->
+<div class="r-col">
+    <!--skills-->
+    <div class="box">
+        <div id="uploaddiv" style="height:80px;">
+            <a href="/upload/default.do">
+            <img src="/contents/images/upload_button.jpg" alt="我要上传" />
+            </a>
+        </div>
+        
+    </div>
+    <!--skills end-->
+	
+	
+	<div class="box"><img src="http://www.tumumi.com/contents/images/user_center_ad1.jpg" width="240" height="100" /></div>
+	
+	
+    <!--doc-cover-side-->
+    <div class="box clear">
+        <div class="box-bor clear">
+            <h3><a target="_blank" href="/list-0-0-0-0-0-0.html" class="fr">更多&gt;&gt;</a>看看大家在阅读什么<span class="fs-16-b">...</span></h3>
+            <div class="doc-cover-side clear">
+            #foreach($item in $hotList)
+                <dl class="clear">
+                    <dt>
+                        <a target="_blank"  href="/p-$!{item.DocId}.html"> 
+                            <img alt="$!{item.Title}" style="width:40px;height:50px;" src="$!FormatHelper.GetConvertUrl($!{item.ThumbnailUrl})" />
+                        </a>
+                    </dt>
+                    <dd class="d0"> 
+                        <img align="absmiddle" src="/contents/images/icon_$!{item.DocType}.gif" alt="$!{item.DocType}"/> 
+                        <a title="$!{item.Title}" target="_blank" href="/p-$!{item.DocId}.html" > 
+                        $!{item.Title}
+                        </a>
+                    </dd>
+                </dl>
+            #end     
+            </div>
+        </div>
+    </div>
+    <!--doc-cover-side end-->
+    <!--item-cover-->
+    <!--item-cover end-->
+    <!--doc-cover-side-->
+    <div class="box clear">
+        <div class="box-bor clear">
+            <h3><a class="fr" target="_blank" href="/my/sysmsg.do">更多&gt;&gt;</a>新闻公告<span class="fs-16-b">...</span></h3>
+            <ul class="announce">
+                <li class="tips clear">
+                    <ul>
+                        <li><span>【官方秘籍】</span><a title="如何在土木迷赚钱？" target="_blank" href="/p-44907311.html">如何在土木迷赚钱</a></li>
+                        <li><span>【用户心得】</span><a title="土木迷赚钱实战攻略" target="_blank" href="/p-32823462.html">土木迷赚钱实战攻略</a></li>
+                    </ul>
+                </li>
+                #foreach($item in $messages)
+                <li class="tmm_li_sysmsg">.
+                <a title="$!{item.Title}" class="abtn">$!FormatHelper.CutString($!{item.Title},28)</a>
+                    <div style="display:none">$!{item.Title}</div>
+                    <div style="display:none">
+                        $!{item.Content}
+                    </div>
+                </li>
+                #end
+                
+            </ul>
+        </div>
+    </div>
+    <!--doc-cover-side end-->
+</div>
+<!--right-column end-->
+</div>    
+
+<div class="item-skills-wapper skills-w500 notice" id="tcc" style="display:none;">
+        <div class="item-skills-bg">
+            <div class="item-skills">
+                <div class="list-shop"> <a title="关闭" class="closed abtn"> <img src="http://img.wanlibo.com/images_cn/group/item_skills_close.gif" alt="关闭"/> </a> </div>
+                <div class="notice-cont">
+                    <div>
+                        <h5 id="showTitle">标题</h5>
+                    </div>
+                    <div id="showContent">内容简介</div>
+                    <!--<div id="showContentAll" style="display:none;">全部内容</div>
+                    <div class="txt-r"> <a href="javascript:display_all();" id="descLink"><span id="key" style="cursor: pointer;">展开</span></a> </div>-->
+                </div>
+            </div>
+        </div>
+    </div>

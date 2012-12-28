@@ -1,0 +1,519 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>兑换 - 土木迷</title>
+<link type="text/css" href="css/pub.css" rel="stylesheet" />
+
+<link type="text/css" href="css/gb.css" rel="stylesheet" />
+<link href="css/recharge.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+
+
+<div style="width:1000px; margin:0 auto; padding-left:15px;">
+    <div style="float:left; padding-top:9px;"> </div>
+    <div style="width:970px; margin:0 auto; padding-left:5px; text-align:center; margin-top:10px;">
+
+		<!--弹出层开始-->
+		<div id="sendEmailDiv" style="display:none;">
+			<div class="close">
+				<img src="http://img.wanlibo.com/images_cn/newDocin/icon_close.gif" align="absmiddle" /> 
+				<a href="javascript:void(0)" id="closeWin" class="tcc">关闭窗口</a>
+		
+			</div>
+			<div class="title">
+				<table style="width:100%">
+					<tr id="vvebtn">
+						<td style="text-align: center;"><input  name="send" type="button" value=" 发送验证码到我的安全邮箱 " onclick="hasValidateEmail()" style="width: 200px; height: 30px; font-size: 14px;" />	</td>
+						<td id="modifyValidateEmail" style="display:none;color:#FF0000; font-size:14px;">&nbsp;<span> 您还没有设置安全邮箱，点击<a href="/app/my/docin/pwdsale?fn=set" class="font14sz">设置</a>！</span>	 </td>
+		
+					</tr>
+					<tr id="vverp" style="display:none;"><td colspan="2" style="font-size:14px;font-weight:bold;color:#000">发送成功,如果超过10分钟您没有收到邮件，可&nbsp;<a href="javascript:hasValidateEmail();">重新发送</a></td></tr>
+				</table>
+			</div>
+			<div class="title" style="text-align:left;padding-left:49px;_padding-left:39px">
+				<span style="color:#000000; font-size:14px; font-weight:bold;">请输入您接收到的最新安全验证码:</span>
+				<label><input type="text" name="yanzheng" id="yanzheng" style="width:150px; height:20px;" />&nbsp; </label>
+		
+				<label><input type="button" name="x" onclick="checkYanzheng()" value=" 确定 " /></label>
+			</div>
+			<div class="bg579">
+				<div class="top"><img src="http://img.wanlibo.com/images_cn/newDocin/images_bgtoplan579.gif" /></div>
+				<div class="cen">
+					<div class="titledf" style="text-align:left; width:100%">温馨提示: </div>
+					<ul style=" text-align:left">
+						<li>· 验证码是为了维护您的帐户安全，验证码随机更换；</li>
+		
+						<li>· 验证码会发送到您的安全邮箱，接收验证码前提必须设置您的安全邮箱，点击<a href="/app/my/docin/pwdsale" class="tsfont_font">设置</a>；</li>
+						<li>· 点击上面“<span style=" font-size:12px; font-weight:bold;">发送验证码到我的安全邮箱</span>”按钮，然后到你的安全邮箱接收最新的验证码，并填写
+							&nbsp;&nbsp;&nbsp;到输入框中，点击“确定”按钮即可完成兑换申请操作；</li>
+						<li>· 为确保您的帐户安全，每次登录使用兑换功能时，都需要重新验证。<a href="http://www.docin.com/jsp_cn/shouyi.jsp" title="近期兑换成功用户名单" target="_blank" style="color:red">近期兑换成功用户名单</a></li>
+					</ul>
+		
+				 </div>
+				<div class="top"><img src="http://img.wanlibo.com/images_cn/newDocin/images_bgbottomlan579.gif" /></div>
+			</div>
+		</div>
+		<!--弹出层结束-->
+		
+		<!--弹出层2开始-->
+		<div id="exchangeSuccess" style="display: none;">
+			<div class="close2">
+				<img src="http://img.wanlibo.com/images_cn/newDocin/icon_close.gif" align="absmiddle" /> 
+				<a href="javascript:void(0)" class="tcc" id="closeWinSuccess">关闭窗口</a>
+		
+			</div>
+			<div class="title2">
+				<img src="http://img.wanlibo.com/images_cn/newDocin/icon_cg.gif" width="76" height="88" align="absmiddle" /> 
+				<span style=" font-size:30px; color:#000000; font-weight:bold;">兑换申请成功！</span>
+				<div class="clear"></div>
+			</div>
+			<div class="title2" style="width:300px; text-align:left;">
+				<span style=" font-size:14px; color:#666666; font-weight:bold; text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;申请兑换金额：<span style="font-weight:normal;">￥</span>0.00</span>
+		
+				<div class="clear"></div>
+			</div>
+			<div class="title2" style="width:300px; text-align:left;">
+				<span style=" font-size:14px; color:#666666; font-weight:bold; text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您的土木迷帐户余额：<span style="font-weight:normal;">￥</span>4.04</span>
+				<div class="clear"></div>
+			</div>
+			<div class="title2" style="width:300px; text-align:left;"><div class="clare"></div></div>
+		
+			<div class="title2" style="width:300px; text-align:left;">
+				<span style=" font-size:14px; color:#666666;text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="closeWinSuccessButt" id="closeWinSuccessButt" type="button" value=" 关闭窗口 " style="font-size:14px;"></span>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<!--弹出层2结束-->
+		
+		
+		<div id="container">
+			 
+			<!--充值标签开始-->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="284"><div class="tab">
+							<div class="nav1" style="background:url(images/images_tabbg2_zdmx.gif) no-repeat;">
+								<div style="width:80px; height:20px; margin-top:10px; margin-left:20px; text-align:center;"> <a href="/app/my/fin/transactionHistory_cn"  class="tabfonthui">账单明细</a> </div>
+							</div>
+							<div class="nav2" style="background:url(images/images_tabbg3.gif) no-repeat;">
+								<div style="width:78px; height:20px; margin-top:10px; margin-left:10px; text-align:center;"> <a href="/app/my/fin/addmoney"class="tabfont">充值</a> </div>
+							</div>
+							<div class="nav3" style="background:url(images/images_tabbg3.gif) no-repeat;">
+								<div style="width:80px; height:20px; margin-top:10px; margin-left:8px; text-align:center;"> <a href="/app/my/fin/settleAccounts" class="tabfont">兑换</a> </div>
+							</div>
+						</div></td>
+					<td>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="28" style=" border-bottom:1px solid #cccccc;">&nbsp;</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!--充值标签结束-->
+			
+			<div class="item-skills-wapper common-skills" id="dateIntegrity" style="display: none">
+			<div class="item-skills-bg">
+			<div class="item-skills">
+				<div class="list-shop"><a class="closed" title="关闭" onclick="divHidden('dateIntegrity','exMain');"><img alt="关闭" src="http://t.docin.com/images_cn/group/item_skills_close.gif"></a></div>
+				<div class="common-skills-cont margin-t">
+					<h5>你的土木迷资料关键项目尚未填选，请完善后再进行兑换。</h5>
+					<h5>注：关键项目以<span class="fcr">红色区域</span>标注。</h5>
+					<div class="t-c margin-t"><input type="button" class="btn" value="立即完善资料" title="立即完善资料" onclick="document.location.href='/app/user/editUserInfo?red=yes&callAddress=exchange'"> </div>
+				</div>
+			</div>
+			</div>
+		
+			</div>
+			
+			<div class="exchange_box" id="exMain" >
+				<div class="exchange_left" style="width:70%;">
+					<div class="titleone" >余额￥4.04；可兑换￥0.00</div>
+					<div class="ex-choose">
+						<h4>请选择兑换方式：</h4>
+						<ul>
+							<li onclick="exHidden('exMain','exZfb','exBank')"><img src="images/zfb-tag.jpg" alt="兑换到我的支付宝账户" /></li>
+		
+							<li onclick="exHidden('exMain','exBank','exZfb')"><img src="images/bank-tag.jpg" alt="兑换到我的银行账户" /></li>
+						</ul>
+					</div>
+				</div>
+				<!--兑换右边提示开始-->
+				<div class="exchange_right">
+					<div class="topbg"><img src="images/images_bgtoplan.gif" /></div>
+					<div class="cenbg">
+						<ul>
+		
+							<li class="dbt"><span class="fontblock2">&nbsp;&nbsp;&nbsp;兑换说明:</span> <span class="fontblock">（币种:人民币）</span></li>
+							<li class="bt" style="list-style-type: disc;">100元起兑，单笔2万元为上限；</li>
+							<li class="bt" style="list-style-type: disc;">最小兑换单位：百位；<br />(例：1498元可兑1400元余98元)</li>
+							<li class="bt" style="list-style-type: disc;">兑换时会收取相应手续费，此项费用需兑换者自理</li>
+							<li><ul style="padding: 0pt;"><li class="bt" style="list-style-type: disc;">用户充值到土木迷的金额不可兑换；</li>
+							<li class="bt" style="list-style-type: disc;">用户在土木迷购买文档时，优先消费帐户中的“充值余额”，再消费其它收益余额；</li>
+							<li class="bt" style="list-style-type: disc;">可兑换金额计算方法：即帐户余额扣除“充值余额”后的百位金额。
+								<div style="display: none;" id="rechange-eg">
+									<ul style="padding: 0pt;">
+										<li>A用户，</li>
+										<li>卖出文档若干 + ￥186.00</li>
+										<li>银行卡充值 + ￥100.00</li>
+										<li>购买文档几篇 -  ￥ 21.32</li>
+										<li>---------------------------------------</li>
+										<li>帐户余额：￥264.68</li>
+										<li>充值余额：￥  78.68</li>
+										<li>其它余额：￥186.00</li>
+										<li>可兑换百位金额为：￥100.00</li></ul></div></li><li class="bt"><a href="#nogo" onmousedown="this.style.display='none';document.getElementById('rechange-eg').style.display='none';document.getElementById('yssl').style.display='block';" id="sqsl" style="display:none">收起实例↑</a><a id="yssl" onmousedown="this.style.display='none';document.getElementById('rechange-eg').style.display='block';document.getElementById('sqsl').style.display='block';" href="#nogo" style="display: block;">演示实例↓</a></li></ul></li>
+							<li class="bt" style="list-style-type: disc;">余额根据兑换数进行扣减。</li>
+						</ul>
+						<div class="clear"></div>
+					</div>
+		
+					<div class="topbg"><img src="images/images_bgbottomlan.gif" /></div>
+				</div>
+				<!--兑换右边提示结束-->
+				<div class="clear"></div>
+			</div>
+		
+			<!--兑换开始-->
+			<div class="exchange_box" id="exBank">
+				<form name="f_bank" id="f_bank" method="post" action="/app/my/fin/withdrawcheck_cn"  >
+		
+					<div class="exchange_left" style="width:70%;">
+						<div class="titleone" >余额￥4.04；可兑换￥0.00</div>
+						<div class="titletwo">
+							<div class="ts" ><a class="back" href="javascript:exHidden('exBank','exMain','exZfb'),void(0)">返回</a>兑换到我的银行账户</div>
+							<div style="font-size:14px;color:red">以下均为必填项-为转帐成功请确保您的信息准确无误</div>
+							<div class="neirong">
+								<div class="left">收款人姓名:</div>
+		
+								<div class="right">
+									<input name="payee_name"  type="text" id="payee_name" size="20" maxlength="50" class="input" />
+								</div>
+							</div>
+							<div class="neirong">
+								<div class="left">收款人银行卡号:</div>
+								<div class="right">
+									<input name="cardid"  type="text" id="cardid" size="20" maxlength="50" class="input" />
+		
+								</div>
+							</div>
+							<div class="neirong">
+								<div class="left">开户银行:</div>
+								<div class="right">
+									<label>
+										<select name="bank_name"  id="bank_name" class="select">
+											
+													<option value="2,工商银行">工商银行</option>
+		
+													
+													<option value="3,农业银行">农业银行</option>
+													
+													<option value="4,建设银行">建设银行</option>
+													
+													<option value="5,招商银行">招商银行</option>
+													
+													<option value="6,邮政储蓄">邮政储蓄</option>
+													
+													<option value="7,民生卡用户">民生卡用户</option>
+													
+													<option value="8,民生签约用户">民生签约用户</option>
+		
+													
+													<option value="9,中国银行">中国银行</option>
+													
+													<option value="10,深圳发展银行">深圳发展银行</option>
+													
+													<option value="11,北京银行">北京银行</option>
+													
+													<option value="12,兴业银行">兴业银行</option>
+													
+													<option value="13,广州市农信社">广州市农信社</option>
+													
+													<option value="14,交通银行">交通银行</option>
+		
+													
+													<option value="15,广州市商业银行">广州市商业银行</option>
+													
+													<option value="16,上海农商银行">上海农商银行</option>
+													
+													<option value="17,浦发银行">浦发银行</option>
+													
+													<option value="18,深圳农商银行">深圳农商银行</option>
+													
+													<option value="19,顺德农信社">顺德农信社</option>
+													
+													<option value="20,中信银行">中信银行</option>
+		
+													
+										</select>
+									</label>
+								</div>
+							</div>
+							<div class="neirong">
+								<div class="left">银行所在省:</div>
+								<div class="right">
+									<label><select class="select"  name="bank_province" id="bank_province" onChange="ChangeChild(value, ArrayCatalog1, 'bank_city_s');"></select></label>
+		
+								</div>
+							</div>
+							<div class="neirong">
+								<div class="left">银行所在市:</div>
+								<div class="right">
+									<label>
+										<div style="position:relative">
+											<input   type="text"    name="bank_city" id="bank_city" value=""  style="display:none;">   
+											<select class="select" name="bank_city_s" id="bank_city_s"    onclick="setTxt('bank_city_s','bank_city')"></select>
+		
+											<script language="javascript">Init(ArrayCatalog1, 'bank_province', 'bank_city_s');</script>			    
+										</div>			    
+									</label>
+								</div>
+							</div>
+							<div class="neirong">
+								<div class="left">兑换金额:</div>
+								<div class="right">
+									<label>	   
+										<select name="amount" id="amount" class="select">
+		
+											<option value=''>0元</option>
+		
+										</select>
+									</label>
+								</div>
+							</div>
+							<div class="neirong">
+								<div class="left"></div>
+								<div class="right">
+		
+									<label></label>
+									<label>
+										<input name="save" type="checkbox" id="save" value="ok" />
+									</label>
+									<span  style="color:#000000;">保存帐户信息</span>
+								</div>
+							</div>
+							<div class="neirong">
+		
+								<div class="left"></div>
+								<div class="right">
+									<label></label>
+									<label>
+										<input type="button" name="s" value=" 兑换 " onclick="findUserBank()" />
+									</label>
+								</div>
+							</div>
+						</div>
+		
+					</div>
+				</form>
+				<!--兑换右边提示开始-->
+				<div class="exchange_right">
+					<div class="topbg"><img src="images/images_bgtoplan.gif" /></div>
+					<div class="cenbg">
+						<ul>
+							<li class="dbt"><span class="fontblock2">&nbsp;&nbsp;&nbsp;兑换说明:</span> <span class="fontblock">（币种:人民币）</span></li>
+		
+							<li class="bt" style="list-style-type: disc;">100元起兑，单笔2万元为上限；</li>
+							<li class="bt" style="list-style-type: disc;">最小兑换单位：百位；<br />(例：1498元可兑1400元余98元)</li>
+							<li class="bt" style="list-style-type: disc;">兑换时，结算机构会收取相应手续<br />费，此项费用需兑换者自理</li>
+							<li><div><ul style="padding: 0pt;"><li class="bt" style="list-style-type: disc;">用户充值到土木迷的金额不可兑换；</li><li class="bt" style="list-style-type: disc;">用户在土木迷购买文档时，优先消费帐户中的“充值余额”，再消费其它收益余额；</li><li class="bt" style="list-style-type: disc;">可兑换金额计算方法：即帐户余额扣除“充值余额”后的百位金额。<div style="display: none;" id="rechange-eg"><ul style="padding: 0pt;"><li>A用户，</li><li>卖出文档若干      + ￥186.00</li><li>银行卡充值　          + ￥100.00</li><li>购买文档几篇      -  ￥ 21.32
+		
+		</li><li>---------------------------------------</li><li>帐户余额：￥264.68</li><li>充值余额：￥  78.68</li><li>其它余额：￥186.00</li><li>可兑换百位金额为：￥100.00</li></ul></div></li><li class="bt"><a href="#nogo" onmousedown="this.style.display='none';document.getElementById('rechange-eg').style.display='none';document.getElementById('yssl').style.display='block';" id="sqsl" style="display:none">收起实例↑</a><a id="yssl" onmousedown="this.style.display='none';document.getElementById('rechange-eg').style.display='block';document.getElementById('sqsl').style.display='block';" href="#nogo" style="display: block;">演示实例↓</a></li></ul></div></li>
+							<li class="bt" style="list-style-type: disc;">勾选“保存帐户信息”，二次兑换<br />直接调用账户信息。</li>
+							<li class="bt" style="list-style-type: disc;">余额根据兑换数进行扣减。</li>
+						</ul>
+		
+						<div class="clear"></div>
+					</div>
+					<div class="topbg"><img src="images/images_bgbottomlan.gif" /></div>
+				</div>
+				<!--兑换右边提示结束-->
+				<div class="clear"></div>
+			</div>
+			<!--兑换结束-->
+			
+			<div class="exchange_box exchange_zfb" id="exZfb">
+		
+				<form name="f_alipay" id="f_alipay" method="post" action="/app/my/fin/withdrawcheck_cn"  ><input type="hidden" name="type" id="type" value="alipay" />
+					<div class="exchange_left" style="width:70%;">
+						<div class="titleone" >余额￥4.04；可兑换￥0.00</div>
+						<div class="titletwo">
+							<div class="ts" ><a class="back" href="javascript:exHidden('exBank','exMain','exZfb'),void(0)">返回</a>兑换到我的支付宝账户</div>
+							<div style="font-size:14px; color:red">以下均为必填项-为转帐成功请确保您的信息准确无误</div>
+							<div class="neirong">
+		
+								<div class="left">收款方支付宝真实姓名:</div>
+								<div class="right">
+									<input name="alipay_name"  type="text" id="alipay_name" size="20" value="" maxlength="50" class="input" />
+								</div>
+							</div>
+							<div class="neirong">
+								<div class="left">收款方支付宝账户:</div>
+								<div class="right">
+		
+									<input name="alipay_id"  type="text" id="alipay_id" size="20" value="" maxlength="50" class="input" />
+								</div>
+							</div>
+							<div class="neirong">
+								<div class="left">确认收款方支付宝账户:</div>
+								<div class="right">
+									<input name="alipay_id_again" value="" type="text" id="alipay_id_again" size="20" maxlength="50" class="input" />
+								</div>
+		
+							</div>
+							<div class="neirong">
+								<div class="left">兑换金额:</div>
+								<div class="right">
+									<label>	   
+										<select name="amount_alipay" id="amount_alipay" class="select">
+											<option value=''>0元</option>
+		
+										</select>
+		
+									</label>
+								</div>
+							</div>
+							<div class="neirong">
+								<div class="left"></div>
+								<div class="right">
+		
+									<label></label>
+									<label>
+		
+										<input name="save" type="checkbox" id="save" value="ok" />
+									</label>
+									<span  style="color:#000000;">保存帐户信息</span>
+								</div>
+							</div>
+							<div class="neirong">
+		
+								<div class="left"></div>
+								<div class="right">
+		
+									<label></label>
+									<label>
+										<input type="button" name="s" value=" 兑换 " onclick="checkinfo()" />
+									</label>
+								</div>
+							</div>
+						</div>
+		
+					</div>
+		
+				</form>
+				<!--兑换右边提示开始-->
+				<div class="exchange_right">
+					<div class="topbg"><img src="images/images_bgtoplan.gif" /></div>
+					<div class="cenbg">
+						<ul>
+							<li class="dbt"><span class="fontblock2">&nbsp;&nbsp;&nbsp;兑换说明:</span> <span class="fontblock">（币种:人民币）</span></li>
+		
+							<li class="bt" style="list-style-type: disc;">100元起兑，单笔2万元为上限；</li>
+							<li class="bt" style="list-style-type: disc;">最小兑换单位：百位；<br />(例：1498元可兑1400元余98元)</li>
+							<li class="bt" style="list-style-type: disc;">通过支付宝方式兑换会收取每笔1%的手续费</li>
+							<li><div><ul style="padding: 0pt;"><li class="bt" style="list-style-type: disc;">用户充值到土木迷的金额不可兑换；</li><li class="bt" style="list-style-type: disc;">用户在土木迷购买文档时，优先消费帐户中的“充值余额”，再消费其它收益余额；</li><li class="bt" style="list-style-type: disc;">可兑换金额计算方法：即帐户余额扣除“充值余额”后的百位金额。<div style="display: none;" id="rechange-eg2"><ul style="padding: 0pt;"><li>A用户，</li><li>卖出文档若干      + ￥186.00</li><li>银行卡充值　          + ￥100.00</li><li>购买文档几篇      -  ￥ 21.32
+		
+		
+		</li><li>---------------------------------------</li><li>帐户余额：￥264.68</li><li>充值余额：￥  78.68</li><li>其它余额：￥186.00</li><li>可兑换百位金额为：￥100.00</li></ul></div></li><li class="bt"><a href="#nogo" onmousedown="this.style.display='none';document.getElementById('rechange-eg2').style.display='none';document.getElementById('yssl2').style.display='block';" id="sqsl2" style="display:none">收起实例↑</a><a id="yssl2" onmousedown="this.style.display='none';document.getElementById('rechange-eg2').style.display='block';document.getElementById('sqsl2').style.display='block';" href="#nogo" style="display: block;">演示实例↓</a></li></ul></div></li>
+							<li class="bt" style="list-style-type: disc;">勾选“保存帐户信息”，二次兑换<br />直接调用账户信息。</li>
+							<li class="bt" style="list-style-type: disc;">余额根据兑换数进行扣减。</li>
+						</ul>
+		
+						<div class="clear"></div>
+					</div>
+					<div class="topbg"><img src="images/images_bgbottomlan.gif" /></div>
+				</div>
+				<!--兑换右边提示结束-->
+				<div class="clear"></div>
+			</div>
+			
+			<!--兑换记录开始-->
+		
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="left"><img src="images/icon_fdj2.gif" width="25" height="26" align="absmiddle" /> <a href="javascript:showList_exchange()" id="showListA" name="showListA" class="lanfont14weight">查看兑换记录>></a></td>
+				</tr>
+			</table>
+			<div id="mylist" name="mylist" style='display:none' class="recordbox">
+				<table width="62%" height="68" border="0" align="left" cellpadding="0" cellspacing="0" style="margin-top:5px;">
+					<tr>
+		
+						<td width="143" height="30"   align="center"><div style="height:25px; padding-top:5px; background:#ECF4FA;"><span class="new_ssfont">时间</span></div></td>
+						<td width="229" height="30" align="left" style="border-right:2px solid #FFFFFF; border-left:2px solid #FFFFFF;" ><div style="height:25px; padding-top:5px; background:#ECF4FA;">&nbsp;&nbsp;&nbsp;<a href="javascript:setOrderField()" class="font14">兑换方式</a></div></td>
+						<td width="136" height="30" align="center" style="border-right:2px solid #FFFFFF;" ><div style="height:25px; padding-top:5px; background:#ECF4FA;"><span class="new_ssfont">金额（元）</span></div></td>
+						<td width="86" height="30"><div style="height:25px; padding-top:5px; background:#ECF4FA;"><span class="new_ssfont">充值状态</span></div></td>
+					</tr>
+					
+				</table>
+				
+				
+				
+				<form action="/app/my/fin/settleAccounts" method="post" name="select_form" onSubmit="return check();" id="select_form" >   
+					<input type="hidden" id="orderField" name="orderField" value="date"/>
+		
+					<div style="width:235px; float:right; margin-top:10px;">
+						<div class="ycboxbottom"><img src="images/images_bgtop.gif" /></div>
+						<div class="ycboxcen">
+							<div class="tittop"><span style="font-size:16px; font-weight:bold; color:#666666;">查询特定记录</span></div>
+							<div class="tittop2">
+								<span style="font-size:14px;">开始日期</span><br />
+								<label>
+									<input name="startdate" id="startdate" type="text" size="10" maxlength="10" readonly="true" value=''  onfocus="setday(this,'dataA1')" class="input" />
+		
+								</label>
+								<img src="images/icon_date.gif" width="26" height="21" align="absmiddle" alt="选择日期"  style="cursor:hand;" id="dataA1"  onclick="document.getElementById('startdate').focus();return false"/>
+								<div class="clear"></div>
+							</div>
+							<div class="tittop2"><span style="font-size:14px;">结束日期</span><br />
+								<label>
+									<input  name="enddate" id="enddate" type="text" size="10" maxlength="10" readonly="true" value=''  onfocus="setday(this,'dataA2')" class="input" />
+								</label>
+		
+								<img src="images/icon_date.gif" width="26" height="21" align="absmiddle"  alt="选择日期"  style="cursor:hand;" id="dataA2" onClick="document.getElementById('enddate').focus();return false"/>
+							</div>
+							<div class="tittop3">
+								<input name="" type="submit" value=" 查询 " />&nbsp;&nbsp;
+								<input type="button" onclick="resetDate()" value="重置" />
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="ycboxbottom"><img src="images/images_bgbottom.gif" /></div>
+		
+						<div class="clear"></div>
+					</div>
+				</form>
+				<!--兑换记录结束-->
+				<div class="clear"></div>
+			</div>
+		</div>
+		<!-- mylist 结束 -->
+		<!--rechange-sks-->
+		<iframe src="" class="rechange-sksTips" id="rechange-sksTips" frameborder="0" style="display:none"></iframe>
+		
+		<div id="tishi" class="item-skills-wapper skills-w500 rechange-sks" style="display:none;">
+			<div class="item-skills-bg">
+				<div class="item-skills">
+					<div class="list-shop"><a href="javascript:coodiv();" title="关闭" class="closed"><img src="http://img.wanlibo.com/images_cn/group/item_skills_close.gif" alt="关闭"/></a></div>
+					<div class="notice-cont">
+						<div><h4 class="fs16">可兑换金额明细：</h4></div>
+						<div>
+							<p class="fs16">余额￥4.04 扣除充值余额￥4.04 ，等于￥0.00，可兑换￥0.00。</p>
+		
+						</div>
+						<div><p>更多细则请参看右侧“兑换说明”</p></div>
+						<div class="tac"><input type="button" class="btn" title="关闭" value="关　闭" onclick="javascript:coodiv();"/></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<%-- 
+Name:	IBatisNetGen.Database.cst
+Version: 2007.02.08
+Author: Yaojian  ( smrtk@hotmail.com )
+Description: Generates SQLMapping/DataClass/DaoIntf/DaoImpl files for IBatis.Net (see ibatis.apache.org)
+--%>
+<%@ CodeTemplate Language="C#" TargetLanguage="C#" Src="CSBatisBuilder.cs" Inherits="DatabaseCompositeTemplate" Debug="true"  Description="Generates IBatis map and data class from a database table." %>
+
+<%@ Assembly Name="System" %>
+<%@ Assembly Name="System.Data" %>
+<%@ Assembly Name="CodeSmith.BaseTemplates" %>
+<%@ Assembly Name="CodeSmith.CustomProperties" %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Src="CSBatisBuilder.cs" %>
+
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.ComponentModel" %>
+<%@ Import Namespace="System.Collections" %>
+<%@ Import Namespace="System.Collections.Specialized" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="CSBatisBuilder" %>
+
+<%@ Register Name="BatisMapTemplate" Template="IBatisNetGen.BatisMap.cst" MergeProperties="False" ExcludeProperties="" %>
+<%@ Register Name="EntityTemplate" Template="IBatisNetGen.Entity.cst" MergeProperties="False" ExcludeProperties="" %>
+<%@ Register Name="DaoIntfTemplate" Template="IBatisNetGen.DaoIntf.cst" MergeProperties="False" ExcludeProperties="" %>
+<%@ Register Name="DaoImplTemplate" Template="IBatisNetGen.DaoImpl.cst" MergeProperties="False" ExcludeProperties="" %>
+<script runat="template">	
+</script>
+<%		
+	BatisMapTemplate batisMap = this.Create<BatisMapTemplate>();
+	EntityTemplate entity = this.Create<EntityTemplate>();
+	DaoIntfTemplate daoIntf = this.Create<DaoIntfTemplate>();
+	DaoImplTemplate daoImpl = this.Create<DaoImplTemplate>();
+		
+	StringCollection batisMapFileNames = new StringCollection();
+	StringCollection intfNames = new StringCollection();
+	StringCollection implNames = new StringCollection();
+	
+	foreach (TableSchema table in this.SourceTables) {
+		TableBuilder builder = new TableBuilder(table, this);
+%>
+================================================================================
+==	BatisMap of table <%= table.FullName %>
+================================================================================
+<%		batisMap.Builder = builder;
+		batisMap.FileOption = this.FileSetOption.BatisMapOption;
+		batisMap.Render(this.Response); %>
+
+================================================================================
+==	Entity of table <%= table.FullName %>
+================================================================================
+<%		entity.Builder = builder;
+		entity.FileOption = this.FileSetOption.EntityOption;
+		entity.Render(this.Response); %>
+
+================================================================================
+==	DAO interface of table <%= table.FullName %>
+================================================================================
+<%		daoIntf.Builder = builder;
+		daoIntf.FileOption = this.FileSetOption.DaoIntfOption;
+		daoIntf.Render(this.Response); %>
+
+================================================================================
+==	DAO implementation of table <%= table.FullName %>
+================================================================================
+<%		daoImpl.Builder = builder;
+		daoImpl.FileOption = this.FileSetOption.DaoImplOption;
+		daoImpl.Render(this.Response); %>
+<%
+		batisMapFileNames.Add(batisMap.FileName);
+		
+		intfNames.Add(daoIntf.Builder.DaoIntfName);
+		implNames.Add(daoImpl.Builder.DaoImplName);
+	} %>
+
+<%	foreach (String s in batisMapFileNames) {	%>
+<sqlMap resource="SqlMaps\<% =s %>" />
+<%	}	%>
+<%	for (int i = 0; i < intfNames.Count; i ++) {
+		String intfName = intfNames[i];
+		String implName = implNames[i];%>
+RegisterPersister<<% =intfName %>, <% =implName %>>();
+<%	}	%>

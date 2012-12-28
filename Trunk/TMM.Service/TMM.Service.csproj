@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F66313DF-7E1D-445E-AB08-470CEA1D2529}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TMM.Service</RootNamespace>
+    <AssemblyName>TMM.Service</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TMM.Lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.Common, Version=1.6.1.0, Culture=neutral, PublicKeyToken=ed781d9fc396c6ca, processorArchitecture=MSIL" />
+    <Reference Include="IBatisNet.DataMapper, Version=1.6.1.0, Culture=neutral, PublicKeyToken=ed781d9fc396c6ca, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bll\Admin\ManageUserBLL.cs" />
+    <Compile Include="Bll\Doc\DownloadLogBLL.cs" />
+    <Compile Include="Bll\Doc\D_CommentBLL.cs" />
+    <Compile Include="Bll\Doc\D_DocInfoBLL.cs" />
+    <Compile Include="Bll\Doc\D_FileInfoBLL.cs" />
+    <Compile Include="Bll\Doc\D_Rel_DocTagBLL.cs" />
+    <Compile Include="Bll\Doc\D_TagBLL.cs" />
+    <Compile Include="Bll\Doc\FileInfoBLL.cs" />
+    <Compile Include="Bll\Doc\M_CatalogBLL.cs" />
+    <Compile Include="Bll\Doc\M_FavoriteBLL.cs" />
+    <Compile Include="Bll\Doc\TReqDocBLL.cs" />
+    <Compile Include="Bll\Doc\T_JoinDocBLL.cs" />
+    <Compile Include="Bll\Order\AccountLogBLL.cs" />
+    <Compile Include="Bll\Order\ExchangeAccountBLL.cs" />
+    <Compile Include="Bll\Order\MPayLogBLL.cs" />
+    <Compile Include="Bll\Order\TOrderBLL.cs" />
+    <Compile Include="Bll\Order\TOrderDetailBLL.cs" />
+    <Compile Include="Bll\Sys\S_CatalogBLL.cs" />
+    <Compile Include="Bll\Sys\S_FriendLinkBll.cs" />
+    <Compile Include="Bll\Sys\S_ConfigBll.cs" />
+    <Compile Include="Bll\User\MAccountBLL.cs" />
+    <Compile Include="Bll\User\M_MessageBLL.cs" />
+    <Compile Include="Bll\User\M_PurchaseBLL.cs" />
+    <Compile Include="Bll\User\U_UserInfoBLL.cs" />
+    <Compile Include="Dal\Admin\ManageUserDao.cs" />
+    <Compile Include="Dal\Doc\DownloadLogDao.cs" />
+    <Compile Include="Dal\Doc\D_CommentDao.cs" />
+    <Compile Include="Dal\Doc\D_DocInfoDao.cs" />
+    <Compile Include="Dal\Doc\D_FileInfoDao.cs" />
+    <Compile Include="Dal\Doc\D_Rel_DocTagDao.cs" />
+    <Compile Include="Dal\Doc\D_TagDao.cs" />
+    <Compile Include="Dal\Doc\FileInfoDao.cs" />
+    <Compile Include="Dal\Doc\M_CatalogDao.cs" />
+    <Compile Include="Dal\Doc\M_FavoriteDao.cs" />
+    <Compile Include="Dal\Doc\TReqDocDao.cs" />
+    <Compile Include="Dal\Doc\T_JoinDocDao.cs" />
+    <Compile Include="Dal\Order\AccountLogDao.cs" />
+    <Compile Include="Dal\Order\ExchangeAccountDao.cs" />
+    <Compile Include="Dal\Order\MPayLogDao.cs" />
+    <Compile Include="Dal\Order\TOrderDao.cs" />
+    <Compile Include="Dal\Order\TOrderDetailDao.cs" />
+    <Compile Include="Dal\Sys\S_CatalogDao.cs" />
+    <Compile Include="Dal\Sys\S_FriendLinkDal.cs" />
+    <Compile Include="Dal\Sys\S_ConfigDal.cs" />
+    <Compile Include="Dal\User\MAccountDao.cs" />
+    <Compile Include="Dal\User\M_MessageDao.cs" />
+    <Compile Include="Dal\User\M_PurchaseDao.cs" />
+    <Compile Include="Dal\User\U_UserInfoDao.cs" />
+    <Compile Include="SystemService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserService.cs" />
+    <Compile Include="AdminService.cs" />
+    <Compile Include="DocService.cs" />
+    <Compile Include="AccountService.cs" />
+    <Compile Include="OrderService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TMM.Models\TMM.Models.csproj">
+      <Project>{E36CD77F-F96D-4245-8504-E88F5E5BD549}</Project>
+      <Name>TMM.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TMM.Persistence\TMM.Persistence.csproj">
+      <Project>{56FD13EB-3455-41A9-B1A9-B7ED58EC4D30}</Project>
+      <Name>TMM.Persistence</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

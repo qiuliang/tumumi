@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>给土木迷发消息-土木迷</title>
+<link type="text/css" href="css/pub.css" rel="stylesheet" />
+<link type="text/css" href="css/my.css" rel="stylesheet" />
+<link type="text/css" href="css/gb.css" rel="stylesheet" />
+<script type="text/javascript" src="js/swfobject.js" ></script>
+</head>
+<body>
+
+
+
+
+
+<div  style=" margin:0 auto; padding-left:15px; width:1000px;">
+    <div style="float:left; padding-top:9px;"> </div>
+    <div style="width:970px; margin:0 auto; text-align:center; padding-left:5px; margin-top:10px;float:left"> ﻿
+        <div id="container" >
+            <div class="mywd_container">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td><div class="chongzhi_navbox">
+                                <!-- 导航开始 -->
+                                <link href="http://img.wanlibo.com/css/newDocin/gb.css" rel="stylesheet" type="text/css" />
+                                <!--提示开始-->
+                                <div class="ts" id="clueToDiv" name="clueToDiv" style=" display:none; width:100%; margin:auto; margin-bottom:20px;  margin:auto; margin-bottom:20px; padding-left:20px;">
+                                    <div class="tsleft"><img src="http://img.wanlibo.com/images_cn/newDocin/bgleft.gif" /></div>
+                                    <div class="tscen" style="width:90%;">
+                                        <div class="title"><span class="fontblock" id="clueToSpan" name="clueToSpan">null</span></div>
+                                    </div>
+                                    <div class="tsleft"><img src="http://img.wanlibo.com/images_cn/newDocin/bgright.gif" /></div>
+                                    <div class="clear"></div>
+                                </div>
+                                <!--提示结束-->
+								
+                                <!--消息标签开始-->
+                                <div class="nav_shao" >
+                                    <div class="nav_sj_shaohui_box">
+                                        <div class="nav_title_shao_hui"> <a href="/app/my/msg/system"  class="tabfonthui2" >系统公告</a> </div>
+                                    </div>
+                                    <!-- 1 -->
+                                    <div class="nav_sj_shaohui_box" >
+                                        <div class="nav_title_shao_hui"> <a href="/app/my/msg/inform" class="tabfont">通知<span style="color:red">(1)</span></a> </div>
+                                    </div>
+                                    <!-- 1 -->
+                                    <!-- 2 -->
+                                    <div class="nav_sj_shaohui_box">
+                                        <div class="nav_title_shao_hui"> <a href="/app/my/msg/receive"  class="tabfont" >接收的消息<span style="color:red">(1)</span></a> </div>
+                                    </div>
+                                    <!-- 2 -->
+                                    <!-- 3 -->
+                                    <div class="nav_sj_shaohui_box">
+                                        <div class="nav_title_shao_hui"> <a href="/app/my/msg/sendMsgList"  class="tabfont" >发送的消息</a> </div>
+                                    </div>
+                                    <!-- 3 -->
+                                    <!-- 4 -->
+                                    <div class="nav_sj_shao">
+                                        <div class="nav_title_shao"> <a href="/app/my/msg/sendToSys"  class="tabfont" >给土木迷发消息</a> </div>
+                                    </div>
+                                    <!-- 4 -->
+                                </div>
+                                <!--消息标签结束-->
+                                <!-- 导航结束 -->
+
+								
+
+								
+								<!--给豆丁发消息开始-->
+                                <div class="d_fswcbox">
+                                    <div class="fsnr" style=" text-align:left; font-size:14px; font-weight: bold;">
+                                        <label class="column" >发送人:</label>
+                                        <label class="d_fontlan14no">28879801</label>
+                                    </div>
+                                    <div class="fsnr" style=" text-align:left; font-size:14px; font-weight: bold;">
+                                        <label class="column" >接收人:</label>
+                                        <label class="d_fontlan14no">豆丁管理员</label>
+                                    </div>
+                                    <form id="reMsgForm" name="reMsgForm" method="post" onsubmit="return checkSysMsg();" action="/app/my/msg/saveMsgToSys">
+                                        <div class="fsnr" style=" text-align:left; font-size:14px; font-weight: bold; width:700px;">
+											主  题:
+                                            <label class="column" >
+                                            <input type="text" name="msgTitle" id="msgTitle" class="text"/>
+                                            </label>
+                                            <div class="d_clear"></div>
+                                        </div>
+                                        <div class="fsnr1">
+                                            <textarea name="msgContent" id="msgContent" class="text1"></textarea>
+                                            <div class="d_clear"></div>
+                                        </div>
+                                        <div class="fsnr"></div>
+                                        <div class="fsnr">
+                                            <input type="submit" class="btn" name="s" value="发送" />
+                                            <input  onclick="returnButClick()"  type="button" class="btn" value="取消" />
+                                        </div>
+                                    </form>
+                                    <div class="d_clear"></div>
+                                </div>
+                                <!--给豆丁发消息结束-->
+								
+								
+								
+								
+                                <!--给豆丁消息历史开始-->
+                                <div class="d_fswcbox">
+                                    <div class="xxlstit">消息历史</div>
+                                    <!-- 消息开始 -->
+                                    <div class="xxlslb">
+                                        <ul>
+                                            <li style="float:left; width:200px; text-align:left;"> 2010-10-24 21:07 <a href="/spidermanlhg" class="d_fontlan12"> 28879801</a> </li>
+                                            <li style=" float:left; text-align:left; width:558px; padding-left:30px;"> <span class="d_fonthui12b">xxx</span><br/>
+                                                <span id="sys174858" >xxx</span> <span style="display: none;" id="toSys174858"> xxx</span> &nbsp;&nbsp; </li>
+                                        </ul>
+                                        <div class="d_clear"></div>
+                                    </div>
+                                    <!-- 消息结束 -->
+                                    <!-- 消息开始 -->
+                                    <div class="xxlslb">
+                                        <ul>
+                                            <li style="float:left; width:200px; text-align:left;"> 2010-10-25 11:29   
+                                                豆丁管理员 </li>
+                                            <li style=" float:left; text-align:left; width:558px; padding-left:30px;"> <span class="d_fonthui12b">豆丁管理员</span><br/>
+                                                <span id="sys174935" >尊敬的用户:
+                                                您好!请问您在使用豆丁网时有什么疑问吗？可以将您的疑问详细的告知我们，以便工作人员能够及时的帮您解决！
+                                                感谢您对豆丁网的支持!</span> <span style="display: none;" id="toSys174935"> 尊敬的用户:
+                                                您好!请问您在使用豆丁网时有什么疑问吗？可以将您的疑问详细的告知我们，以便工作人员能够及时的帮您解决！
+                                                感谢您对豆丁网的支持!</span> &nbsp;&nbsp; </li>
+                                        </ul>
+                                        <div class="d_clear"></div>
+                                    </div>
+                                    <!-- 消息结束 -->
+                                    <!-- 消息开始 -->
+                                    <div class="xxlslb">
+                                        <ul>
+                                            <li style="float:left; width:200px; text-align:left;"> 2010-11-03 22:50 <a href="/spidermanlhg" class="d_fontlan12"> 28879801</a> </li>
+                                            <li style=" float:left; text-align:left; width:558px; padding-left:30px;"> <span class="d_fonthui12b">请问里面多余的钱可以退还到支付宝里吗</span><br/>
+                                                <span id="sys178073" >请问里面多余的钱可以退还到支付宝里吗</span> <span style="display: none;" id="toSys178073"> 请问里面多余的钱可以退还到支付宝里吗</span> &nbsp;&nbsp; </li>
+                                        </ul>
+                                        <div class="d_clear"></div>
+                                    </div>
+                                    <!-- 消息结束 -->
+                                    <div class="d_clear"></div>
+                                </div>
+                                <!--给豆丁消息历史结束-->
+								
+								
+
+                                ﻿
+                                <div id="feny">
+                                    <ul>
+                                        <!-- 上一页 -->
+                                        <li><a href="javascript:void(0)"  class="current_ss" style="color:#FFFFFF;">1</a></li>
+                                        <li><a href="/app/my/msg/system?&currentPage=2">2</a></li>
+                                        <li><a href="/app/my/msg/system?&currentPage=3">3</a></li>
+                                        <li><a href="/app/my/msg/system?&currentPage=4">4</a></li>
+                                        <!-- 下一页 -->
+                                        <li><a href="/app/my/msg/system?&currentPage=2">&gt;</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="recordbox">
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="clear"></div>
+                            </div></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+</body>
+</html>

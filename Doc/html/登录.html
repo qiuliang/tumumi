@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>登录 - 土木迷</title>
+<link href="css/pub.css" type="text/css" rel="stylesheet"/>
+<link href="css/reg.css" type="text/css" rel="stylesheet"/>
+</head>
+<body >
+<div id="main">
+    <!--左侧登录-->
+    <form action="/app/login" method="post" name="login" id="login">
+        <input type="hidden" name="forward" value=""/>
+        <input type="hidden" name="forwardUrl" value=""/>
+        <input type="hidden" name="tologin" value="1"/>
+        <input type="hidden" name="groupid" value="0"/>
+        <input type="hidden" name="guid" value="0"/>
+        <div class="login">
+            <h4>登录</h4>
+            <table>
+                <tr class="dpn-renren">
+                    <th><h5>已经拥有土木迷账号？</h5></th>
+                </tr>
+                <tr>
+                    <th><label for="username1">用户名/邮箱：</label></th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="username" id="username1" value="" /></td>
+                </tr>
+                <tr>
+                    <th><label for="password1">登录密码：</label></th>
+                </tr>
+                <tr>
+                    <td><div class="fortips">
+                            <input type="password" name="password" onKeyDown="if(event.keyCode==32) return false" id="password1" maxlength="16" onKeyPress="if (event.keyCode==32) {event.returnvalue=false;return false;}" />
+                        </div></td>
+                </tr>
+                <tr>
+                    <td><a href="/app/forward?forward=findPsw1" class="fz12 float-r">忘记密码？</a>
+                        <input name="save" id="save" type="checkbox" class="selectd" value="1" />
+                        <label for="save">记住我</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="登录" title="登录" class="btn_login" onClick="return createuser_login();" /></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    <!--左侧登录end-->
+    <!--内容-->
+    <form action="/app/createUser" method="post" name="loginForm" id="loginForm">
+        <input type="hidden" name="forward" value=""/>
+        <div id="shop">
+            <h4>注册</h4>
+            <table>
+                <tr>
+                    <th><label for="login_name">用户名：</label></th>
+                    <td><input type="text" name="login_name" id="login_name" value="支持英文及数字组合" onFocus="if(this.value=='支持英文及数字组合') this.value='';this.style.color='#000'" onBlur="javascript:createuser_check_login_name();" /></td>
+                    <td><div class="tips" id="login_name_result">
+                            <p>用于登录及主页的个性域名，请正确填写！</p>
+                        </div></td>
+                </tr>
+                <tr>
+                    <th><label for="login_email">邮箱：</label></th>
+                    <td><input type="text" name="login_email" id="login_email" onBlur="javascript:createuser_check_login_email();" /></td>
+                    <td><div class="tips" id="login_email_result">
+                            <p>用于登录及接收验证邮件，请正确填写!</p>
+                        </div></td>
+                </tr>
+                <tr>
+                    <th><label for="pwd">设置密码：</label></th>
+                    <td><div class="fortips">
+                            <input type="password" onKeyDown="if(event.keyCode==32) return false" id="pwd" name="password" maxlength="16" onKeyUp="javascript:createuser_showStrong();" onBlur="javascript:createuser_check_pwd();" />
+                            <div id="login_pwd_strong"></div>
+                        </div></td>
+                    <td><div class="tips" id="login_pwd_result">
+                            <p>长度6-16位，建议数字、符号或特殊字符组合！</p>
+                        </div></td>
+                </tr>
+                <tr>
+                    <th><label for="validate_code">验证码：</label></th>
+                    <td><input type="text" maxlength="4" class="validator" id="validate_code" name="validate_code" onBlur="javascript:createuser_checkCode();" />
+                        <img class="vor" id="regimg" name="regimg" src="/servlet/getimg"/> <a href="javascript:refCode();">换张图片</a> </td>
+                    <td><div id="validate_code_result"></div></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td colspan="2"><input type="checkbox" checked="checked" class="selectd" id="chAgree" name="chAgree" value="1" />
+                        <label for="chAgree">本人已经阅读并同意遵守</label>
+                        &nbsp; <a href="/about/doc_fwtk.jsp" target="_blank" title="土木迷网站服务条款">土木迷网站服务条款</a> </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td colspan="2"><input type="button" value="确定注册" title="确定注册" class="btn" onClick="javascript:createuser_submit_doc_login();" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    <!--内容end-->
+    <span class="bottom"></span>
+</div>
+</body>
+</html>

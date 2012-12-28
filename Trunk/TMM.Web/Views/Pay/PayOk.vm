@@ -1,0 +1,20 @@
+﻿#capturefor(title) 支付完成 #end
+#capturefor(head)
+    <meta   http-equiv="refresh"   content="5;URL=$!{gotoUrl}">
+#end
+
+<div  style="width:1000px; margin:0 auto; padding-left:15px;">
+
+   <div style="width:400px; margin:0 auto">
+   	<img style="float:left;" src="/Contents/images/icon_success.jpg" width="92" height="97" />
+    <p style="float:left; margin:40px 0 0 10px;">
+    	<strong style="font-size:20px; color:#000;">已支付成功</strong><br />
+        <a style="font-weight:bold; color:#d4782d; font-size:14px; " href="$!{gotoUrl}">点此继续&gt;&gt;</a>
+    </p>
+    
+    <div class="clear"></div>
+    </div>
+</div>
+
+        
+

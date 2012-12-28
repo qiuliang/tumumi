@@ -1,0 +1,83 @@
+﻿#capturefor(title)正在跳转至下载页面 - $!{sysConfig.WebName}#end
+
+
+<div class="wapper clear" style="margin:0 auto 15px;width:960px;position:relative;">
+    <img src="/contents/images/ajaxBar.gif" />
+    <h4>正在跳转至下载页面，请稍候...</h4>
+</div>
+<script type="text/javascript">
+<!--
+    var j = jQuery;
+    (function() {
+        j(document).ready(function() {
+            downFile();
+        });
+
+
+
+        function downFile() {
+            var docId = "$!docId";
+            j.post("/ajax/checkdown.do", {
+                "docId": docId
+            }, function(d) {
+                
+                eval("var ro = " + d + ";");
+                if (typeof (ro) == "object") {
+                    if (ro.code == -1) {
+                        alert("系统错误，请重试");
+                    }
+                    else if (ro.code == 0) {
+                        if (confirm("此操作需要登录才能继续，点击【确定】登录，【取消】返回")) {
+                            document.location.href = "/login?backUrl=$!Context.Url";
+                        }
+                    }
+                    else if (ro.code == 1) {
+                        //文档未找到
+                        alert("文档未找到");
+                        window.close();
+                    }
+                    else if (ro.code == 2) {
+                        //前往支付页面
+                        var remsg = ro.msg.split(',');
+                        alert("此文档需要付费下载，点击【确定】前往支付页面");
+                        document.location.href = "/my/DoCharge.do?returnUrl=$!Context.Url&docid=" + remsg[0] + "&total=" + remsg[1] + "&chargeType=1";
+                    }
+                    else if (ro.code == 3) {
+                        //前往下载页面                        
+                        document.location.href = "/file/DownloadDoc.do?docId=$!docId&valkey=" + ro.msg;
+                        //j("#postDownForm").attr("action", "/file/doc?docId=$!docId&valkey=" + ro.msg);
+                        //j("#postDownForm").submit();
+                    }
+                    else if (ro.code == 4) {
+                        //超过免费文档下载次数
+                        alert("您已经超过了免费文档的下载次数限制");
+                        window.close();
+                    }
+                }
+                else {
+                    alert("系统错误，请重试2");
+                }
+            });
+        }
+
+
+        function initEvent() {
+            j("#message").focus(function() {
+                j("#textarea_imp").hide();
+            });
+            j("#message").blur(function() {
+                if (j("#message").val().trim().length == 0) {
+                    j("#textarea_imp").show();
+                }
+            });
+            j("#insertMessageBtn").click(submitComment);
+            //顶
+            j("#topA").click(addUp);
+            //收藏
+            j("#aFav").click(addFav);
+            //下载
+            j("#download_a_top").click(downFile);
+        }
+    })();
+-->
+</script>

@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>高级搜索 - 土木迷</title>
+<link type="text/css" href="css/pub.css" rel="stylesheet" />
+<link type="text/css" href="css/adsearch.css" rel="stylesheet" />
+<script type="text/javascript" language="javascript" src="js/swfobject.js" ></script>
+</head>
+<body>
+
+<div id="listmore_main">
+    <!--左侧内容开始-->
+    <div id="leftcolumn">
+        <!--左侧最近被搜索关键字开始-->
+        <div class="cateBox">
+            <h2>最近被搜索关键字</h2>
+            <div class="img_list">
+                <ul class="catelist">
+                    <li><a href="javascript:searchProduct('理财')">理财</a></li>
+                    <li><a href="javascript:searchProduct('php编程')">php编程</a></li>
+                    <li><a href="javascript:searchProduct('网赚致富')">网赚致富</a></li>
+                    <li><a href="javascript:searchProduct('photoshop教程')">photoshop教程</a></li>
+                    <li><a href="javascript:searchProduct('GRE作文')">GRE作文</a></li>
+                    <li><a href="javascript:searchProduct('干旱与小麦')">干旱与小麦</a></li>
+                    <li><a href="javascript:searchProduct('拓扑学')">拓扑学</a></li>
+                    <li><a href="javascript:searchProduct('入党申请书')">入党申请书</a></li>
+                    <li><a href="javascript:searchProduct('简历模板')">简历模板</a></li>
+                    <li><a href="javascript:searchProduct('英语四级')">英语四级</a></li>
+                    <li><a href="javascript:searchProduct('HR表格')">HR表格</a></li>
+                    <li><a href="javascript:searchProduct('健康指南')">健康指南</a></li>
+                    <li><a href="javascript:searchProduct('林志玲写真')">林志玲写真</a></li>
+                    <li><a href="javascript:searchProduct('外贸申请表')">外贸申请表</a></li>
+                    <li><a href="javascript:searchProduct('保险理赔')">保险理赔</a></li>
+                    <li><a href="javascript:searchProduct('女人生活')">女人生活</a></li>
+                    <li><a href="javascript:searchProduct('高考数学题')">高考数学题</a></li>
+                    <li><a href="javascript:searchProduct('创业策划书')">创业策划书</a></li>
+                    <li><a href="javascript:searchProduct('网店')">网店</a></li>
+                    <li><a href="javascript:searchProduct('英语口语')">英语口语</a></li>
+                    <li><a href="javascript:searchProduct('word技巧')">word技巧</a></li>
+                    <li><a href="javascript:searchProduct('励志')">励志</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--左侧最近被搜索关键字结束-->
+        <!--左侧广告样式开始-->
+        <div class="banner_box"> </div>
+        <!--左侧广告样式结束-->
+        <div class="clear"></div>
+    </div>
+    <!--左侧内容结束-->
+    <!--右侧内容开始-->
+    <div id="rightcolumn">
+        <div class="highSearch-tit clear">高级搜索</div>
+        <div class="highSearch clear">
+            <dl>
+                <dt >
+                    <label for="keyword2">文档名称：</label>
+                </dt>
+                <dd>
+                    <input type="text" class="txtinput" id="keyword2" name="keyword2" />
+                    <label for="chexact">
+                    <input type="checkbox" id="chexact" name="chexact" style="vertical-align:middle;">
+                    精确匹配文档名称</label>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="tag">标签：</label>
+                </dt>
+                <dd class="heightauto">
+                    <input type="text" class="txtinput" name="tag" id="tag" />
+                    <!-- <a href="javascript:ShowHotTag();">查看热门标签</a>  -->
+                    <div id="hotTagDiv" class="popbox" style="display:none;"> <a href="javascript:addTag('新闻');">新闻</a> <a href="javascript:addTag('军事');">军事</a> <a href="javascript:addTag('奥运');">奥运</a> <a href="javascript:addTag('体育');">体育</a> <img src="http://img.wanlibo.com/images_cn/listpic/icon_gbbut.gif" onClick="javascript:ShowHotTag();" class="close" alt="关闭"/> </div>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="pid">文档分类：</label>
+                </dt>
+                <dd class="heightauto">
+                    <select name="pid" id="pid" onChange="changeCategory(this.value);" size="5" class="selinput" >
+                    </select>
+                    <select name="cid" id="cid"  size="5" class="selinput" >
+                        <option value="0" selected>全部分类
+                    </select>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="">文档格式：</label>
+                </dt>
+                <dd class="heightauto">
+                    <input type="checkbox" name="word" id="word" value="1" />
+                    <label for="word"><img src="http://img.wanlibo.com/images_cn/searchNew/icon_word.gif" onclick="chg('word')" />word</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="excel" id="excel" value="1" />
+                    <label for="excel"><img src="http://img.wanlibo.com/images_cn/searchNew/icon_excel.gif" onclick="chg('excel')" />excel</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="pdf" id="pdf" value="1" />
+                    <label for="pdf"><img src="http://img.wanlibo.com/images_cn/searchNew/icon_pdf.gif" onclick="chg('pdf')" />pdf</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="ppt" id="ppt" value="1" />
+                    <label for="ppt"><img src="http://img.wanlibo.com/images_cn/searchNew/icon_ppt.gif" onclick="chg('ppt')" />ppt</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="txt" id="txt" value="1" />
+                    <label for="txt"><img src="http://img.wanlibo.com/images_cn/searchNew/icon_txt.gif" onclick="chg('txt')" />txt</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <!-- <a href="javascript:ShowFileType();">所有格式</a>  -->
+                    <div class="popbox" id="fileTypeDiv" style="display:none;">
+                        <label>
+                        <input type="checkbox"/>
+                        Doc</label>
+                        <label>
+                        <input type="checkbox"/>
+                        docx</label>
+                        <label>
+                        <input type="checkbox"/>
+                        txt</label>
+                        <label>
+                        <input type="checkbox"/>
+                        Pot</label>
+                        <label>
+                        <input type="checkbox"/>
+                        pub</label>
+                        <label>
+                        <input type="checkbox"/>
+                        ppsx</label>
+                        <label>
+                        <input type="checkbox"/>
+                        Ppt</label>
+                        <label>
+                        <input type="checkbox"/>
+                        mpp</label>
+                        <label>
+                        <input type="checkbox"/>
+                        rtf</label>
+                        <label>
+                        <input type="checkbox"/>
+                        Pps</label>
+                        <label>
+                        <input type="checkbox"/>
+                        vsd</label>
+                        <label>
+                        <input type="checkbox"/>
+                        pptx</label>
+                        <label>
+                        <input type="checkbox"/>
+                        xls</label>
+                        <label>
+                        <input type="checkbox"/>
+                        xlsx</label>
+                        <label>
+                        <input type="checkbox"/>
+                        potx</label>
+                        <label>
+                        <input type="checkbox"/>
+                        Bmp</label>
+                        <label>
+                        <input type="checkbox"/>
+                        gif</label>
+                        <label>
+                        <input type="checkbox"/>
+                        jpg</label>
+                        <label>
+                        <input type="checkbox"/>
+                        Pdf</label>
+                        <label>
+                        <input type="checkbox"/>
+                        psd</label>
+                        <label>
+                        <input type="checkbox"/>
+                        jpeg</label>
+                        <label>
+                        <input type="checkbox"/>
+                        Tif</label>
+                        <label>
+                        <input type="checkbox"/>
+                        tiff</label>
+                        <label>
+                        <input type="checkbox"/>
+                        pdw</label>
+                        <label>
+                        <input type="checkbox"/>
+                        Pxl</label>
+                        <label>
+                        <input type="checkbox"/>
+                        psw</label>
+                        <label>
+                        <input type="checkbox"/>
+                        xml</label>
+                        <img src="http://img.wanlibo.com/images_cn/listpic/icon_gbbut.gif" onClick="javascript:ShowFileType();" class="close" alt="关闭"/> </div>
+                </dd>
+            </dl>
+
+            <dl style="height:30px">
+                <dt>
+                    <label for="date">发布时间：</label>
+                </dt>
+                <dd>
+                    <select id="date" name="date">
+                        <option value="0">不限</option>
+                        <option value="1">近一天</option>
+                        <option value="7">近一周</option>
+                        <option value="30">近一月</option>
+                        <option value="42">近六月</option>
+                    </select>
+                </dd>
+            </dl>
+            <p>
+                <input type="button" class="btn" onClick="javascript:checkFormSearch();" value="搜&nbsp;索">
+            </p>
+            <input id="action" name="action" type="hidden" value="form"/>
+        </div>
+        <!--
+		<div class="highSearch-tit clear">精确搜索</div>
+		<div class="highSearch clear">
+		<dl>
+				<dt ><label for="pname">文档名称：</label></dt>
+				<dd>
+					<input type="text" name="pname" id="pname" value="" class="txtinput" />
+				</dd>
+   			</dl>
+			<p><input type="button" value="搜&nbsp;索" onclick="javascript:exactSearch();" class="btn" /></p>
+		</div>
+		-->
+    </div>
+    <!--右侧内容结束-->
+    <div class="clear"></div>
+</div>
+
+
+
+</body>
+</html>

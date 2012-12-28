@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>$!title - $!{sysConfig.WebName}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="$!{title},$!{keywords}" />
+    <meta name="description" content="$!{title},$!{description}" />
+    <link href="/contents/css/pub.css" type="text/css" rel="stylesheet"/>
+    <link href="/contents/css/index_before.css" type="text/css" rel="stylesheet"/>
+    
+    <script type="text/javascript" src="/contents/js/Common.js"></script>
+    <script type="text/javascript" src="/contents/js/jquery.js"></script>
+    
+    $!{head}
+</head>
+<body>
+<div id="wapper-101">
+    #component(AdminHeadComponent)
+    
+    $!childContent
+    <!--页尾-->
+    <div id="foot_k">
+        <p class="p1"> 
+        <a href="#">关于土木迷</a> 
+        <a href="#">使用须知</a> 
+        <a href="#">常见问题</a> 
+        <a href="#">广告刊例</a> 
+        <a href="#">联系我们</a> 
+        网站备案   备案号 </p>
+        <p class="copy">©2007-2010 tumumi.com Inc. All Rights Reserved</p>
+    </div>
+    #component(ValidationAwareComponent)
+</div>
+</body>
+</html>

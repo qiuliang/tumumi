@@ -1,0 +1,9 @@
+2011-05-02 14:38:51 [9] ERROR TMM.Core.Utils.Log4Net (null) - Refer : http://localhost:1660/admin/doc/index.do
+2011-05-02 14:38:57 [9] ERROR TMM.Core.Utils.Log4Net (null) - Refer : http://localhost:1660/admin/doc/index.do
+2011-05-02 14:48:12 [9] ERROR TMM.Core.Utils.Log4Net (null) - Refer : 
+2011-05-02 14:48:56 [9] ERROR TMM.Core.Utils.Log4Net (null) - Refer : 
+2011-05-02 14:49:04 [8] ERROR TMM.Core.Utils.Log4Net (null) - Refer : 
+2011-05-02 14:51:36 [9] ERROR TMM.Core.Utils.Log4Net (null) - SaveAs 方法被配置为需要根路径，但是路径“dd”不是根路径。
+   在 System.Web.HttpPostedFile.SaveAs(String filename)
+   在 TMM.Core.Controller.Admin.DocController.SaveNewDocThumbnail(HttpPostedFile file, String oldThumbnailUrl) 位置 E:\tmm\Trunk\TMM.Core\Controller\Admin\DocController.cs:行号 474
+   在 TMM.Core.Controller.Admin.DocController.DoEditDoc(DDocInfo doc, HttpPostedFile file) 位置 E:\tmm\Trunk\TMM.Core\Controller\Admin\DocController.cs:行号 363

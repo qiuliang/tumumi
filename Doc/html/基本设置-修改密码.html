@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>土木迷</title>
+<link type="text/css" href="css/gb.css" rel="stylesheet" />
+</head>
+<body>
+
+<div  style=" margin:0 auto; padding-left:15px; width:1000px;">
+    <div style="float:left; padding-top:9px;"> </div>
+    <div style="width:970px; margin:0 auto;  text-align:center; padding-left:5px; margin-top:10px; ">
+        <div id="container" style="padding-top:10px; margin:auto;">
+            <!--基本设置标签开始-->
+            <div class="nav_shao">
+                <div  class=" nav_sj_shao">
+                    <div class="nav_title_shao"> <a href="/app/my/docin/password" class="tabfonthui2_new" >修改密码</a> </div>
+                </div>
+                <div class="nav_sj_shaohui_box">
+                    <div class="nav_title_shao_hui"> <a href="/app/my/docin/pwdsale"  class="tabfont" >设置密码保护</a> </div>
+                </div>
+                <div class="nav_sj_shaohui_box">
+                    <div class="nav_title_shao_hui"> <a href="/app/my/docin/validate"  class="tabfont" >登录邮箱验证</a> </div>
+                </div>
+                <div class="clare"></div>
+            </div>
+            <!--基本设置标签结束-->
+            <!-- 不同的页面开始 -->
+            <form action="/app/my/docin/password?fn=update" id="updatePassword" name="updatePassword" method="post">
+                <div class="exchange_box">
+                    <div class="exchange_left" style="width:65%;">
+                        <div class="titleone_grsz" style="">提醒：为避免密码被盗，请不要启用生日、身份证号码作为密码。</div>
+                        <div class="titletwo_mmgl_xxmm">
+                            <div class="clear">
+                                <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" style="font-size:14px; color:#666666;">
+                                    <tr>
+                                        <td width="187" height="50" ><div style="width:100px; font-size:14px; text-align:left;">原密码:</div></td>
+                                        <td width="275" height="50" align="left"><label>
+                                            <input type="password" id="oldPwd" name="oldPwd" maxlength="16" onblur="javascript:checkOldPwd();" onkeydown="if(event.keyCode==32) return false" class="input_mmgl"/>
+                                            </label>
+                                        </td>
+                                        <td width="278" height="50" align="left"><!--小提示开始-->
+                                            <div class="xggaimima_box">
+                                                <div class="xggaimima_box_succed" id="oldDiv"></div>
+                                                <div class="clear"></div>
+                                            </div>
+                                            <!--小提示结束-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="50"><div style="width:120px; font-size:14px; text-align:left;">新密码:</div></td>
+                                        <td height="50" align="left"><div>
+                                                <label>
+                                                <input type="password" id="newPwd" name="newPwd" maxlength="16" onkeydown="if(event.keyCode==32) return false" onKeyUp="return ShowStrong();" onblur="return checkNewPwd();" class="input_mmgl"/>
+                                                </label>
+                                                <label id="pswstrong"></label>
+                                            </div></td>
+                                        <td height="50" align="left"><!--小提示开始-->
+                                            <div class="xggaimima_box">
+                                                <div class="xggaimima_box_succed" id="newDiv"></div>
+                                                <div class="clear"></div>
+                                            </div>
+                                            <!--小提示结束-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="50"><div style="width:120px; font-size:14px; text-align:left;">确认密码:</div></td>
+                                        <td height="50" align="left"><label>
+                                            <input type="password" id="newPwdAgain" name="newPwdAgain" onblur="return checkNewAgain();" maxlength="16" onkeydown="if(event.keyCode==32) return false" class="input_mmgl"/>
+                                            </label>
+                                        </td>
+                                        <td height="50" align="left"><!--小提示开始-->
+                                            <div class="xggaimima_box" >
+                                                <div class="xggaimima_box_succed" id="newAgainDiv"></div>
+                                                <div class="clear"></div>
+                                            </div>
+                                            <!--小提示结束-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="50">&nbsp;</td>
+                                        <td height="50" colspan="2"><label>
+                                            <input type="button" name="Submit" value= " 确定 " onclick="javascript:submitPassword();" style="font-size:14px; height:26px; line-height:24px; cursor:pointer" />
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <!--兑换右边提示开始-->
+                    <div class="exchange_right" style="text-align:left; float:right; padding-right:10px;">
+                        <div class="topbg"><img src="http://img.wanlibo.com/images_cn/newDocin/images_bgtoplan.gif" /></div>
+                        <div class="cenbg">
+                            <ul>
+                                <li class="dbt"><span class="fontblock2">&nbsp;&nbsp;&nbsp;温馨提示: </span></li>
+                                <li class="bt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码由6-16个字符组成；</li>
+                                <li class="bt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;支持英文字母、数字或符号的组合密码；</li>
+                                <li class="bt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不能单独使用英文字母、数字或符号作为密码。</li>
+                            </ul>
+                            <div class="clare"></div>
+                        </div>
+                        <div class="topbg"><img src="http://img.wanlibo.com/images_cn/newDocin/images_bgbottomlan.gif" /></div>
+                        <div class="clear"></div>
+                    </div>
+                    <!--兑换右边提示结束-->
+                    <div class="clear"></div>
+                </div>
+            </form>
+            <!-- 不同的页面结束 -->
+            <div class="clare"></div>
+        </div>
+    </div>
+    <div class="clare"></div>
+</div>
+
+
+
+</body>
+</html>

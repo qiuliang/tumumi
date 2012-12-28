@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>编辑用户主页 -  土木迷</title>
+<link href="css/pub.css" type="text/css" rel="stylesheet"/>
+<link href="css/user.css" type="text/css" rel="stylesheet"/>
+</head>
+<body >
+
+<div  style=" margin:0 auto; padding-left:15px; width:1000px;">
+    <div style="float:left; padding-top:9px; "> </div>
+    <div style="width:970px; margin:0 auto; margin-top:10px; ">
+        <link href="http://img.wanlibo.com/css/newDocin/gb.css" rel="stylesheet" type="text/css" />
+        <div id="container">
+            <!--编辑你的文档开始-->
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td><div class="edit_word_sly" >
+                            <div class="title1_sly"><span class="font16">编辑你的主页信息</span></div>
+                            <div class="title1_sly">在这里，你可以修改用户头像、昵称、介绍等你的主页信息。</div>
+                        </div></td>
+                </tr>
+            </table>
+            <!--编辑你的文档内容开始-->
+            <div class="edit_container">
+                <form  action="/app/user/edit" enctype="multipart/form-data"  method="post" name="updateUser" id="updateUser">
+                    <input type="hidden" value="" name="callAddress" id="callAddress"/>
+                    <input type="hidden" value="" name="red" id="red"/>
+                    <div class="title_xgzlB clear" style="float:none;width:auto;margin:0;padding:10px"> <span class="titleblock" style="font-size:16px">公开项目</span> <span style="font-size:14px;color:#333">(个人主页将显示公开项目，方便豆友相互了解)</span> </div>
+                    <div class="clear" style="border:1px #FDDDAE solid;background:#FEFAF1;color:#333;padding:8px 8px 10px;margin:0 10px 10px"><img src="http://img.wanlibo.com/images_cn/recharge/icon_atten2.jpg" style="vertical-align:middle;margin:0 15px 0 0">土木迷会对公开项信息进行审核，包含色情、广告、个人联系方式（如QQ/手机等）及其它违法内容均将被删除！</div>
+                    <table width="99%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="67%" ><div class="title_xgzl">
+                                    <div  class="bt_grzl">邮箱：</div>
+                                    <div class="inputbox_grzl" id="undiv"> <strong>spidermanlhg@qq.com</strong> </div>
+                                </div>
+                                <div class="title_xgzl">
+                                    <div  class="bt_grzl">昵称：</div>
+                                    <div class="inputbox_grzl">
+                                        <input type="text" class="input" id="nikeName" name="nikeName" value="28879801" onblur="javascript:checkNikeName();" />
+                                    </div>
+                                </div>
+                                <div class="title_xgzl">
+                                    <div  class="bt_grzl">姓名：</div>
+                                    <div class="inputbox_grzl">
+                                        <input type="text" class="input" id="realName" name="realName" value=" " />
+                                    </div>
+                                </div>
+                                <div class="title_xgzl">
+                                    <div  class="bt_grzl">性别：</div>
+                                    <div class="inputbox_grzl "> &nbsp;&nbsp;
+                                        <label>
+                                            <input type="radio" name="sex" id="sexM" value="男"  />
+                                        </label>
+                                        男
+                                        <label>
+                                            <input type="radio" name="sex" id="sexW" value="女"  />
+                                        </label>
+                                        女 </div>
+                                </div>
+                                <div class="title_xgzl">
+                                    <div  class="bt_grzl">生日：</div>
+                                    <div class="inputbox_grzl "> &nbsp;&nbsp;
+                                        <label>
+                                            <select name="year" id="year" onChange="selectYear();">
+                                                <option>请选择</option>
+                                                <option value="1950" >1950年</option>
+                                                <option value="1951" >1951年</option>
+                                                <option value="1952" >1952年</option>
+                                                <option value="1953" >1953年</option>
+                                                <option value="1954" >1954年</option>
+                                                <option value="1955" >1955年</option>
+                                                <option value="1956" >1956年</option>
+                                                <option value="1957" >1957年</option>
+                                                <option value="1958" >1958年</option>
+                                                <option value="1959" >1959年</option>
+                                                <option value="1960" >1960年</option>
+                                                <option value="1961" >1961年</option>
+                                                <option value="1962" >1962年</option>
+                                                <option value="1963" >1963年</option>
+                                                <option value="1964" >1964年</option>
+                                                <option value="1965" >1965年</option>
+                                                <option value="1966" >1966年</option>
+                                                <option value="1967" >1967年</option>
+                                                <option value="1968" >1968年</option>
+                                                <option value="1969" >1969年</option>
+                                                <option value="1970" >1970年</option>
+                                                <option value="1971" >1971年</option>
+                                                <option value="1972" >1972年</option>
+                                                <option value="1973" >1973年</option>
+                                                <option value="1974" >1974年</option>
+                                                <option value="1975" >1975年</option>
+                                                <option value="1976" >1976年</option>
+                                                <option value="1977" >1977年</option>
+                                                <option value="1978" >1978年</option>
+                                                <option value="1979" >1979年</option>
+                                                <option value="1980" selected>1980年</option>
+                                                <option value="1981" >1981年</option>
+                                                <option value="1982" >1982年</option>
+                                                <option value="1983" >1983年</option>
+                                                <option value="1984" >1984年</option>
+                                                <option value="1985" >1985年</option>
+                                                <option value="1986" >1986年</option>
+                                                <option value="1987" >1987年</option>
+                                                <option value="1988" >1988年</option>
+                                                <option value="1989" >1989年</option>
+                                                <option value="1990" >1990年</option>
+                                                <option value="1991" >1991年</option>
+                                                <option value="1992" >1992年</option>
+                                                <option value="1993" >1993年</option>
+                                                <option value="1994" >1994年</option>
+                                                <option value="1995" >1995年</option>
+                                                <option value="1996" >1996年</option>
+                                                <option value="1997" >1997年</option>
+                                                <option value="1998" >1998年</option>
+                                                <option value="1999" >1999年</option>
+                                                <option value="2000" >2000年</option>
+                                                <option value="2001" >2001年</option>
+                                                <option value="2002" >2002年</option>
+                                                <option value="2003" >2003年</option>
+                                                <option value="2004" >2004年</option>
+                                                <option value="2005" >2005年</option>
+                                                <option value="2006" >2006年</option>
+                                                <option value="2007" >2007年</option>
+                                                <option value="2008" >2008年</option>
+                                                <option value="2009" >2009年</option>
+                                                <option value="2010" >2010年</option>
+                                            </select>
+                                        </label>
+                                        <label>
+                                            <select name="month" id="month" onChange="selectChange();">
+                                                <option>请选择</option>
+                                                <option value=01 selected>01月</option>
+                                                <option value=02 >02月</option>
+                                                <option value=03 >03月</option>
+                                                <option value=04 >04月</option>
+                                                <option value=05 >05月</option>
+                                                <option value=06 >06月</option>
+                                                <option value=07 >07月</option>
+                                                <option value=08 >08月</option>
+                                                <option value=09 >09月</option>
+                                                <option value=10 >10月</option>
+                                                <option value=11 >11月</option>
+                                                <option value=12 >12月</option>
+                                            </select>
+                                        </label>
+                                        <label>
+                                            <select name="day" id="day">
+                                                <option>请选择</option>
+                                                <option value=01 selected>01日</option>
+                                                <option value=02 >02日</option>
+                                                <option value=03 >03日</option>
+                                                <option value=04 >04日</option>
+                                                <option value=05 >05日</option>
+                                                <option value=06 >06日</option>
+                                                <option value=07 >07日</option>
+                                                <option value=08 >08日</option>
+                                                <option value=09 >09日</option>
+                                                <option value=10 >10日</option>
+                                                <option value=11 >11日</option>
+                                                <option value=12 >12日</option>
+                                                <option value=13 >13日</option>
+                                                <option value=14 >14日</option>
+                                                <option value=15 >15日</option>
+                                                <option value=16 >16日</option>
+                                                <option value=17 >17日</option>
+                                                <option value=18 >18日</option>
+                                                <option value=19 >19日</option>
+                                                <option value=20 >20日</option>
+                                                <option value=21 >21日</option>
+                                                <option value=22 >22日</option>
+                                                <option value=23 >23日</option>
+                                                <option value=24 >24日</option>
+                                                <option value=25 >25日</option>
+                                                <option value=26 >26日</option>
+                                                <option value=27 >27日</option>
+                                                <option value=28 >28日</option>
+                                                <option value="29" >29日</option>
+                                                <option value="30" >30日</option>
+                                                <option value="31" >31日</option>
+                                            </select>
+                                        </label>
+                                        &nbsp; </div>
+                                </div>
+                                
+                                
+                                <div class="title_xgzl">
+                                    <div  class="bt_grzl">职业：</div>
+                                    <div class="inputbox_grzl ">
+                                        <input type="text" class="input2" name="profession" id="profession" value="" />
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                
+                                <div class="title_xgzl">
+                                    <div  class="bt_grzl">工作单位：</div>
+                                    <div class="inputbox_grzl ">
+                                        <label for="U_UserInfo.CompanyType_1">
+                                            <input type="radio" name="U_UserInfo.CompanyType" id="U_UserInfo.CompanyType_1" />设计院
+                                        </label>
+                                        <label for="U_UserInfo.CompanyType_2">
+                                            <input type="radio" name="U_UserInfo.CompanyType" id="U_UserInfo.CompanyType_2" />施工/监理
+                                        </label>
+                                        <label for="U_UserInfo.CompanyType_3">
+                                            <input type="radio" name="U_UserInfo.CompanyType" id="U_UserInfo.CompanyType_3" />材料/设备商
+                                        </label>
+                                        <label for="U_UserInfo.CompanyType_4">
+                                            <input type="radio" name="U_UserInfo.CompanyType" id="U_UserInfo.CompanyType_4" />甲方
+                                        </label>
+                                        <label for="U_UserInfo.CompanyType_5">
+                                            <input type="radio" name="U_UserInfo.CompanyType" id="U_UserInfo.CompanyType_5" />软件商
+                                        </label>
+                                        <label for="U_UserInfo.CompanyType_6">
+                                            <input type="radio" name="U_UserInfo.CompanyType" id="U_UserInfo.CompanyType_6" />高校师生
+                                        </label>
+                                        <label for="U_UserInfo.CompanyType_7">
+                                            <input type="radio" name="U_UserInfo.CompanyType" id="U_UserInfo.CompanyType_7" />其他
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="title_xgzl">
+                                    <div  class="bt_grzl">专业属性：</div>
+                                    <div class="inputbox_grzl ">
+                                        <label for="U_UserInfo.Major_1">
+                                            <input type="radio" name="U_UserInfo.Major" id="U_UserInfo.Major_1" />给排水
+                                        </label>
+                                        <label for="U_UserInfo.Major_2">
+                                            <input type="radio" name="U_UserInfo.Major" id="U_UserInfo.Major_2" />环保
+                                        </label>
+                                        <label for="U_UserInfo.Major_3">
+                                            <input type="radio" name="U_UserInfo.Major" id="U_UserInfo.Major_3" />暖通
+                                        </label>
+                                        <label for="U_UserInfo.Major_4">
+                                            <input type="radio" name="U_UserInfo.Major" id="U_UserInfo.Major_4" />制冷
+                                        </label>
+                                        <label for="U_UserInfo.Major_5">
+                                            <input type="radio" name="U_UserInfo.Major" id="U_UserInfo.Major_5" />电气
+                                        </label>
+                                        <label for="U_UserInfo.Major_6">
+                                            <input type="radio" name="U_UserInfo.Major" id="U_UserInfo.Major_6" />结构
+                                        </label>
+                                        <label for="U_UserInfo.Major_7">
+                                            <input type="radio" name="U_UserInfo.Major" id="U_UserInfo.Major_7" />建筑
+                                        </label>
+                                        <label for="U_UserInfo.Major_8">
+                                            <input type="radio" name="U_UserInfo.Major" id="U_UserInfo.Major_8" />园林
+                                        </label>
+                                        <label for="U_UserInfo.Major_9">
+                                            <input type="radio" name="U_UserInfo.Major" id="U_UserInfo.Major_9" />水利
+                                        </label>
+                                    </div>
+                                </div>
+                              
+                                <div class="title_xgzl">
+                                    <div  class="bt_grzl"></div>
+                                    <div class="inputbox_grzl">
+                                        <label></label>
+                                        <div class="clear">
+                                            <label>
+                                                <input type="button" name="Submit" id="Submit" value="保存修改" onclick="return checkUpdateUserSubmit();" style="font-size:14px;"  />
+                                            </label>
+                                            <label>
+                                                <input type="reset" name="reset" id="reset" value=" 重置 " onclick="javascript:returnDIV();" style="font-size:14px;" />
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div></td>
+                            <td width="33%" valign="top"><!--预览图开始-->
+                                <table width="80%" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:10px;" class="">
+                                    <tr>
+                                        <td height="30" align="center"><span style="font-size:14px; font-weight:bold; color:#000000">用户头像</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td height="171" align="center"><table border="0" align="center" cellpadding="0" cellspacing="0" style="background:#ebebeb;">
+                                                <tr>
+                                                    <td height="89" align="center" valign="top"><div class="pic" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale);"  id="productImageContent" name="productImageContent"><img src="http://img.wanlibo.com/images_cn/people01_118x118.gif" width="210" height="210" /></div>
+                                                        <input type="hidden" name="hidImage" id="hidImage" value="http://img.wanlibo.com/images_cn/people01_118x118.gif" /></td>
+                                                </tr>
+                                            </table></td>
+                                    </tr>
+                                    <tr>
+                                        <td height="38" align="center"><label>
+                                                <input type="file" name="photo" id="photo" onchange="javascript:showPhoto();" />
+                                            </label></td>
+                                    </tr>
+                                </table>
+                                <table width="80%" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:5px;">
+                                    <tr>
+                                        <td height="38">图片≤1MB; 格式:jpg/gif; 系统会自动将上传的图片裁切成方图, 最佳尺寸210×210像素<br/></td>
+                                    </tr>
+                                </table>
+                                <!--预览图结束--></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <!--编辑你的文档内容结束-->
+        </div>
+        <!--社区提示 -->
+        <div class="item-skills-wapper task-honor-skills" style="display: none;" id="completeInfo">
+            <div class="item-skills-bg">
+                <div class="item-skills">
+                    <div class="list-shop"><a href="javascript:closeCompleteInfoDiv();" title="关闭" class="closed"><img src="http://img.wanlibo.com/images_cn/group/item_skills_close.gif?rand=20101110" alt="关闭"></a></div>
+                    <div>
+                        <h5>你已完善了个人资料，会获得积分</h5>
+                        <p><img alt="完善个人资料" src="http://img.wanlibo.com/images_cn/renwu/icon-integral1.png?rand=20101110"><strong>10</strong>积分<a href="http://shequ.docin.com/app/shequ/themeview?tid=14070" target="_blank" title="帮助"><img src="http://img.wanlibo.com/images_cn/renwu/help.gif" alt="帮助"/></a></p>
+                        <div class="t-c">
+                            <input type="button" class="btn" onclick="javascript:closeCompleteInfoDiv();"  value="确定" title="确定">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+</body>
+</html>

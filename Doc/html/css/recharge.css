@@ -1,0 +1,158 @@
+﻿@charset"utf-8";
+.skills_recharge span,input.btn,.list_recharge div a,#record_recharge,.zfb-wapper .btn{ background:url(../images/recharge_bg.png) no-repeat}
+.box_recharge .attention,.fcr{color:red}
+h4,h5{color:#000}
+h4{ font-size:16px}
+h5{ font-size:14px; padding:0 0 10px; margin:0}
+h6{color:#164da7; font-size:14px; position:relative;}
+h4 img{ border:0; margin:0 20px 0 0;_margin-bottom:-3px; position:relative;top:3px}
+h4 span{color:#9a9a9a; font-size:12px; font-weight:normal; margin:0 0 0 10px}
+h6 img{ vertical-align:middle;position:relative;top:-5px;left:15px}
+input.btn{ width:103px; height:35px; line-height:35px; padding:0;color:#fff; text-align:center; border:0; background-position:0 -42px; font-size:16px; font-weight:bold;cursor:pointer}
+.fs12{ font-size:12px; font-family:"宋体"}
+/*= 主体 =*/
+
+.box_recharge{ width:100%;margin:10px auto; height:auto; overflow:hidden; position:relative;text-align:left}
+
+
+
+
+/*= 充值功能 =*/
+.shop_recharge{margin:0 290px 40px 0;}
+.shop_form{ margin:50px 0 0 5%; border-spacing:0; border-collapse:collapse; clear:both}
+.shop_form th,.shop_form td{ padding:10px 0;color:#000}
+.shop_form th{ font-weight:normal; font-size:14px}
+.shop_form td input.text,.shop_form td select{ width:170px; padding:6px 3px; vertical-align:middle; font-weight:bold; font-size:14px;color:#000}
+.shop_form td input.btn{ margin:20px 0 0 35px}
+.shop_form td select,.shop_form td .win-180{ width:190px}
+.shop_form td .win-100{ width:100px}
+
+.text_center{ text-align:center; width:94%}
+.text_center td p.mobile_card{ margin:10px 0 0; font-weight:bold; font-size:20px;}
+
+/*= 温馨提示 =*/
+.box_attention,.box_attention div,.box_attention .tips{ float:left;margin:5px 0 -40px; padding:0 0 0 10px; height:26px; line-height:26px;overflow:hidden; color:#000; background:url(../images/attention_bg.gif) no-repeat 0 0;}
+.box_attention{ position:relative;height:39px;}
+.box_attention div{ background-position:right 0; padding:13px 10px 0 0; margin:0;}
+.box_attention .tips{ padding:0; margin:0; width:13px; height:8px; position:absolute;top:0;left:25px;background-position:-28px 0;}
+
+.box_attention2{ width:655px; margin:5px 0 0; padding:11px 10px 0 10px; height:40px;overflow:hidden; color:#000; background:url(../images/attention_bg2.gif) no-repeat 0 0;}
+.box_attention2 img{ float:left;vertical-align:middle; margin:0 5px 10px 0}
+.box_attention img{ vertical-align:middle; margin:0 5px 3px 0}
+.box_attention span{color:#326FA6}
+.att_tips{font-size:14px;background:url(../images/attention_bg3.gif) no-repeat 0 0; height:60px; line-height:2;margin:5px 0 50px;}
+.att_tips img{float:left;vertical-align:middle; margin:5px 5px 10px 0}
+
+/*= 充值提示 =*/
+.skills_recharge{ width:276px; overflow:hidden; height:auto; background:#f7faff; position:absolute;top:0;right:0}
+.skills_recharge div{ border:1px #e3ecf5 solid; padding:12px 12px 8px;color:#666}
+.skills_recharge span{ width:6px; height:6px; position:absolute; z-index:10; overflow:hidden}
+.skills_recharge span.lt{ background-position:-56px -21px;top:-1px;left:-1px}
+.skills_recharge span.rt{ background-position:-62px -21px;top:-1px;right:-1px}
+.skills_recharge span.lb{ background-position:-56px -27px;bottom:-1px;left:-1px}
+.skills_recharge span.rb{ background-position:-62px -27px;bottom:-1px;right:-1px}
+.skills_recharge p{font-size:12px; text-indent:20px; line-height:22px}
+
+
+.forindex_recharge{ width:670px; height:115px; margin:15px 0 30px;position:relative}
+.forindex_recharge div{ height:113px; padding:0; }
+.forindex_recharge p{font-size:14px}
+.forindex_recharge p select,.forindex_recharge p input.sel{ width:155px; margin:0 10px 0 0;vertical-align:middle; font-weight:bold; font-size:14px;color:#000}
+.forindex_recharge p input.sel{ height:18px;background:#fff url(../images/sel-btn.gif) no-repeat right center;cursor:default;}
+.forindex_recharge p input{ vertical-align:middle}
+.forindex_recharge p.attention{ text-align:center; margin:15px 0 20px}
+
+
+
+
+/*= 更多充值 =*/
+h5.choose{ border-bottom:1px #e4e4e4 solid; margin:0 0 10px; text-align:left}
+.more_recharge{ width:100%; height:auto;overflow:hidden}
+.more_recharge table{border-spacing:0; border-collapse:collapse; width:100%}
+.more_recharge td{text-align:center}
+.more_recharge td div {position:relative;text-align:center;line-height:61px;height:62px;font-size:0;*font-size:52px; overflow:hidden}
+.more_recharge td div img {vertical-align:middle;}
+.more_recharge td div a:after {content:".";font-size:1px;visibility:hidden}
+.more_recharge td span{ display:block; position:absolute;top:7px;right:0;width:0; height:47px; line-height:47px; font-size:0; overflow:hidden;border-left:1px #e1e1e1 solid; border-right:1px #fbf8f4 solid}
+
+.more_recharge ul{ float:left; width:100%; height:auto; word-wrap:break-word}
+.more_recharge li{float:left;height:60px;line-height:60px;margin:10px;font-size:12px; overflow:hidden; _font-size:50px}
+.more_recharge li a img{vertical-align:middle;}
+
+
+/*= 充值首页充值方式列表 =*/
+.listtable_recharge{ width:100%; margin:8px 0 0}
+.listtable_recharge td{ width:33%}
+.list_recharge{ height:135px; width:98%; border:1px #d4dfe9 solid; margin:5px 0 0}
+.list_recharge dl{ height:104px; width:100%; overflow:hidden;}
+.list_recharge dt{float:left; height:104px; margin:3% 6% 0 5%; display:inline}
+.list_recharge dd{ margin:0 2% 0 0;color:#9a9a9a}
+.list_recharge dd h6{ margin-top:5%}
+.list_recharge div{ height:31px; width:100%;background:#ecf4f9; clear:both}
+.list_recharge div a{ position:relative;top:5px;right:20px;float:right; width:55px; padding:0 0 0 25px;height:21px; line-height:23px; overflow:hidden;color:#164da7}
+
+
+#record_recharge{background-position:-80px 0;}
+#record_recharge a{  padding:5px 0 10px 40px; margin:10px 0; display:block;color:#3070a6; font-size:14px; font-weight:bold}
+#record_recharge a:hover{ text-decoration:underline}
+
+
+.mobil_skillsWapper{display:none; background:url(../images/mobil_skillsBg.png) no-repeat right 0;width:520px; height:300px; position:absolute;top:50%;left:50%;margin:-155px 0 0 -305px;padding:0 5px 5px 0}
+.mobil_skills{ width:500px;height:280px;border:10px #F7F7F7 solid; background:#fff}
+.mobil_skills p{ text-align:center; margin:0 0 25px}
+.mobil_skills p input{ width:175px; padding:3px 2px 2px; vertical-align:middle; font-weight:700}
+.mobil_skills p label{ width:310px; margin:0 auto;display:block}
+.mobil_skills p span{ float:left; font-size:14px; font-weight:700;width:120px; text-align:right; margin:4px 0 0}
+.mobil_skills p.closed{ text-align:right; margin:16px 20px 55px 0;}
+.mobil_skills p.closed a{ text-decoration:underline;color:#aaa; font-size:12px; background:url(../images/mobil_skills.gif) no-repeat 0 2px; padding:0 0 0 18px}
+.mobil_skills p.btn{ text-align:center; margin:50px 0 0}
+.mobil_skills p.btn input{ width:103px; padding:0}
+/*= 中国移动提示 =*/
+.skills_recharge p.for_mobil{font-size:14px;font-weight:bold}
+
+/*bank skills*/
+.rechange-bank{left:50%;margin:0 0 0 -350px;position:absolute !important;top:175px;width:700px;}
+.rechange-bank .list-shop .closed{ right:5px; top:5px}
+.rechange-bank-cont li{ float:left; margin:10px 20px 5px 0;*margin:10px 15px 5px 0}
+.rechange-bank-cont li img{ vertical-align:middle; border:1px #ddd solid; width:113px; height:36px; margin:0 0 0 8px;}
+.rechange-bank-cont p{ text-align:center}
+.rechange-bank-cont button{ margin:15px 0 5px;font-size:14px; font-weight:bold;color:#fff; cursor:pointer; border:1px outset #029FD6; background:#007FC6;width:66px; height:28px;}
+.rechange-bank-cont button.btnclose{ margin-left:19px; }
+.rechange-bank-cont button:hover{border:1px #029fd6 inset;}
+
+.rechange-bank iframe{height:550px; width:550px; position:absolute;top:-1px;left:-1px; z-index:1}
+.rechange-bank .item-skills-bg{position:relative; z-index:2}
+
+
+/*paypal-tab*/
+.paypal-tab{ width:100%; margin:5px 0}
+.paypal-tab th,.paypal-tab td{border:1px #BFE2E8 solid; color:#333; padding:6px 7px 7px; line-height:1; background:#fff}
+.paypal-tab th{ font-weight:normal}
+.paypal-tab thead th{ padding-top:7px; padding-bottom:8px;text-align:center;}
+.paypal-tab tbody th{ background:#F2FCFE}
+
+.paypal-tab .tac{text-align:center;}
+
+/*ad*/   
+ .re-guangg{position:absolute;top:44px;+top:43px;_top:41px;right:4px; width: 286px;overflow:hidden; }
+
+/*zfb-wapper*/
+.zfb-wapper{width: 960px;margin:0 auto;font-size:14px; color:#000;  }
+.zfb-wapper p,.zfb-wapper dt,.zfb-wapper dd{padding:10px 0; }
+.zfb-wapper .padL30,.zfb-wapper dd{padding-left:30px;}
+.zfb-wapper .padN{padding-top:0;}
+.zfb-wapper .fs16{font-size:16px;}
+.zfb-wapper .fwb{font-weight:700}
+.zfb-wapper .fch{color:#666; }
+.zfb-wapper .btn{display:block;width: 139px;height: 35px;line-height:35px;border:none;font-size:16px;text-align:center; color:#fff;font-weight:700;   background-position: 0 -77px ;cursor:pointer;}
+.zfb-wapper .btn:hover{text-decoration:none; color:#fff; }
+.zfb-wapper p a{text-decoration:underline;  }
+.zfb-wapper p a:hover{text-decoration:none; }
+.zfb-pay{width: 400px;margin-left:-200px; }
+.zfb-pay h5{font-size:14px;}
+.zfb-pay .zfbPay-cont{padding:20px 0 10px 65px;background:url(../images/attr-tips.gif) no-repeat 15px 20px;}
+.zfb-pay .padTips{padding:20px 0 0; }
+.zfb-pay p{line-height:24px;}
+.zfb-pay input{ width:100px; height:28px;padding:2px;  text-align:center;font-weight:bold; font-size:14px; color:#fff;border:1px outset #029FD6; background:#007FC6; cursor:pointer}
+.zfb-pay input:hover{border:1px #029fd6 inset;}
+.zfb-pay .wid120{width: 120px; }

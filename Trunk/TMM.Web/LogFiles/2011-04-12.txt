@@ -1,0 +1,6 @@
+2011-04-12 21:04:40 [4] ERROR TMM.Core.Utils.Log4Net (null) - SELECT     [CommentId]     , [DocId]     , [Content]     , [CreateTime]     , [UserId]     , [IsDisp]     , [NickName] as [UserInfo.NickName]     , [Email] as [UserInfo.Email]     FROM     (SELECT           a.*,b.NickName,b.Email     FROM [D_Comment] a left join U_UserInfo b ON a.UserId=b.UserId      WHERE         [DocId] =  @param0             ) t
+2011-04-12 21:07:32 [8] ERROR TMM.Core.Utils.Log4Net (null) - SELECT     [CommentId]     , [DocId]     , [Content]     , [CreateTime]     , [UserId]     , [IsDisp]     , [NickName] as [UserInfo.NickName]     , [Email] as [UserInfo.Email]     FROM     (SELECT           a.*,b.NickName,b.Email     FROM [D_Comment] a left join U_UserInfo b ON a.UserId=b.UserId      WHERE         [DocId] =  @param0             ) t
+2011-04-12 21:09:01 [4] ERROR TMM.Core.Utils.Log4Net (null) - SELECT count(*) FROM [D_Comment]      WHERE         [DocId] =  @param0
+2011-04-12 21:09:19 [8] ERROR TMM.Core.Utils.Log4Net (null) - SELECT count(*) FROM [D_Comment]      WHERE         [DocId] =  @param0
+2011-04-12 21:10:35 [8] ERROR TMM.Core.Utils.Log4Net (null) - 23
+2011-04-12 21:10:36 [4] ERROR TMM.Core.Utils.Log4Net (null) - 23

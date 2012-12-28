@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>上传文档 - 土木迷</title>
+<link type="text/css" href="css/pub.css" rel="stylesheet" />
+<link type="text/css" href="css/upload.css" rel="stylesheet" />
+<script type="text/javascript" language="javascript" src="js/swfobject.js" ></script>
+</head>
+<body>
+
+
+<div class="wapper clear">
+    <!-- upload-shop -->
+    <div class="upload-shop" id="uploadbox">
+        <script language="JavaScript" type="text/javascript">
+											var fo = new SWFObject("http://img.wanlibo.com/players/mainUpload.swf?rand=20100722", "uploadswf", "420", "140", "9.0.16.0", "#000");
+									        fo.addVariable("uploadPage", "http://upload.docin.com/uploadfile");
+									        fo.addVariable("countryId","1"); 
+											fo.addParam("align","middle");
+											fo.addParam("quality","high");
+									        fo.addParam("allowFullScreen","true");
+									        fo.addParam("allowScriptAccess","always");
+									        fo.addParam("wmode","transparent");
+									        fo.useExpressInstall('/players/expressinstall.swf');
+									        fo.write("uploadbox");
+										</script>
+        <div class="upload-options" id="otheroption_url">
+            <h4 >其他上传选项：</h4>
+            <span onclick="showUrlUpload()" >上传文档的 URL地址</span>（输入文档的网络绝对URL地址，土木迷会自动帮助你上传） </div>
+    </div>
+    <!-- upload-shop end -->
+    <!-- upload-shop -->
+    <div class="upload-shop" id="urluploadbox" style="display:none">
+        <div class="upload-shop-sub">
+            <!-- urlform -->
+            <div name="urlform" id="urlform">
+                <div class="upload-url">
+                    <form onsubmit="return checkUrl();" method="GET" target="uploadTag" action="../uploadFile_url">
+                        <h4 >
+                            <label for="fileurl">输入文档URL地址：</label>
+                        </h4>
+                        <input type="text" class="txt" name="fileurl" id="fileurl" gtbfieldid="9">
+                        <br />
+                        例如：http://www.docin.com/test.doc ；   链接地址要真实有效，否则上传会失败。 <br />
+                        <strong>
+                        <label for="code">中文验证码：</label>
+                        </strong>
+                        <input type="text" maxlength="4" class="txt wid-80" name="code" id="code" gtbfieldid="10">
+                        <img alt="点击更换验证码" title="点击更换验证码" onclick="javascript:refCode();" id="regimg" name="regimg">看不清楚? <a href="javascript:refCode();" title="换个图片">换个图片</a>
+                        <div class="upload-url-tips">
+                            <input type="image" src="http://img.wanlibo.com/images_cn/images/sc_button.gif">
+                        </div>
+                    </form>
+                </div>
+                <div class="upload-options">
+                    <h4 >其他上传选项：</h4>
+                    <span onclick="showLocalUpload()" >上传本地文档</span> </div>
+            </div>
+            <!-- urlform end -->
+            <!-- urlwaiting -->
+            <div name="urlwaiting" id="urlwaiting"> <br>
+                文件正在上传请等待...<br>
+                <br>
+                <img src="http://img.wanlibo.com/images_cn/images/process_bar.gif"><br>
+                <br>
+                上传过程中请不要关闭或刷新本页! </div>
+            <!-- urlwaiting end -->
+            <!-- urlsuccess -->
+            <div name="urlsuccess" id="urlsuccess"> <br>
+                <br>
+                <img src="http://img.wanlibo.com/images_cn/uploadFile/sccg.gif"/> </div>
+            <!-- urlsuccess end -->
+        </div>
+    </div>
+    <!-- upload-shop end -->
+    <!-- upload-cont  -->
+    <div class="upload-cont" id="flashDesc">
+        <p >内容优秀的文档，将为您带来更多的关注与收益。<a target="_blank" href="http://www.docin.com/about/doc_help_faq.jsp#faq30" title="什么是收益?">什么是收益?</a></p>
+        <h4 >温馨小贴示：<span>请勿上传已设置加密或只读的文档，土木迷不支持此类文档。</span></h4>
+        <h4 >支持的文件格式</h4>
+        <table class="upload-class">
+            <colgroup>
+            <col span="1" class="col1">
+            <col span="1" class="col2">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>Microsoft office系列</th>
+                    <td><img width="16" height="17" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_wd.gif">doc,docx<img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_smail1.gif">ppt,pptx<img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_smail4.gif">xls,xlsx<img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_smail3.gif">pot,potx<img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_ppsx.gif">pps<img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_vsd.gif">vsd<img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_pub.gif">pub<img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_mpp.gif">mpp<img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_smail8.gif">rtf</td>
+                </tr>
+            </tbody>
+            <tbody id="moreFileType" style="display:none">
+                <tr>
+                    <th>图片</th>
+                    <td><img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_bmp.gif">bmp<img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_gif.gif">gif<img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_jpg.gif">jpg<img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_tif.gif">tif</td>
+                </tr>
+                <tr>
+                    <th>wps office系列</th>
+                    <td><img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_wps.gif">wps<img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_et.gif">et<img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_dps.gif">dps</td>
+                </tr>
+                <tr>
+                    <th>Pocket office系列</th>
+                    <td><img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_pdw.gif">pdw<img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_pxl.gif">pxl<img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_psw.gif">psw</td>
+                </tr>
+                <tr>
+                    <th>文本</th>
+                    <td><img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_txt.gif">txt</td>
+                </tr>
+                <tr>
+                    <th>其他</th>
+                    <td><img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_xml.gif">xml<img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_eml.gif">eml<img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_ps.gif">ps</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>Adobe  PDF</th>
+                    <td><script type="text/javascript">
+											var typeStatueText={'none':'更多格式&gt;&gt;','block':'还原&lt;&lt;'};
+											</script>
+                        <div class="upload-class-tips"><img width="16" height="18" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_fdj3.gif"> <a id="_showStyle" class="tsfont2_font" onclick="fileTypeDisplay()" href="javascript:void(0)">更多格式&gt;&gt;</a></div>
+                        <img width="16" height="16" align="absmiddle" src="http://img.wanlibo.com/images_cn/icon_pdf.gif">pdf</td>
+                </tr>
+            </tbody>
+        </table>
+        <h4 >支持的文件最大容量：<em>20MB</em><span>(20480KB)</span></h4>
+        <p class="tips fcb">禁止上传违反土木迷相关规定的内容。</p>
+        <p>1.  禁止发布、散布、宣扬、危害中国主权、攻击党和国家领导人、故意破坏社会稳定局势、邪教、反动、封建迷信、淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的.</p>
+        <p>2.  禁止发布内容低级不健康、过分的性话题或太过隐私，不宜在公开场合讨论的话题。肮脏的、色情话题及黄色小段子。含病毒连接或恶意代码的。</p>
+        <p>3.  禁止发布恐怖、凶杀以及给人视觉反感的图片、人体暴露照片、色情的以及打擦边球的图片（人体艺术图片视情况而定）.</p>
+        <p>4.  禁止发布包含个人隐私内容的文档，比如：包含您或他人的电话号码、邮箱、住址等联系方式，以及个人身份证件号码、银行卡号，等等。</p>
+        <p>5.  不得发表包含种族、肤色、性别、性取向、宗教、民族、地域、残疾、社会经济状况歧视内容的言论.</p>
+        <p>6.  不得发表对他人构成伤害的言论，不得发表宣扬对青少年成长不利的言论。禁止进行人身攻击、侮辱或者诽谤他人、侵害他人合法权益的、含有法律、行政法规禁止的其他内容的。网络上传信息及其后果由上传者本人负责，违反各种法律法规及《保守国家秘密法》等严重行为者，将承担法律责任。</p>
+        <p>7.  文档内容、简介、标题涉及广告宣传。</p>
+        <p>8.  盗版内容，非法转载以及侵权内容。土木迷网对他人在网站上实施的此类侵权行为不承担法律责任，侵权的法律责任概由本人承担。</p>
+        <p>9.  用户利用不同ID，进行自我交易实现获利的，视为作弊行为，土木迷网保留一切解释和处理权利。</p>
+        <p>10.  用户在土木迷网上传已存在的文档。</p>
+        <p>11.  禁止上传无效或无价值文档。</p>
+        <p>12.  如严重违反上述规定，土木迷网将对于违规用户会采取封闭账号、禁止访问的措施。</p>
+        <p >13. 用户在土木迷网上传文档，即代表用户已经阅读并同意 <a href="http://www.docin.com/about/doc_fwtk.jsp" title="土木迷网《服务条款》" target="_blank">土木迷网《服务条款》</a> 。如果用户不同意《服务条款》及上述规定之内容，请不要在土木迷上传文档。</p>
+        <p class="tips">如果您还有其他问题或者建议，可以与我们联系，QQ:<a href="tencent://message/?uin=1036254810&amp;Site=万里播客服小V&amp;Menu=yes"><img src="http://img.wanlibo.com/images_cn/news/icon_qq.gif" alt="点击这里给我发消息
+QQ:1036254810" ></a><a href="tencent://message/?uin=690719824&amp;Site=万里播客服小V&amp;Menu=yes" ><img src="http://img.wanlibo.com/images_cn/news/icon_qq.gif" alt="点击这里给我发消息
+QQ:690719824" ></a>MSN:<span onclick="javascript:window.open('http://www.365groups.com/ChatWin.aspx?chatIDs=mw7m6bbm0NX6XXbz3AiYdviKjH6mm0m&amp;ServiceTag=0&amp;language=0','mw7m6bbm0NX6XXbz3AiYdviKjH6mm0m0','width=560,height=490, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no,center=yes')"><img alt="点击这里给我发消息service@vonibo.com" src="http://img.wanlibo.com/images_cn/news/icon_msn.gif"></span></p>
+    </div>
+    <!--  upload-cont -->
+    <!-- upload-end -->
+    <iframe width="100%" height="20px;" id="uploadTag" name="uploadTag" style="display:none;"></iframe>
+    <div class="upload-end" id="second" style="display:none;">
+    <table class="upload-edit">
+        <colgroup>
+        <col span="1" class="col1">
+        <col span="1" class="col2">
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+                <td><img src="http://img.wanlibo.com/images_cn/text_faq.gif" alt="收益小秘籍"><span class="fcr">收益小秘籍：</span><span class="fch">准确填选以下各项内容，有助于文档更快被人找到，快速增加收益。</span></td>
+            </tr>
+        </thead>
+        <form action="/app/uploadFile/upload" onsubmit="return checkDocin(true)" method="post" enctype="multipart/form-data" name="uploadDesc" id="uploadDesc" target="uploadTag">
+            <input type="hidden" name="productId" id="productId" value="">
+            <input type="hidden" name="shopId" id="shopId" value="2">
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <td><input type="submit" value="确定" title="确定" name="Submit" class="btn"></td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <th>标题:</th>
+                    <td><input type="text" maxlength="50" value="" id="productName" name="productName" class="txt" gtbfieldid="3"></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>文档简介:</th>
+                    <td><textarea id="productDesc" name="productDesc" ></textarea></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>文档标签:</th>
+                    <td><input type="text" maxlength="250" id="tagAll" name="tagAll" class="txt" gtbfieldid="4">
+                        <p>可定义10项，标签之间用“,”或“ ”分隔
+            </div>
+            </p>
+            </td>
+            </tr>
+            </tbody>
+            
+            <tbody>
+                <tr>
+                    <th>分类:</th>
+                    <td><select size="17" onchange="changeCategory(this.value);" id="productParentCategoryId" name="productParentCategoryId" gtbfieldid="5">
+                        </select>
+                        <select  size="17"  id="productCategoryId" name="productCategoryId" gtbfieldid="5">
+                        </select></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>下载:</th>
+                    <td><div class="upload_end_skills">收费下载&nbsp;￥
+                            <input type="text" value="0.00"  id="downPrice" name="downPrice" gtbfieldid="7" class="price">
+                            <label for="priceflag">
+                            <input type="checkbox" checked="checked" id="priceflag" name="priceflag">
+                            &nbsp;让土木迷自动调整价格，优化销售。</label>
+                            <img src="http://img.wanlibo.com/images_cn/newDocin/index/icon_help.gif" alt="小提示" onclick="var d=document;d.getElementById('upload_end_tips').style.display='block';">
+                            <div class="upload_end_tips" id="upload_end_tips">土木迷每天晚上会计算你的文档质量评分，同时依据文档的受欢迎程度进行综合测算，调整为更加合适的价格。</div>
+                        </div></td>
+                </tr>
+            </tbody>
+        </form>
+    </table>
+</div>
+</body>
+</html>
